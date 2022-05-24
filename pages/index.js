@@ -1,16 +1,181 @@
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import Link from 'next/link'
+import AOS from 'aos'
+var $ = require('jquery')
+if (typeof window !== 'undefined') {
+  window.$ = window.jQuery = require('jquery')
+}
+import 'owl.carousel/dist/assets/owl.carousel.css'
+import 'owl.carousel/dist/assets/owl.theme.default.css'
+import dynamic from 'next/dynamic'
+const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
+  ssr: false,
+})
+
+
 const Index = () => {
+
+    const state = {
+        responsive: {
+          0: {
+            items: 1,
+            nav: true,
+            dots: false,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            loop: true,
+          },
+          300: {
+            items: 2,
+            nav: true,
+            dots: false,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            margin: 10,
+            loop: true,
+          },
+    
+          766: {
+            items: 2,
+            nav: true,
+            dots: false,
+            loop: true,
+          },
+    
+          1200: {
+            items: 4,
+            nav: true,
+            dots: true,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            loop: true,
+          },
+        },
+        responsive_top_cat: {
+          0: {
+            items: 1,
+            nav: false,
+            dots: true,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            loop: true,
+          },
+          300: {
+            items: 1,
+            nav: true,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            dots: false,
+            loop: true,
+          },
+    
+          766: {
+            items: 3,
+            nav: true,
+            dots: false,
+            loop: true,
+          },
+    
+          1200: {
+            items: 3,
+            nav: true,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            dots: true,
+          },
+        },
+        responsive_top_catnew: {
+          0: {
+            items: 1,
+            nav: false,
+            dots: true,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            loop: true,
+          },
+          300: {
+            items: 1,
+            nav: true,
+            dots: false,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            loop: true,
+          },
+    
+          766: {
+            items: 3,
+            nav: true,
+            dots: false,
+            loop: true,
+          },
+    
+          1200: {
+            items: 4,
+            nav: false,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            dots: true,
+          },
+        },
+        responsive_trust_comp: {
+          0: {
+            items: 1,
+            nav: false,
+            dots: true,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            loop: true,
+          },
+          300: {
+            items: 3,
+            nav: false,
+            dots: true,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            loop: true,
+          },
+    
+          766: {
+            items: 3,
+            nav: false,
+            dots: false,
+            loop: true,
+          },
+    
+          1200: {
+            items: 5,
+            nav: false,
+            dots: true,
+            autoplay:true,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            center: true,
+          },
+        },
+      }
+
     return (
         <>
 
-
-<div>
   <header className="site-header topmain mobexheight norm">
     {/*--New Updates---*/}   
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container">
         {/* Brand */}
         <a className="navbar-brand" href="/">
-          <img src="./images/logo.jpg" className="navbar-brand-img" alt="logo" />
+          <img src="/images/logo.jpg" className="navbar-brand-img" alt="logo" />
         </a>
         {/* Toggler */}
         <button className="navbar-toggler openhdas" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,72 +238,42 @@ const Index = () => {
     </nav>
   </header>
   <section className="homemainbanner">
-    <div className="homefirstbbn owl-theme owl-carousel">
-      <div className="item">
+
+
+    <OwlCarousel
+                    className="homefirstbbn owl-theme owl-carousel"
+                    loop
+                    // margin={15}
+                    nav
+                    items={1}
+                  >
+                     <div className="item">
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-lg-7 text-center align-self-center">
               <div className="hmbannerquotes">
-                <img src="./images/bnrtexttop.png" className="tpquotelf" />
+                <img src="/images/bnrtexttop.png" className="tpquotelf" />
                 <h1 className="bnrhd">
                   Cracking the <span>C<div className="ogcl">O</div>DE</span> to<br />
                   Success</h1>
                 <p>Neque porro quisquam est qui dolorem ipsum </p>
-                <img src="./images/bnquotergs.png" className="bnquoterg" />
+                <img src="/images/bnquotergs.png" className="bnquoterg" />
               </div>
             </div>
             <div className="col-md-6 col-lg-5 text-center">
-              <img src="./images/smartboys.png" className="rgtmds" />
-              <img src="./images/mobilebane.jpg" className="mobhomeshos" />
+              <img src="/images/smartboys.png" className="rgtmds" />
+              <img src="/images/mobilebane.jpg" className="mobhomeshos" />
             </div>
           </div>
         </div>	
       </div>
-      <div className="item">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 col-lg-7 text-center align-self-center">
-              <div className="hmbannerquotes">
-                <img src="./images/bnrtexttop.png" className="tpquotelf" />
-                <h1 className="bnrhd">
-                  Cracking the <span>C<div className="ogcl">O</div>DE</span> to<br />
-                  Success</h1>
-                <p>Neque porro quisquam est qui dolorem ipsum </p>
-                <img src="./images/bnquotergs.png" className="bnquoterg" />
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-5 text-center">
-              <img src="./images/smartboys.png" className="rgtmds" />
-              <img src="./images/mobilebane.jpg" className="mobhomeshos" />
-            </div>
-          </div>
-        </div>	
-      </div>
-      <div className="item">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 col-lg-7 text-center align-self-center">
-              <div className="hmbannerquotes">
-                <img src="./images/bnrtexttop.png" className="tpquotelf" />
-                <h1 className="bnrhd">
-                  Cracking the <span>C<div className="ogcl">O</div>DE</span> to<br />
-                  Success</h1>
-                <p>Neque porro quisquam est qui dolorem ipsum </p>
-                <img src="./images/bnquotergs.png" className="bnquoterg" />
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-5 text-center">
-              <img src="./images/smartboys.png" className="rgtmds" />
-              <img src="./images/mobilebane.jpg" className="mobhomeshos" />
-            </div>
-          </div>
-        </div>	
-      </div>
-    </div>
+                  </OwlCarousel>
+                  
+
   </section>
   <section className="onestopcourse">
     <div className="container">
-      <img src="./images/bluedots.png" className="bldotslefts" />
+      <img src="/images/bluedots.png" className="bldotslefts" />
       <div className="mx-auto col-md-8 bgorngs text-center">
         <div className="coursetextmoreinf">
           <h2 className="mdbldshds">Our one stop <b>study destination</b></h2>
@@ -194,8 +329,8 @@ const Index = () => {
     </div>
   </section>
   <section className="aboutsect">
-    <img src="./images/abbots.png" className="bottomabuis" />
-    <img src="./images/topabdots.png" className="topmstomabuis" />
+    <img src="/images/abbots.png" className="bottomabuis" />
+    <img src="/images/topabdots.png" className="topmstomabuis" />
     <div className="container">
       <div className="col-md-12 col-lg-12 align-self-center text-center" data-aos="fade-up" data-aos-duration={1000}>
         <h2 className="mainhds mb-lg-4 ">Ab<div className="ogcl">o</div>ut Us</h2>
@@ -209,7 +344,7 @@ const Index = () => {
           <div className="item">
             <div className="mnboxstg">
               <div className="usericons">
-                <img src="./images/abouttags1.png" />
+                <img src="/images/abouttags1.png" />
               </div>
               <div className="mnlines">
                 <p>Online Degrees Entitled by UGC/AICTE</p>
@@ -219,7 +354,7 @@ const Index = () => {
           <div className="item">
             <div className="mnboxstg">
               <div className="usericons">
-                <img src="./images/abouttags2.png" />
+                <img src="/images/abouttags2.png" />
               </div>
               <div className="mnlines">
                 <p> Live online sessions</p>
@@ -229,7 +364,7 @@ const Index = () => {
           <div className="item">
             <div className="mnboxstg">
               <div className="usericons">
-                <img src="./images/abouttags3.png" />
+                <img src="/images/abouttags3.png" />
               </div>
               <div className="mnlines">
                 <p>Value-added certifications by Coursera &amp; edX</p>
@@ -239,7 +374,7 @@ const Index = () => {
           <div className="item">
             <div className="mnboxstg">
               <div className="usericons">
-                <img src="./images/abouttags4.png" />
+                <img src="/images/abouttags4.png" />
               </div>
               <div className="mnlines">
                 <p>Global Accreditation</p>
@@ -249,7 +384,7 @@ const Index = () => {
           <div className="item">
             <div className="mnboxstg">
               <div className="usericons">
-                <img src="./images/abouttags5.png" />
+                <img src="/images/abouttags5.png" />
               </div>
               <div className="mnlines">
                 <p>Sessions by Top industry experts </p>
@@ -259,7 +394,7 @@ const Index = () => {
           <div className="item">
             <div className="mnboxstg">
               <div className="usericons">
-                <img src="./images/abouttags6.png" />
+                <img src="/images/abouttags6.png" />
               </div>
               <div className="mnlines">
                 <p>100+ Hiring companies </p>
@@ -271,8 +406,8 @@ const Index = () => {
     </div>
   </section>
   <section className="featuredcls">
-    <img src="./images/featblus.png" className="bottomabuis" />
-    <img src="./images/abbots.png" className="borblfts mobmls" />
+    <img src="/images/featblus.png" className="bottomabuis" />
+    <img src="/images/abbots.png" className="borblfts mobmls" />
     <div className="container">
       <div className="text-center hdingst">
         <h2 className="mainhds">Popular <div className="ogcl">O</div>nline Programs</h2>
@@ -296,129 +431,267 @@ const Index = () => {
       <div className="tab-content" id="myTabContent2">
         <div className="tab-pane fade show active" id="trendingprg" role="tabpanel" aria-labelledby="trendingprg-tab">
           <div className="coursespanels">
+
+          <OwlCarousel
+                    className="featuredslide owl-theme owl-carousel"
+                    loop
+                    // margin={15}
+                    nav
+                    items={3}
+                  >
+
+<div className="item">
+                <div className="crsimgs">
+                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#" className="crcategs">Master</a>
+                </div>
+                <div className="panelcards">
+                  <h5 className="csnms">MBA</h5>
+                  <div className="tmclcs">
+                    <img src="/images/wallclock.png" className="tmicn" />
+                    <p>12 Months</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/scholors.png" className="tmicn" />
+                    <p>MBA with elective in FinTech</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/rupicon.png" className="tmicn" />
+                    <p>45,000</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="crsimgs">
+                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
+                  <a href="#" className="crcategs">Master</a>
+                </div>
+                <div className="panelcards">
+                  <h5 className="csnms">MBA</h5>
+                  <div className="tmclcs">
+                    <img src="/images/wallclock.png" className="tmicn" />
+                    <p>12 Months</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/scholors.png" className="tmicn" />
+                    <p>MBA with elective in FinTech</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/rupicon.png" className="tmicn" />
+                    <p>45,000</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="crsimgs">
+                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
+                  <a href="#" className="crcategs">Master</a>
+                </div>
+                <div className="panelcards">
+                  <h5 className="csnms">MBA</h5>
+                  <div className="tmclcs">
+                    <img src="/images/wallclock.png" className="tmicn" />
+                    <p>12 Months</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/scholors.png" className="tmicn" />
+                    <p>MBA with elective in FinTech</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/rupicon.png" className="tmicn" />
+                    <p>45,000</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="crsimgs">
+                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#" className="crcategs">Master</a>
+                </div>
+                <div className="panelcards">
+                  <h5 className="csnms">MBA</h5>
+                  <div className="tmclcs">
+                    <img src="/images/wallclock.png" className="tmicn" />
+                    <p>12 Months</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/scholors.png" className="tmicn" />
+                    <p>MBA with elective in FinTech</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/rupicon.png" className="tmicn" />
+                    <p>45,000</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="crsimgs">
+                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
+                  <a href="#" className="crcategs">Master</a>
+                </div>
+                <div className="panelcards">
+                  <h5 className="csnms">MBA</h5>
+                  <div className="tmclcs">
+                    <img src="/images/wallclock.png" className="tmicn" />
+                    <p>12 Months</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/scholors.png" className="tmicn" />
+                    <p>MBA with elective in FinTech</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/rupicon.png" className="tmicn" />
+                    <p>45,000</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="crsimgs">
+                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
+                  <a href="#" className="crcategs">Master</a>
+                </div>
+                <div className="panelcards">
+                  <h5 className="csnms">MBA</h5>
+                  <div className="tmclcs">
+                    <img src="/images/wallclock.png" className="tmicn" />
+                    <p>12 Months</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/scholors.png" className="tmicn" />
+                    <p>MBA with elective in FinTech</p>
+                  </div>
+                  <div className="tmclcs">
+                    <img src="/images/rupicon.png" className="tmicn" />
+                    <p>45,000</p>
+                  </div>
+                </div>
+              </div>
+
+                      </OwlCarousel>
+
             <div className="featuredslide owl-theme owl-carousel">
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/2.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/3.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/2.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/3.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
@@ -431,126 +704,126 @@ const Index = () => {
             <div className="featuredslide owl-theme owl-carousel">
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/2.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/3.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/2.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/3.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
@@ -563,126 +836,126 @@ const Index = () => {
             <div className="featuredslide owl-theme owl-carousel">
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/2.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/3.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/2.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/3.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
@@ -695,126 +968,126 @@ const Index = () => {
             <div className="featuredslide owl-theme owl-carousel">
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/2.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/3.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/2.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
               </div>
               <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="./images/ftcourses/3.jpg" className="fllimg" /></a>
+                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
                 </div>
                 <div className="panelcards">
                   <h5 className="csnms">MBA</h5>
                   <div className="tmclcs">
-                    <img src="./images/wallclock.png" className="tmicn" />
+                    <img src="/images/wallclock.png" className="tmicn" />
                     <p>12 Months</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/scholors.png" className="tmicn" />
+                    <img src="/images/scholors.png" className="tmicn" />
                     <p>MBA with elective in FinTech</p>
                   </div>
                   <div className="tmclcs">
-                    <img src="./images/rupicon.png" className="tmicn" />
+                    <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
                   </div>
                 </div>
@@ -832,109 +1105,122 @@ const Index = () => {
       </div>
       {/* for desktop slider only */}
       <div className="cpmslide desktopsds">
-        <div className="trustcmpcarso owl-theme owl-carousel">
-          <div className="item">
+
+      <OwlCarousel
+                    className="trustcmpcarso owl-theme owl-carousel"
+                    loop
+                    // margin={15}
+                    nav
+                    items={1}
+                  >
+
+<div className="item">
             <div className="row">
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/1.png" />
+                  <img src="/images/client/1.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/2.png" />
+                  <img src="/images/client/2.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/3.png" />
+                  <img src="/images/client/3.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/4.png" />
+                  <img src="/images/client/4.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/5.png" />
+                  <img src="/images/client/5.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/6.png" />
+                  <img src="/images/client/6.png" />
                 </div>
               </div>
             </div>
           </div>
+
           <div className="item">
             <div className="row">
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/7.png" />
+                  <img src="/images/client/7.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/8.png" />
+                  <img src="/images/client/8.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/9.png" />
+                  <img src="/images/client/9.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/1.png" />
+                  <img src="/images/client/1.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/2.png" />
+                  <img src="/images/client/2.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/3.png" />
+                  <img src="/images/client/3.png" />
                 </div>
               </div>
             </div>
           </div>
-        </div>
+
+     </OwlCarousel>
+       
       </div>
+
+
       <div className="cpmslide mobilesds">
         <div className="trustcmpcarsomobs owl-theme owl-carousel">
           <div className="item">
             <div className="row">
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/1.png" />
+                  <img src="/images/client/1.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/2.png" />
+                  <img src="/images/client/2.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/3.png" />
+                  <img src="/images/client/3.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/4.png" />
+                  <img src="/images/client/4.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/5.png" />
+                  <img src="/images/client/5.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/6.png" />
+                  <img src="/images/client/6.png" />
                 </div>
               </div>
             </div>
@@ -943,32 +1229,32 @@ const Index = () => {
             <div className="row">
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/7.png" />
+                  <img src="/images/client/7.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/8.png" />
+                  <img src="/images/client/8.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/9.png" />
+                  <img src="/images/client/9.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/1.png" />
+                  <img src="/images/client/1.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/2.png" />
+                  <img src="/images/client/2.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="./images/client/3.png" />
+                  <img src="/images/client/3.png" />
                 </div>
               </div>
             </div>
@@ -978,43 +1264,54 @@ const Index = () => {
     </div>
   </section>
   <section className="testimoniapn">
-    <img src="./images/topbllefts.png" className="topblfts" />
-    <img src="./images/abbots.png" className="borblfts" />
+    <img src="/images/topbllefts.png" className="topblfts" />
+    <img src="/images/abbots.png" className="borblfts" />
     <div className="container">
       <div className="text-center hdingst">
         <h2 className="mainhds">In <div className="ogcl">N</div>ews</h2>
       </div>
       <div className="testimparts">
-        <div className="reviewtestim owl-carousel owl-theme">
-          <div className="item">
+
+
+      <OwlCarousel
+                    className="reviewtestim owl-theme owl-carousel "
+                    loop
+                    // margin={15}
+                    nav
+                    items={3}
+                    >
+
+<div className="item">
             <div className="testipnlpts">
               <p className="usrnmtst">Neque porro quisquam </p>
               <p>quia dolor sit amet, consectetur adipisci velit</p>
-              <img src="./images/innews/1.jpg" />
+              <img src="/images/innews/1.jpg" />
             </div>
           </div>
           <div className="item">
             <div className="testipnlpts">
               <p className="usrnmtst">Neque porro quisquam </p>
               <p>quia dolor sit amet, consectetur adipisci velit</p>
-              <img src="./images/innews/2.jpg" />
+              <img src="/images/innews/2.jpg" />
             </div>
           </div>
           <div className="item">
             <div className="testipnlpts">
               <p className="usrnmtst">Neque porro quisquam </p>
               <p>quia dolor sit amet, consectetur adipisci velit</p>
-              <img src="./images/innews/3.jpg" />
+              <img src="/images/innews/3.jpg" />
             </div>
           </div>
           <div className="item">
             <div className="testipnlpts">
               <p className="usrnmtst">Neque porro quisquam </p>
               <p>quia dolor sit amet, consectetur adipisci velit</p>
-              <img src="./images/innews/1.jpg" />
+              <img src="/images/innews/1.jpg" />
             </div>
           </div>
-        </div>
+          
+                        </OwlCarousel>
+
         <div className="text-center pt-4">
           <a href="#" className="orangectathms">View All</a>
         </div> 
@@ -1026,37 +1323,49 @@ const Index = () => {
       <div className="text-center hdingst">
         <h2 className="mainhds">Gallery</h2>
       </div>
-      <div className="advantfeat owl-carousel owl-theme text-center pt-5">
-        <div className="item">
-          <img src="./images/galleryhn/1.jpg" />
+
+      
+      <OwlCarousel
+                    className="advantfeat owl-theme owl-carousel text-center pt-5"
+                    loop
+                    // margin={15}
+                    nav
+                    items={3}
+                    >
+
+<div className="item">
+          <img src="/images/galleryhn/1.jpg" />
           <p>Lorem Ipsum is simply dummy text of the printing and </p>
         </div>
         <div className="item">
-          <img src="./images/galleryhn/2.jpg" />
+          <img src="/images/galleryhn/2.jpg" />
           <p>Lorem Ipsum is simply dummy text of the printing and </p>
         </div>
         <div className="item">
-          <img src="./images/galleryhn/3.jpg" />
+          <img src="/images/galleryhn/3.jpg" />
           <p>Lorem Ipsum is simply dummy text of the printing and </p>
         </div>
         <div className="item">
-          <img src="./images/galleryhn/1.jpg" />
+          <img src="/images/galleryhn/1.jpg" />
           <p>Lorem Ipsum is simply dummy text of the printing and </p>
         </div>
         <div className="item">
-          <img src="./images/galleryhn/2.jpg" />
+          <img src="/images/galleryhn/2.jpg" />
           <p>Lorem Ipsum is simply dummy text of the printing and </p>
         </div>
         <div className="item">
-          <img src="./images/galleryhn/3.jpg" />
+          <img src="/images/galleryhn/3.jpg" />
           <p>Lorem Ipsum is simply dummy text of the printing and </p>
         </div>
-      </div>
+        
+        </OwlCarousel>
+                    
+      
     </div>
   </section>
   <section className="faqnewtys">
-    <img src="./images/topbllefts.png" className="topblfts" />
-    <img src="./images/abbots.png" className="borblfts" />
+    <img src="/images/topbllefts.png" className="topblfts" />
+    <img src="/images/abbots.png" className="borblfts" />
     <div className="container">
       <div className="text-center hdingst  align-self-center">
         <h2 className="mainhds"> 
@@ -1201,17 +1510,17 @@ const Index = () => {
     <a href="tel:+91 9945580408" className="graytelsnaps"> <i className="fas fa-phone-alt" /> +91 9945580408 </a>
     <div className="ctatcs">
       <ul>
-        <li><a href="#"><img src="./images/telnumb.png" /></a><span className="hntps"><i className="fas fa-phone-alt" /> +919945580408 </span></li>
-        <li><a href="#"><img src="./images/whatsappcta.png" /></a></li>
+        <li><a href="#"><img src="/images/telnumb.png" /></a><span className="hntps"><i className="fas fa-phone-alt" /> +919945580408 </span></li>
+        <li><a href="#"><img src="/images/whatsappcta.png" /></a></li>
       </ul>
     </div>
   </div>
   <section className="mobileiconpanel">
     <ul>
-      <li><a href="#"><img src="./images/applyico.png" /><span>Apply Now<span /></span></a></li>
-      <li style={{width: 300}}><a href="tel:+919945580408"><img src="./images/callicos.png" /><span>Call us<span /></span></a></li>
-      <li><a href="#"><img src="./images/whatsappicos.png" /><span>Whatsapp Us<span /></span></a></li>
-      <li style={{border: 'none'}}><a href="#"><img src="./images/downldico.png" /><span>Brochure<span /></span></a></li>
+      <li><a href="#"><img src="/images/applyico.png" /><span>Apply Now<span /></span></a></li>
+      <li style={{width: 300}}><a href="tel:+919945580408"><img src="/images/callicos.png" /><span>Call us<span /></span></a></li>
+      <li><a href="#"><img src="/images/whatsappicos.png" /><span>Whatsapp Us<span /></span></a></li>
+      <li style={{border: 'none'}}><a href="#"><img src="/images/downldico.png" /><span>Brochure<span /></span></a></li>
     </ul>
   </section>
   <footer className="stfooter">
@@ -1317,10 +1626,6 @@ const Index = () => {
       </div>
     </div>
   </footer>
-</div>
-
-
-
 
         </>
     );
