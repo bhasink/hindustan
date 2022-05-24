@@ -1,0 +1,1011 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('./fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('./fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+        url('./fonts/Gilroy-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-SemiBold.woff2') format('woff2'),
+        url('./fonts/Gilroy-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body::-webkit-scrollbar {
+  display:none;
+}
+
+
+body {
+    padding-top: 66px;
+	font-family: 'Gilroy';
+}
+
+
+.loginpartns .fllmd {
+    width: 67%;
+}
+
+
+
+.loginpartns .container {
+    max-width: 1920px;
+    padding: 24px 50px;
+    margin: auto;
+}
+
+.loginpartns {
+    position: relative;
+    height: 100vh;
+    display: flex;
+}
+
+.loginpartns:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    width: 36%;
+    height: 100%;
+    background: #f89b36;
+    z-index: -2;
+}
+
+.formlogins {
+    max-width: 300px;
+    margin: auto;
+}
+
+.formlogins label {
+    color: #fff;
+    font-weight: 600;
+}
+
+.formlogins 
+ .blulghtcta {
+    border: none;
+    max-width: 150px;
+    width: 100px;
+    display: inline-block;
+    border-radius: 7px;
+    font-weight: 600;
+	  border-radius: 0px;
+}
+
+.formlogins .form-group .form-control {
+    border-radius: 0px;
+    height: auto;
+    padding: 4px 7px;
+}
+
+.blulghtcta {
+    display: block;
+    text-align: center;
+    background: #303158;
+    border-radius: 19px;
+    padding: 6px;
+    color: #ffffff;
+}
+
+.formlogins .form-group.mdmdlarge {
+    margin-top: 38px;
+    border-top: 1px solid;
+    padding-top: 35px;
+}
+
+.formlogins  .mdmdlarge .blulghtcta {
+    max-width: 211px;
+    width: 100%;
+}
+
+
+.adminarebga {
+    background: #f89c37;
+    padding: 50px 0;
+}
+
+.adminarebga .admheads {
+    color: #fff;
+    font-weight: 600;
+}
+
+.adminarebga  p {
+    color: #fff;
+}
+
+.adminpageheaders p span {
+    margin: 0 6px;
+}
+
+.mainadareas {
+    padding: 30px 0;
+}
+
+.blumenubga {
+    background: #302e59;
+	    padding: 0;
+}
+
+.admmenusets ul li img {
+    width: 20px;
+    text-align: left;
+    filter: invert(1);
+    margin: auto 12px;
+}
+
+.admmenusets ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admmenusets ul li a {
+    color: #fff;
+    padding: 11px 6px;
+    display: block;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+}
+
+.admmenusets ul li a:hover {
+    background: #f89c37;
+    text-decoration: none;
+}
+
+
+.admmenusets ul li {
+    margin-bottom: 10px;
+}
+
+.admmenusets {
+    padding-top: 40px;
+}
+
+
+.whitebgas {
+    background: #fff;
+}
+
+
+.mainadareas .container,
+.adminpageheaders .container {
+  max-width: 1700px;
+    padding: 0 62px;
+}
+
+.mainadareas .admsetforms {
+    background: #f89c37;
+    max-width: 430px;
+    margin: 50px auto;
+    padding: 40px 0;
+}
+
+
+.transctabd {
+    color: #fff;
+    border: 1px solid;
+    padding: 10px 28px;
+}
+
+.transctabd:hover {text-decoration: none;color: #f89c37;background: #fff;}
+
+.formlogins .form-group.organgmds .blulghtcta {
+    background: #df8017;
+    border: 1px solid #000;
+}
+
+
+
+
+/* megamenu css */
+
+h3.mobclick {
+    display: none;
+}
+
+
+.site-header.topmain nav.navbar .navbar-brand{
+    width: 95px;
+}
+
+.site-header.topmain nav.navbar .navbar-brand img{
+    width:100%;
+}
+
+.site-header.topmain .navbar ul li {
+    position: relative;
+	margin: 0 0 0 25px;
+}
+
+.site-header.topmain .navbar ul li.sgnorg {
+    display: flex;
+    margin: 0 0 0 25px;
+}
+
+.site-header.topmain .navbar ul li.nav-item.sgnorg a {
+    padding: 18px 3px;
+}
+
+.site-header.topmain.navfixed .navbar ul li.nav-item.sgnorg a {
+    padding: 8px 3px;
+}
+
+.site-header.topmain .navbar ul li.nav-item a {
+    color: #676d76;
+    font-size: 14px;
+    padding: 18px 21px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all ease 0.5s;
+    position: relative;
+}
+
+.site-header.topmain .navbar ul li.nav-item a:hover{
+	color: #fe982c;
+}
+.site-header.topmain .navbar ul li.nav-item .megamenu ul li a:hover {
+    background: #f69c35;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.site-header.topmain.navfixed .navbar ul li.nav-item a {
+    padding: 8px 21px;
+}
+
+.site-header.topmain.navfixed .navbar ul li.nav-item .subarrs:after {
+    top: 13px;
+}
+
+
+.site-header.topmain .navbar ul li .collapse.show {
+    opacity: 0;
+    visibility: hidden;
+	 position: absolute;
+    left: 8px;
+    width: 200px;
+}
+
+.site-header.topmain .navbar ul li .collapse:not(.show) {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 200px;
+    background: #fff;
+}
+
+.site-header.topmain .navbar ul li:hover .collapse:not(.show) {
+    opacity: 1;
+    visibility: visible;
+}
+
+.site-header.topmain .navbar ul li.nosublnk:hover .collapse:not(.show) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.site-header.topmain .navbar ul li:hover .collapse {
+    opacity: 1;
+    visibility: visible;
+}
+
+.site-header.topmain .navbar ul li .collapse:not(.show) {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    width: 200px;
+}
+
+.site-header.topmain .navbar ul li .megamenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.site-header.topmain .navbar ul li.nav-item .megamenu ul li {
+    border: none;
+    background: #2b4284;
+    display: block;
+}
+
+.site-header.topmain .navbar ul li.nav-item .megamenu ul li a {
+    position: relative;
+    display: block;
+    background: #2e2c56;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+    padding: 8px 19px;
+}
+
+
+
+.site-header.topmain .navbar ul li .megamenu li .megamenu.subdropsmen ul li a {
+    padding-left: 35px;
+    margin-left: 0px;
+}
+
+.site-header.topmain .navbar ul li .megamenu li .megamenu.subdropsmen ul li a:after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    top: 13px;
+    z-index: 9;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    transform: rotate( 132deg);
+}
+
+.mobile-widgets {
+    display: none;
+}
+
+
+.site-header.topmain nav.navbar {
+  background: #ffffff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: all ease 0.5s;
+  z-index: 9;
+}
+
+header.site-header.topmain.mobexheight.navfixed nav.navbar{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    transition: all ease 0.5s;
+    top: 0;
+}
+
+.site-header.topmain .navbar ul li.sgnorg {
+    display: none;
+}
+
+.site-header.topmain .navbar ul li.sgnorg:nth-child(6), .site-header.topmain .navbar ul li.sgnorg:nth-child(7), .site-header.topmain .navbar ul li.sgnorg:nth-child(8), .site-header.topmain .navbar ul li.sgnorg:nth-child(9) {
+    display: flex;
+}
+
+
+
+.themetableadms {
+    box-shadow: #00000026 0px 0px 5px 0px;
+    margin: 50px 0;
+}
+
+.tablefilterres {
+    padding: 50px 0 0 0;
+}
+
+.themetableadms .table tr th {
+    background: #302e59;
+    color: #fff;
+}
+
+.themetableadms .table td a img {
+    width: 16px;
+}
+
+.themetableadms .table td a {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.themetableadms .table td  .atcons {
+    background: #1f8b02;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    box-shadow: inset #fff 0px 0px 0px 4px;
+    border: 1px solid #a5a0a0;
+    display: inline-block;
+}
+
+.themetableadms .table td {
+    text-align: center;
+	font-size: 14px;
+}
+
+.themetableadms .table tr:nth-child(even) td {
+    background: #ededed;
+}
+
+.themetableadms .table td i {
+    border: 1px solid;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    line-height: 19px;
+}
+
+.themetableadms .table td i.fa-plus {
+    background: #1891f3;
+    color: #fff;
+}
+
+.themetableadms .table td i.fa-minus {
+    background: #ff2121;
+    color: #fff;
+}
+
+
+.entyfilts {
+    display: flex;
+}
+
+.entyfilts span {
+    font-weight: 800;
+    margin: auto 14px;
+    color: #766e6e;
+}
+
+.entyfilts select.form-control {
+    width: auto;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid;
+}
+
+.orgsrch .form-control {
+    border: 1px solid #f89c37;
+    box-shadow: none;
+    outline: none;
+	border-radius:0px;
+	    padding: 0 36px;
+}
+
+.orgsrch {
+    position: relative;
+}
+
+.orgsrch:after {
+    content: "";
+    position: absolute;
+    left: 24px;
+    width: 20px;
+    height: 20px;
+    background: url('./images/partners/search.png');
+    background-size: contain;
+    top: 8px;
+    background-repeat: no-repeat;
+}
+
+.themetableadms .table .collapsed i.fa-minus {
+    display: none;
+}
+
+.themetableadms .table .collapsed i.fa-plus {
+    display: block;
+}
+
+.themetableadms .table  i.fa-minus{
+    display: block;
+}
+
+.themetableadms .table  i.fa-plus{
+    display: block;
+      display: none;
+}
+
+.fxwfths {
+    position: absolute;
+    width: 828px;
+    background: #fff;
+    padding: 6px 13px;
+    box-shadow: #000 0px 0px 2px 0px;
+    text-align: left;
+}
+
+.fxwfths span {
+    margin-right: 30px;
+}
+
+.orlightbgas {
+    background: #fdead5;
+}
+
+
+/* create course forms */
+
+.editablecrtforms {
+    background: #fff;
+    max-width: 810px;
+    margin: 40px auto;
+}
+
+.editablecrtforms .blpdhds {
+    text-align: center;
+    padding: 7px;
+    background: #302e59;
+    color: #fff;
+    font-weight: 600;
+}
+
+.mainfmsd {
+    padding: 50px 20px;
+}
+
+.mainfmsd .form-groupsets label {
+      font-weight: bold;
+    color: #7d7373;
+}
+
+.mainfmsd .form-groupsets {
+    margin-bottom: 1.5rem;
+}
+
+.mainfmsd .form-groupsets .form-control {
+    border-radius: 0px;
+    border: 1.2px solid #302e59;
+    box-shadow: none;
+    outline: none;
+}
+
+
+.ifomn {
+    font-size: 13px;
+    font-weight: 600;
+    color: #898585;
+}
+
+.mainfmsd .form-groupsets .admranges {
+    width: 100%;
+}
+
+.editablecrtforms  .ifomn {
+    color: #000;
+    margin: 20px 0;
+
+}
+
+ .ifomn span {
+    width: auto;
+    border: 1px solid;
+        padding: 3px 5px;
+}
+
+.ifomn span:nth-child(2) {
+    float: right;
+}
+
+.orangectadms {
+    border: none;
+    background: #f89c37;
+    color: #fff;
+    padding: 4px 20px;
+    margin: 20px 0;
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.roundbotms .orangectadms {
+    border-radius: 30px;
+    padding: 7px 0px;
+    width: 218px;
+}
+
+
+.ctypcustm .custom-control.custom-radio {
+    padding: 0 19px 0 0;
+}
+
+.ctypcustm .custom-radio .custom-control-label::before,
+.ctypcustm .custom-control-label::after{
+    opacity: 0;
+}
+
+.ctypcustm .custom-control.custom-radio .custom-control-label {
+    border: 1px solid;
+    padding: 0 6px;
+	    font-weight: 600;
+}
+
+.ctypcustm .custom-control.custom-radio.active .custom-control-label {
+    background: #f89c37;
+    color: #fff;
+}
+
+
+
+.nopadmodealcus {
+    max-width: 1015px;
+}
+
+.nopadmodealcus .editablecrtforms {
+    max-width: initial;
+    margin-top: 0;
+}
+
+.nopadmodealcus .modal-body {
+    padding: 0;
+}
+
+.nopadmodealcus .modal-content {
+    border: none;
+}
+
+.nopadmodealcus .close,
+.delemodsa .close {
+    text-shadow: none;
+    color: #fff;
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 100%;
+    position: absolute;
+    right: -9px;
+    top: -8px;
+	outline:none;
+}
+
+
+.delemodsa .modal-body {
+    padding: 0;
+}
+
+.delrecds {
+    text-align: center;
+    padding: 20px;
+}
+
+.delrecds h5 {
+    font-weight: 600;
+    color: #c52424;
+}
+
+.delrecds .transctmods {
+    border-radius: 20px;
+    border: none;
+    padding: 4px 35px;
+}
+
+.delrecds .orangectadms {
+    border-radius: 20px;
+    border: none;
+    padding: 4px 35px;
+}
+
+
+/* faq css */
+
+
+.cuadmfaqs {
+    padding: 50px;
+}
+
+.cuadmfaqs button.btn.btn-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 11px 21px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cuadmfaqs .card-header {
+    padding: 0;
+    background: #fff;
+    border-bottom: none;
+}
+
+.cuadmfaqs button.btn.btn-link i {
+    float: right;
+}
+
+.cuadmfaqs button.btn.btn-link .fa-minus {
+    display: block;
+}
+
+.cuadmfaqs button.btn.btn-link .fa-plus {
+    display: none;
+}
+
+.cuadmfaqs button.btn.btn-link.collapsed {}
+
+.cuadmfaqs button.btn.btn-link.collapsed .fa-plus {
+    display: block;
+}
+
+.cuadmfaqs button.btn.btn-link.collapsed .fa-minus {
+    display: none;
+}
+
+.cuadmfaqs .card {
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: #c1bbbb -2px 1px 2px 0px;
+}
+
+.editablecrtforms .mainfmsd img {
+    width: 100%;
+}
+
+
+.admmenusets ul li .innermenus ul {list-style-type: none; padding: 0 0  0 55px;     color: #fff;}
+
+.admmenusets ul li .innermenus ul li a {
+	padding: 0;
+    display: inline-block;
+	font-weight: 100;
+    font-size: 12px;
+}
+
+.admmenusets ul li .innermenus ul li a:hover {background: transparent;}
+
+.admmenusets ul li .innermenus ul li {list-style-type: disc;}
+
+.admmenusets ul li .innermenus ul li:hover {color: #f89c37;}
+
+.admmenusets ul li .innermenus ul li {margin: auto;}
+
+.admmenusets ul li a i {float: right;margin: auto 9px auto auto;}
+
+.admmenusets ul li a:hover i {color: #302e59;}
+
+.admmenusets ul li a.arrdrp.collapsed {background: #302e59;}
+
+.admmenusets ul li a.arrdrp.collapsed i {
+    transform: rotate(-90deg);
+}
+
+.admmenusets ul li a.arrdrp{
+	    background: #f89c37;
+		color:#fff;
+}
+
+.admmenusets ul li a.arrdrp.collapsed i{
+	color:#fff;
+}
+
+.admmenusets ul li a.arrdrp i {color: #302e59;}
+
+.editablecrtforms.withourhdlowmd {max-width: 410px;}
+
+.editablecrtforms .ifomn input {display: inline-block;width: 40px;border: none;text-align: center;font-weight: 600;     outline: none;}
+
+
+.ui-widget-header {background: #f89c37;}
+
+.ui-state-default, .ui-widget-content .ui-state-default {border-radius: 100%;width: 14px;height: 14px;top: -4px;}
+
+.ui-widget.ui-widget-content {height: 8px;border: 1px solid #fafafa;background: #ece7e7;}
+
+.ui-state-default, .ui-widget-content .ui-state-default:active {background: #f89c37; border-color: #f89c37; outline:none;}
+
+/* css for responsive */
+
+@media screen and (max-width: 767px) and (min-width: 320px){
+
+
+.loginpartns:after {position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 61%;
+    background: #f89b36;
+    z-index: -2;
+    top: inherit;
+    left: 0;
+    margin: auto;
+}
+
+.formlogins {padding-top: 108px;}
+
+
+.cuadmfaqs {
+    padding: 50px 10px;
+}
+
+.adminarebga{
+	    overflow: hidden;
+}
+
+.themetableadms {
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.themetableadms .table tr th, .themetableadms .table tr td {
+    font-size: 12px;
+    padding: 6px 13px;
+    vertical-align: middle;
+}
+
+.themetableadms table.table {
+    width: 832px;
+}
+
+.navbar-light .navbar-toggler {
+    z-index: 9;
+    float: right;
+    position: absolute;
+    right: 19px;
+    top: 13px;
+    color: #766f6f;
+    border-color: rgb(255 255 255 / 0%);
+	outline: none;
+}
+
+
+.site-header.topmain .collapse:not(.show) {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    height: 100vh;
+    transform: translateX(-630px);
+    transition: all ease 0.5s;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.site-header.topmain.heightexps .collapse:not(.show) {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    height: 100vh;
+    transition: all ease 0.5s;
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+    /* z-index: 9; */
+}
+
+.site-header.topmain .navbar ul li.nav-item a {
+    display: none;
+}
+
+.site-header.topmain .navbar ul li.nav-item.nosublnk a {
+    display: block;
+    padding: 0;
+    font-size: 19px;
+    margin: 0;
+    padding: 14px 0;
+    border-bottom: 1px dashed #302b2b;
+    font-weight: 500;
+}
+
+.site-header.topmain .navbar ul li.nav-item.nosublnk h3.mobclick {
+    display: none;
+}
+
+.site-header.topmain .navbar ul li .collapse:not(.show) {
+    display: none;
+}
+
+.site-header.topmain .navbar ul li .collapse.show {
+    opacity: 1;
+    visibility: visible;
+	    position: relative;
+	    width: 100%;
+    left: 0;
+}
+
+.site-header.topmain .navbar ul li h3 i {
+    float: right;
+}
+
+h3.mobclick {
+    display: block;
+    color: #676d76;
+}
+
+.site-header.topmain .navbar ul li h3 {
+    font-size: 19px;
+    margin: 0;
+    padding: 14px 0;
+    border-bottom: 1px dashed #302b2b;
+}
+
+.site-header.topmain .navbar ul li h3.mobclick.collapsed i.fa-angle-down {
+    display: block;
+}
+
+.site-header.topmain .navbar ul li h3.mobclick.collapsed i.fa-angle-up {
+    display: none;
+}
+
+.site-header.topmain .navbar ul li h3.mobclick i.fa-angle-up {
+    display: block;
+}
+
+.site-header.topmain .navbar ul li h3.mobclick i.fa-angle-down {
+    display: none;
+}
+
+
+.openhdas .fa-times {
+    display: none;
+}
+
+.openhdas.crossshwos .fa-bars {
+    display: none;
+}
+
+.openhdas.crossshwos .fa-times {
+    display: block;
+}
+
+.site-header.topmain .navbar ul li:hover .collapse:not(.show) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fixbd {
+    overflow: hidden;
+}
+
+.site-header.topmain .navbar ul li,
+.site-header.topmain .navbar ul li.sgnorg {
+    padding: 0;
+    margin: 0;
+	display:block;
+}
+
+
+.mainadareas .container, .adminpageheaders .container {
+    padding: 0 10px;
+}
+
+.blumenubga {
+    display: none;
+}
+
+.site-header.topmain .navbar ul li.sgnorg:nth-child(6), .site-header.topmain .navbar ul li.sgnorg:nth-child(7), .site-header.topmain .navbar ul li.sgnorg:nth-child(8), .site-header.topmain .navbar ul li.sgnorg:nth-child(9){
+	    display: block;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 1920px) and (min-width: 1700px){
+	.editablecrtforms{
+		max-width: 1087px;
+	}
+}
