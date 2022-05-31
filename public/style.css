@@ -237,9 +237,9 @@ header.site-header.topmain.mobexheight.navfixed nav.navbar{
 
 /* css for homebanner */
 
-.owl-carousel .owl-item .hmbannerquotes .tpquotelf {display: inherit;width: 27px;position: relative;top: -36px;left: -6px;}
+.owl-carousel .owl-item .hmbannerquotes .tpquotelf, .hmbannerquotes .tpquotelf {display: inherit;width: 27px;position: relative;top: -36px;left: -6px;}
 
-.owl-carousel .owl-item .hmbannerquotes  .bnquoterg {float: right;width: 25px;}
+.owl-carousel .owl-item .hmbannerquotes .bnquoterg, .hmbannerquotes .bnquoterg {float: right;width: 25px;}
 
 
 .homemainbanner .bnrhd {
@@ -1208,7 +1208,7 @@ footer.stfooter .collapse:not(.show) {
 
 .homemainbanner .owl-carousel .owl-item .rgtmds {display: block; }
 
-.homemainbanner .owl-carousel .owl-item .mobhomeshos {display: none;}
+.homemainbanner .owl-carousel .owl-item .mobhomeshos, .homemainbanner  .mobhomeshos {display: none;}
 
 .faqnewtys .btn-link i {
     float: right;
@@ -1384,7 +1384,9 @@ footer.stfooter .collapse:not(.show) {
 
 .mnptsd ul li {display: inline-block;margin: auto;padding: 1px 12px;}
 
-.mnptsd ul li a {padding: 4px 11px;display: block;color: #000;font-weight: 600;}
+.mnptsd ul li a {padding: 4px 11px;display: block;color: #000;font-weight: 600; border-bottom: 3px solid #f0871800;} 
+
+.mnptsd ul li a:hover {border-bottom: 3px solid #f08718;}
 
 .mnptsd {background: #f1f1f1;padding: 0px 0;     margin-bottom: 30px;     transition: all ease 0.5s;
     position: relative;}
@@ -1604,9 +1606,6 @@ footer.stfooter .collapse:not(.show) {
 .hiringcompns .topmstomabuis {position: absolute;top: -33px;width: 40px;left: 0;}
 
 
-.sefixpointrs .container {
-    max-width: 1230px;
-}
 
 .sefixpointrs .mnptsd .container {max-width: 1140px;}
 
@@ -1641,9 +1640,374 @@ footer.stfooter .collapse:not(.show) {
 
 .topblfts.shfrgs {left: inherit;right: 20px;}
 
+.mnptsd ul li.active:nth-child(6) a {border-bottom: none;}
+
+.moreless-button,
+.moreless-button2 {font-size: 14px;margin-top: -13px;display: inherit;}
+
+.moretext2, .moretext {display: none;}
+
+
+
+.rdspecials{
+	    display: none;
+}
+
+.rdspecials:hover {color: #f28823;}
+
+/* css for all programs page */
+
+.oragecoursebr {position: relative;padding-top: 50px;margin-top: 50px;}
+
+.oragecoursebr:after {content: "";position: absolute;top: 0;width: 100%;height: 46%;background: #f08718;z-index: -2;border-radius: 15px;}
+
+.onestopallcrs {position: relative;padding: 70px 0; overflow: hidden; margin-bottom:70px;}
+
+.onestopallcrs:after {content: "";position: absolute;top: 39%;background: #f1f1f1;width: 100%;height: 80%;z-index: -3;}
+
+.courseallpnsd .crsimgs {background: #fff;padding: 7px;padding-bottom: 0;}
+
+.oragecoursebr .nav-tabs {margin: auto;max-width: 520px;margin-bottom: 50px;     border: none;}
+
+.oragecoursebr .nav-tabs .nav-link {color: #fff;border: none;border-bottom: 4px solid transparent; padding: 7px 35px;}
+
+.oragecoursebr .nav-tabs .nav-item {border-bottom: 1px solid #fff;}
+
+.oragecoursebr .nav-tabs .nav-link.active {background: transparent;border-bottom: 4px solid #fff;}
+
+.offeredprogr {padding-top: 70px;}
+
+.hrnwhitecom {padding-bottom: 70px;}
+
+.cdshadows {margin-bottom: 30px;box-shadow: #cdcdcd 0px 3px 4px 0px;}
+
+.courseallpnsd .panelcards .ondrs {display: flex;flex-direction: row;text-align: left;}
+
+.ondrs .tmicn {margin-top: 3px;width: 16px;}
+
+.courseallpnsd .csnms {display: inline-block;text-align: center;margin: auto;font-weight: 700;border: none;}
+
+.courseallpnsd .panelcards {text-align: center;}
+
+.courseallpnsd .crcategs {background: #f08718;text-transform: uppercase;}
+
+.panelcards .gractashow {display: block;background: #f1f1f1;border: 1px solid #ddd;border-radius: 20px;color: #676d76;font-weight: 300;
+padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
+
+.panelcards .gractashow:hover, .cdshadows:hover .gractashow {background: #000;color: #fff;}
+
+.showextcourses {padding-bottom: 70px;border-bottom: 1px solid #ddd;margin-bottom: 70px;}
+
+.courseallpnsd .panelcards .tmclcs p {font-size: 12px;}
+
+.showextcourses .courseallpnsd {padding-top: 50px;}
+
+.courseallpnsd {position: relative;}
+
+.rightdotsals {top: -32px;position: absolute;right: -34px;width: 86px;}
+
+.lfbotstsals {position: absolute;bottom: -20px;left: -15px;width: 33px;}
+
+.trendone .col-lg-4,
+.allprotwo .col-lg-4,
+ .mstload .col-lg-4,
+ .batchlastfl .col-lg-4,
+ .otherextone .col-lg-4,
+ .otherlastcl .col-lg-4{
+	display:block;
+}
+
+.dotsptns {
+  background-image: radial-gradient(#afafaf 10%, transparent 6%),
+    radial-gradient(#afafaf 10%, transparent 6%);
+  background-size: 11px 26px;
+  background-position: 0 0, 0px 11px;
+  background-repeat: repeat;width: 100%;height: 61px;position: absolute;top: 58px;
+}
+
+.showextcourses .lfbotstsals {bottom: 56px;}
+
+.showextcourses .rightdotsals {top: 17px;}
+
+
+
+/*about us page */
+
+.awardscrdsd .testipnlpts .usrnmtst {font-size: 11px;color: #676d76;font-weight: 400;margin: 60px 0 13px 0;}
+
+.awardscrdsd .testipnlpts  p {font-size: 11px;font-weight: 500;}
+
+.awardscrdsd .testipnlpts .lgocirc {position: absolute;top: -56px;right: 0;left: 0;margin: auto;width: 103px;
+    height: 103px;border: 5px solid #f28909;}
+
+.awardscrdsd .testipnlpts {background: #f1f1f1;position: relative;}
+
+.awardscrdsd .owl-carousel .owl-nav button span {background: #f1f1f1;color: #bdbdbd;}
+
+.awardscrdsd .owl-carousel .owl-nav button span:hover {color: #fff;background: #000;}
+
+.awardscrdsd .owl-carousel .item {padding-top: 104px;}
+
+.awardscrdsd .owl-item.active img {filter: grayscale(1);opacity: 0.6;}
+
+.awardscrdsd .owl-item.active.center img {filter: none;opacity: 1;}
+
+.whoarewes {padding: 70px 0;}
+
+.leaderbdrs {background: #f1f1f1;padding: 70px 0;margin-bottom: 70px;}
+
+.leaderbdrs .container {position: relative;}
+
+.leaderbdrs  .bottomabuis {position: absolute;right: 0;top: -113px;width: 55px;}
+
+.rnkers {padding-bottom: 70px;}
+
+.rnkers .container {position: relative;}
+
+.rnkers .bottomabuis {position: absolute;bottom: -100px;width: 47px;}
+
+
+.aboutbgbacks {height: 511px; position:relative; overflow: hidden;}
+
+.aboutbgbacks .item {display: flex;height: 100vh;position: relative;flex-direction: column;}
+
+.aboutbgbacks .bgdeskmb {position: absolute;top: 0;width: 100%;}
+
+.aboutbgbacks .hmbannerquotes .bnrhd, .aboutbgbacks .hmbannerquotes p {color: #fff;}
+.aboutbgbacks .container {position: absolute;z-index: 2;top: 18%; left: 5%;}
+
+.aboutbgbacks  .owl-theme .owl-nav {position: absolute;
+    top: 36%;
+    width: 100%;
+}
+
+.hdingst.mbltop {
+	display:none;
+}
+
+
+.offeredprogr .container {position: relative;}
+
+.offeredprogr .dotsptns {width: 11%;right: 0;top: -62px;transform: rotate(90deg);background-image: radial-gradient(#385599 10%, transparent 3%), radial-gradient(#385599 10%, transparent 3%);background-position: 0 0, 0px 11px;}
+
+.leaderbdrs  .dotsptns,
+.rnkers .dotsptns {
+	display:none;
+}
+
+.homemainbanner.aboutbgbacks .owl-theme .owl-nav button span {
+    box-shadow: none;
+}
+
+.aboutbgbacks .hmbannerquotes p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 24px;
+}
+
+/* contact us page */
+
+
+.addresspnorgs {background: #f18600;margin: auto;padding: 60px 75px;border-radius: 10px;max-width: 694px;margin-top: 70px;}
+
+.contactinfoons {padding: 70px 0;}
+
+.icmds img {width: 78px;}
+
+.adhds {color: #000;}
+
+.addresspnorgs p {color: #fff;font-size: 16px;font-weight: 100;}
+
+
+.addressportns img {width: 39px;margin-bottom: 12px;}
+
+.addressportns {padding-top: 70px;}
+
+.addressportns h5 {
+	text-transform: uppercase; 
+	font-weight: 600; 
+	font-size: 17px;
+	margin: 14px 0;
+}
+
+.addressportns  b {color: #000;font-weight: 600;}
+
+.addressportns p {margin: 0 0 5px 0;}
+
+.bdbtms {border-bottom: 1px solid #ddd;padding-bottom: 50px;margin-bottom: 50px;border-right: 1px solid #ddd;}
+
+.bdbtms:nth-child(3){border-right: none;}
+
+.downbrochures {background: #000;padding: 40px 0;}
+
+.downbrochures h4 {color: #fff;}
+
+.downbrochures p {color: #959292;}
+
+.downbrochures .blackctathms {background: #fff;color: #000;padding: 11px 25px;border-radius: 5px; font-weight:600;}
+
+.downbrochures .blackctathms img {width: 25px;margin-right: 17px;}
+
+.contactinfoons .dotsptns.tplfd {display: block;
+    width: 6%;
+    height: 79px;
+    left: 7px;
+    bottom: -123px;
+    top: inherit;
+    transform: rotate(180deg);
+    background-image: radial-gradient(#385599 10%, transparent 3%), radial-gradient(#385599 10%, transparent 3%);
+    background-position: 0px -4px, 0px 8px;position: absolute;top: 0;}
+
+.contactinfoons .dotsptns.btmlfd {display: block;
+    width: 6%;
+    height: 64px;
+    
+    top: 343px;
+    
+    transform: rotate(180deg);
+    background-image: radial-gradient(#f18600 10%, transparent 3%), radial-gradient(#f18600 10%, transparent 3%);
+    background-position: 0px -4px, 0px 8px;right: -60px;left: inherit;}
+
+.contactinfoons .container {position: relative;}
+
+.contactinfoons .dotsptns.verytmlfd {display: block;
+    width: 6%;
+    height: 79px;
+    left: -70px;
+    transform: rotate(180deg);
+    background-image: radial-gradient(#385599 10%, transparent 3%), radial-gradient(#385599 10%, transparent 3%);
+    background-position: 0px -4px, 0px 8px;
+    position: absolute;
+    bottom: -51px;top: inherit;
+}
+
+
+.rnkers .mainhds {
+    position: relative;
+}
+
+.rnkers .mainhds:after {
+    content: "";
+    width: 58px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #ddd;
+    margin: auto;
+    bottom: -12px;
+}
+
+.rnkers .testimparts .owl-theme .owl-nav {
+    top: -155px;
+}
+
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){
+	
+	.rnkers .testimparts .owl-theme .owl-nav {
+    top: -155px;
+}
+
+	.rnkers .testimparts .owl-theme .owl-nav button.owl-next {
+    right: -9px;
+}
+
+.rnkers .testimparts .owl-theme .owl-nav button.owl-prev {
+    left: -9px;
+}
+
+	.downbrochures .blackctathms {padding: 11px 15px;display: inline-block; text-align: center;font-size: 12px;}
+
+.downbrochures .blackctathms img {width: 16px;margin: 0 5px;}
+
+.downbrochures p {font-size: 12px;}
+
+.downbrochures p br {display: none;}
+
+.downbrochures {padding: 20px 0;}
+
+.icmds img {display: none;}
+
+.icmds {border-bottom: 1px solid #ddd;margin: 19px 18px;padding: 0px 0;margin-bottom: 30px;}
+
+.addresspnorgs {padding: 34px 22px;text-align: center;}
+
+.bdbtms {border-right: none;}
+
+.contactinfoons .dotsptns.btmlfd {right: 7px;top: 489px;width: 43px;height: 91px;}
+
+.contactinfoons .dotsptns.tplfd {width: 50px;top: -76px;left: 14px;}
+
+.contactinfoons .dotsptns.verytmlfd {bottom: -100px;left: 13px;width: 44px;}
+
+
+	.rnkers .dotsptns {display: block;
+    width: 12%;
+    height: 106px;left: 7px;
+    bottom: -123px;
+    top: inherit;transform: rotate(180deg);
+    
+    background-image: radial-gradient(#385599 10%, transparent 3%), radial-gradient(#385599 10%, transparent 3%);background-position: 0px -4px, 0px 8px;}
+
+.rnkers .bottomabuis {display: none;}
+
+
+	.leaderbdrs .bottomabuis {display: none;}
+
+.leaderbdrs  .dotsptns {
+	display:block;
+	width: 26%;
+    right: -6px;
+    top: -69px;
+    transform: rotate(90deg);
+    background-image: radial-gradient(#f28823 10%, transparent 3%), radial-gradient(#f28823 10%, transparent 3%);
+    background-position: 0 0, 0px 11px;
+}
+	
+	
+	.offeredprogr .dotsptns {right: -21px;
+    top: -83px;width: 30%;}
+	
+	.hdingst.mbltop {margin-bottom: 40px; display:block;}
+
+.hdingst.dsktop {display: none;}
+
+	.aboutbgbacks  .owl-carousel .owl-item .bgdeskmb {display: none;}
+
+.aboutbgbacks .container {position: relative;top: 0;left: 0;padding: 0;}
+
+	.rightdotsals {display: none;}
+
+.oragecoursebr .nav-tabs .nav-link {padding: 7px 11px;}
+
+.oragecoursebr .nav-tabs .nav-item {margin: auto;}
+
+.oragecoursebr .nav-tabs {max-width: 324px;}
+
+.courseallpnsd .panelcards .ondrs {display: block;}
+
+.lengtheds {overflow: hidden;height: 200px; transition: all ease 0.5s;}
+
+.rdspecials {text-align: center;display: block;margin-top: 8px;}
+
+.offeredprogr {padding-top: 60px;}
+
+.faqnewtys.allprgs .topblfts.shfrgs {display: block;bottom: -28px;top: inherit;left: 22px;}
+
+.onestopallcrs {padding: 0 0 40px 0; margin-bottom: 40px;}
+
+.showextcourses {margin-bottom: 40px;padding-bottom: 40px;}
+.courseallpnsd .panelcards .tmclcs p {margin: 0 8px;}
+
+.lengtheds.expdspcs {height: auto;}
+
+.moreless-button:hover, .moreless-button2:hover {color: #f28823;}
+
+.moreless-button2{
+	display:block;
+}
 	
 	.site-header.topmain .navbar ul li.nav-item.nosublnk .orangebtns, .site-header.topmain .navbar ul li.nav-item.nosublnk:nth-child(1) {display: none;}
 	
@@ -1671,7 +2035,7 @@ footer.stfooter .collapse:not(.show) {
 	padding: 6px 34px;
 }
 
-	.crsnames, .crsubtitle {font-size: 32px;}
+	.crsnames, .crsubtitle {font-size: 24px;}
 	
 	.grelgbg {text-align: center;}
 
@@ -1849,7 +2213,7 @@ footer.stfooter .collapse:not(.show) {
 	
 .homemainbanner .owl-carousel .owl-item .rgtmds {display: none;}
 
-.homemainbanner .owl-carousel .owl-item .mobhomeshos {display: block;}
+.homemainbanner .owl-carousel .owl-item .mobhomeshos, .homemainbanner .mobhomeshos {display: block;}
 
 	
 	.allprogtabs ul.nav-tabs {width: auto;}
@@ -2248,6 +2612,16 @@ h3.mobclick {
     height: 46.6vh;
 }
 
+.aboutbgbacks{
+	height: 433px;
+}
+
+.aboutbgbacks .owl-theme .owl-nav {
+    position: absolute;
+    top: 18%;
+    width: 100%;
+}
+
 .onestopcourse{
 	    box-shadow: none;
 }
@@ -2409,6 +2783,16 @@ h3.mobclick {
 .testimparts .owl-theme .owl-nav button.owl-next {float: right;}
 
 .testimparts .owl-theme .owl-nav button span {background: #000;}
+
+.awardscrdsd .owl-carousel .owl-nav button span{background: #f1f1f1;
+    color: #bdbdbd;}
+	
+.awardscrdsd .owl-carousel .item {max-width: 278px;margin: auto;}
+
+.whoarewes, .leaderbdrs {padding: 40px 0;}
+
+.leaderbdrs {margin-bottom: 40px;}
+
 
 .trustbycoms .container {padding: 0;}
 
@@ -2869,6 +3253,10 @@ h3.mobclick {
 @media screen and (max-width: 3500px) and (min-width: 1600px){
 	.container {
     max-width: 1504px;
+}
+
+.aboutbgbacks{
+	    height: 767px;
 }
 
 }
