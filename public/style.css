@@ -1183,12 +1183,11 @@ footer.stfooter .collapse:not(.show) {
 }
 
 .sotfllshw .dropdown-item.active, .sotfllshw .dropdown-item:active{
-        background-color: #302d58;
+        background-color: #f18600;
+        border-radius: 20px;
 }
 
-.sotfllshw .bootstrap-select .dropdown-menu li {
-    border-bottom: 1px solid #ddd;
-}
+.sotfllshw .bootstrap-select .dropdown-menu li {margin-bottom: 5px;}
 
 .sotfllshw .btn-light:not(:disabled):not(.disabled):active:focus,
 .sotfllshw  .bootstrap-select .dropdown-toggle:focus{
@@ -1714,7 +1713,7 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
  .batchlastfl .col-lg-4,
  .otherextone .col-lg-4,
  .otherlastcl .col-lg-4{
-	display:block;
+	display:none;
 }
 
 .dotsptns {
@@ -1902,10 +1901,292 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
 }
 
 
+/* media page */
+
+.crdmda {
+    text-align: center;
+    padding: 28px;
+    box-shadow: #dadada 0px 0px 5px 0px;
+    max-width: 238px;
+    margin: auto;
+	border-radius: 4px;
+}
+
+.vloptn {
+    display: flex;
+}
+
+.crdmda .vloptn img {
+    width: 15px;
+    margin: auto 0 auto auto;
+}
+
+.vloptn p {
+    margin: 0;
+	color: #000;
+	font-weight: 600;
+}
+
+.crdmda img {
+    width: 166px;
+    margin: 40px 0;
+}
+
+.mediadescs {
+    padding: 70px 0;
+}
+
+.mdcategtbs {
+    background: #f1f1f1;
+    margin-bottom: 63px;
+}
+
+.mdcategtbs .nav-tabs .nav-link {
+    color: #000;
+    font-weight: 700;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 19px 6px;
+}
+
+.mdcategtbs .nav-tabs .nav-link.active {
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid #f18600;
+}
+
+.mdcategtbs .nav-tabs {
+    border: none;
+}
+
+.mdcategtbs .nav-tabs .nav-item {
+    margin: 0 14px;
+}
+
+.newshmbs .crds {
+    border-radius: 4px;
+    box-shadow: #cfcfcf63 0px 0px 6px 4px;
+    padding: 12px;
+    margin-bottom: 30px;
+}
+
+.newshmbs .crds img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.gallcrd img {
+    width: 100%;
+}
+
+.gallcrd .blhds {
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+}
+
+.gallcrd {
+    margin-top: 41px;
+}
+
+.tabblogsd {
+    background: #f1f1f1;
+}
+
+
+.tabblogsd ul {
+    border: none;
+}
+
+.tabblogsd .nav-tabs .nav-link {
+    color: #000;
+    border: none;
+    padding: 16px 46px;
+    font-weight: 700;
+    display: block;
+    border-radius: 8px;
+    position: relative;
+}
+
+.tabblogsd .nav-tabs .nav-link.active {
+    background: #f08718;
+    color: #fff;
+}
+
+.tabblogsd .nav-tabs .nav-item {
+    margin: auto;
+    width: 25%;
+    text-align: center;
+}
+
+.tabblogsd .nav-tabs .nav-link:after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 0;
+    height: 30px;
+    width: 4px;
+    border-right: 2px solid #ddd;
+}
+
+.tabblogsd .nav-tabs .nav-link.active:after {
+    border-right: 2px solid #ddd0;
+}
+
+.tabblogsd .nav-tabs .nav-item:last-child .nav-link:after{
+    border-right: none;
+}
+
+.populararts .lkcomms img {
+    width: auto;
+}
+
+.lkcomms {
+    display: flex;
+    padding-top: 10px;
+}
+
+.lkcomms a {
+    margin: auto 2px;
+}
+
+.populararts .owl-item .item{
+    border-left: 2px solid #ddd;
+    padding: 0 31px;
+}
+
+.populararts .owl-item:nth-child(3) .item {
+    border-left: none;
+}
+
+.populararts {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.mediadescs .dotsptns.btmlfd {
+    display: block;
+    width: 5.4%;
+    height: 71px;
+    top: -50px;
+    transform: rotate(271deg);
+    background-image: radial-gradient(#f18600 10%, transparent 6%), radial-gradient(#f18600 10%, transparent 4%);
+    background-position: 0px -4px, 0px 8px;
+    left: -74px;
+}
+
+.mediadescs .container {
+    position: relative;
+}
+
+.mediadescs .dotsptns.tplfd {
+    display: block;
+    width: 5.4%;
+    height: 95px;
+    bottom: -94px;
+    top: inherit;
+    right: 19px;
+    left: inherit;
+}
+
+.sotfllshw {
+    right: 0;
+    top: -35px;
+    float: right;
+    width: 100%;
+    text-align: right;
+    padding: 13px 0;
+    position: relative;
+}
+
+.sotfllshw .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    font-weight: 700;
+}
+
+.sotfllshw .bootstrap-select .dropdown-toggle .filter-option {
+    top: -7px;
+}
+
+.artblogs .inpds {
+    padding: 15px;
+}
+
+.artblogs {
+    box-shadow: #b9acac3d 0px 0px 3px 4px;
+    margin-bottom: 30px;
+	min-height: 536px;
+}
+
+.gallcrd  .artblogs .blhds {
+    margin-bottom: 10px;
+}
+
+.gallcrd .artblogs a {
+    border-bottom: 1px solid;
+}
+
+/* common css changes */
+
+.tabnormcta {
+    margin: auto;
+    max-width: 520px;
+    margin-bottom: 50px;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+.tabnormcta button {
+    color: #fff;
+    border: none;
+    border-bottom: 4px solid transparent;
+    padding: 7px 35px;
+    background: transparent;
+    outline: none;
+}
+
+.tabnormcta button.active {
+        border-bottom: 4px solid #fff;
+}
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){
 	
+	.tabblogsd .nav-tabs .nav-item {
+    width: auto;
+}
+
+.tabblogsd .nav-tabs .nav-link {
+    padding: 12px 14px;
+}
+
+.mdcategtbs .nav-tabs .nav-item {
+    margin: 0 10px;
+}
+
+.mdcategtbs .nav-tabs .nav-link {
+    padding: 15px 6px;
+}
+
+.mediadescs .crdmda {
+    max-width: 275px;
+    margin-bottom: 40px;
+}
+
+.mediadescs .dotsptns.btmlfd {
+    top: -58px;
+    left: 0;
+    width: 15.4%;
+    height: 54px;
+}
+
+.mediadescs .dotsptns.tplfd {
+    width: 15.4%;
+    height: 80px;
+    bottom: -89px;
+}
+
 	.rnkers .testimparts .owl-theme .owl-nav {
     top: -155px;
 }

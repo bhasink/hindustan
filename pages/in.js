@@ -195,23 +195,17 @@ const Listing = () => {
         <h2 className="mainhds">Our <div className="ogcl">o</div>ne stop study destination</h2>
       </div>
       <div className="oragecoursebr">
-        <ul className="nav nav-tabs" id="myTab" role="tablist">
-          <li className="nav-item">
-            <a className="nav-link active" id="trending-tab" data-toggle="tab" href="#trending" role="tab" aria-controls="trending" aria-selected="true">Trending</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" id="allprofile-tab" data-toggle="tab" href="#allprofile" role="tab" aria-controls="allprofile" aria-selected="false">All</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" id="masters-tab" data-toggle="tab" href="#masters" role="tab" aria-controls="masters" aria-selected="false">Masters</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" id="batchelors-tab" data-toggle="tab" href="#batchelors" role="tab" aria-controls="batchelors" aria-selected="false">Bachelors</a>
-          </li>
-        </ul>
-        <div className="tab-content" id="myTabContent">
-          <div className="tab-pane fade show active" id="trending" role="tabpanel" aria-labelledby="trending-tab">
-            <div className="courseallpnsd trendone">
+
+      <div className="tabnormcta">
+          <button class="btn-group btn-group-toggle active">Trending</button>
+          <button class="btn-group btn-group-toggle">All</button>
+          <button class="btn-group btn-group-toggle">Masters</button>
+          <button class="btn-group btn-group-toggle">Bachelors</button>
+        </div>
+
+        
+
+        <div className="courseallpnsd">
               <img src="/images/dotsorgbeh.png" className="rightdotsals" />
               <img src="/images/topabdots.png" className="lfbotstsals" />
               <div className="row">
@@ -451,584 +445,12 @@ const Listing = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center pt-4  showctmore">
-              <a href="javascript:void(0);" className="orangectathms load-more">View more</a>
+            <div className="text-center pt-4">
+              <a href="javascript:void(0);" className="orangectathms">View more</a>
             </div>
-          </div>
-          <div className="tab-pane fade" id="allprofile" role="tabpanel" aria-labelledby="allprofile-tab">
-            <div className="courseallpnsd allprotwo">
-              <div className="row">
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className=" ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="text-center pt-4 showctmore2">
-              <a href="javascript:void(0);" className="orangectathms load-morenew">View more</a>
-            </div>
-          </div>
-          <div className="tab-pane fade" id="masters" role="tabpanel" aria-labelledby="masters-tab">
-            <div className="courseallpnsd mstload">
-              <div className="row">
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="text-center pt-4  showctmorems2">
-              <a href="#" className="orangectathms load-morenewms">View more</a>
-            </div>
-          </div>
-          <div className="tab-pane fade" id="batchelors" role="tabpanel" aria-labelledby="batchelors-tab">
-            <div className="courseallpnsd batchlastfl">
-              <div className="row">
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6  col-lg-4">
-                  <div className="cdshadows">
-                    <div className="crsimgs">
-                      <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                      <a href="#" className="crcategs">Master</a>
-                    </div>
-                    <div className="panelcards">
-                      <h5 className="csnms">MBA</h5>
-                      <div className="ondrs">
-                        <div className="tmclcs">
-                          <img src="/images/wallclock.png" className="tmicn" />
-                          <p>12 Months</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/scholors.png" className="tmicn" />
-                          <p>MBA with elective in FinTech</p>
-                        </div>
-                        <div className="tmclcs">
-                          <img src="/images/rupicon.png" className="tmicn" />
-                          <p>45,000</p>
-                        </div>
-                      </div>
-                      <a href="#" className="gractashow">View Program</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="text-center pt-4  showctmorebt2">
-              <a href="#" className="orangectathms load-morenewbtc">View more</a>
-            </div>
-          </div>
-        </div>
+
+
+       
       </div>
     </div>
   </section>
@@ -1039,7 +461,7 @@ const Listing = () => {
           Bachel<div className="ogcl">o</div>rs
         </h2>
       </div>
-      <div className="courseallpnsd otherextone">
+      <div className="courseallpnsd">
         <img src="/images/dotsorgbeh.png" className="rightdotsals" />
         <img src="/images/topabdots.png" className="lfbotstsals" />
         <div className="row">
@@ -1200,8 +622,8 @@ const Listing = () => {
             </div>
           </div>
         </div>
-        <div className="text-center pt-4  otherctmorebt2">
-          <a href="#" className="orangectathms load-othernewbtc">View more</a>
+        <div className="text-center pt-4">
+          <a href="#" className="orangectathms">View more</a>
         </div>
       </div>
     </div>
@@ -1213,7 +635,7 @@ const Listing = () => {
           Masters
         </h2>
       </div>
-      <div className="courseallpnsd otherlastcl">
+      <div className="courseallpnsd">
         <img src="/images/dotsorgbeh.png" className="rightdotsals" />
         <img src="/images/topabdots.png" className="lfbotstsals" />
         <div className="row">
@@ -1374,8 +796,8 @@ const Listing = () => {
             </div>
           </div>
         </div>
-        <div className="text-center pt-4  otherctlastbt2">
-          <a href="javascript:void(0);" className="orangectathms load-otherlastbtc">View more</a>
+        <div className="text-center pt-4">
+          <a href="javascript:void(0);" className="orangectathms">View more</a>
         </div>
       </div>
     </div>
@@ -1399,7 +821,7 @@ const Listing = () => {
                     loop
                     // margin={15}
                     nav
-                    items={3}
+                    items={6}
                   >
 
           <div className="item">
