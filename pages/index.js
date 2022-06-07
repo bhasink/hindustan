@@ -17,6 +17,12 @@ import Nav from '../components/Nav'
 
 const Index = () => {
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    })
+  }, [])
+
     const state = {
         responsive: {
           0: {
@@ -56,13 +62,53 @@ const Index = () => {
             loop: true,
           },
         },
-        responsive_top_cat: {
+
+        responsive_featuredslide: {
+        
+            0: {
+              items: 1,
+              nav: true,
+              dots: false,
+              loop: true
+            },
+            300: {
+              items: 2,
+              nav: false,
+             dots: true,
+               margin: 10,
+              loop: true
+            },
+      
+            766: {
+              items: 2,
+              nav: true,
+              dots: false,
+              loop: true
+            },
+      
+            1200: {
+              items: 3,
+              nav: true,
+              center:true,
+              autoplay: true,
+              margin: 20,
+              autoplaySpeed: 3000,
+                autoplayHoverPause: true,
+              dots: false,
+              loop: true
+            }
+          },
+        
+
+
+        responsive_reviewtestim: {
           0: {
             items: 1,
             nav: false,
             dots: true,
             autoplay:true,
             autoplaySpeed: 3000,
+            center: true,
             autoplayHoverPause: true,
             loop: true,
           },
@@ -72,6 +118,7 @@ const Index = () => {
             autoplay:true,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
+            center: true,
             dots: false,
             loop: true,
           },
@@ -85,14 +132,128 @@ const Index = () => {
     
           1200: {
             items: 3,
+            margin: 40,
             nav: true,
             autoplay:true,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
+            center: true,
+            dots: false
+          }
+      },
+
+        responsive_advantfeat: {
+          items: 3,
+    loop: true,
+    nav:false,
+    margin: 20,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    autoplayHoverPause: true,
+    center: true,
+
+          0: {
+            items: 1,
+            nav: false,
             dots: true,
+            loop: true
+          },
+          300: {
+            items: 1,
+            nav: false,
+           dots: true,
+           center: true,
+            loop: true
+          },
+    
+          766: {
+            items:3,
+            nav: true,
+            dots: false,
+            loop: true
+          },
+    
+          1200: {
+            items: 3,
+            margin: 20,
+            nav: true,
+        center:true,
+            dots: true
+          }
+        },
+
+        responsive_homefirstbbn: {
+          0: {
+            items: 1,
+            nav: false,
+            dots: true,
+            loop: true
+          },
+          300: {
+            items: 1,
+            nav: true,
+           dots: true,
+            loop: true
+          },
+    
+          766: {
+            items: 1,
+            nav: false,
+            dots: false,
+            loop: true
+          },
+    
+          1200: {
+            items: 1,
+            nav: true,
+            dots: true,
+        center: true,
           },
         },
+
+        responsive_trust_comp: {
+          0: {
+            items: 1,
+            nav: false,
+            dots: true,
+            animateOut: 'slideOutUp',
+            animateIn: 'slideInUp',
+            loop: true
+          },
+          300: {
+            items: 1,
+           nav: false,
+            dots: true,
+            autoplay:true,
+        margin: 10,
+        autoplaySpeed: 6000,
+      animateOut: 'slideOutUp',
+      animateIn: 'slideInUp',
+            loop: true
+          },
+    
+          766: {
+            items: 1,
+           nav: false,
+          dots: false,
+            loop: true
+          },
+    
+          1200: {
+            items: 6,
+            nav: false,
+            autoplay:true,
+            autoplaySpeed: 3000,
+		animateOut: 'slideInLeft',
+	animateIn: 'slideInLeft',
+            dots: true, 
+            loop: true
+          }
+        },
+        
         responsive_top_catnew: {
+          
           0: {
             items: 1,
             nav: false,
@@ -128,43 +289,7 @@ const Index = () => {
             dots: true,
           },
         },
-        responsive_trust_comp: {
-          0: {
-            items: 1,
-            nav: false,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-          300: {
-            items: 3,
-            nav: false,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-    
-          766: {
-            items: 3,
-            nav: false,
-            dots: false,
-            loop: true,
-          },
-    
-          1200: {
-            items: 5,
-            nav: false,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            center: true,
-          },
-        },
+      
       }
 
     return (
@@ -175,14 +300,79 @@ const Index = () => {
   <section className="homemainbanner">
 
 
-    <OwlCarousel
-                    className="homefirstbbn owl-theme owl-carousel"
+  <OwlCarousel
+                    className="featuredslide owl-theme owl-carousel"
                     loop
-                    // margin={15}
+                    responsive={state.responsive_homefirstbbn}
                     nav
-                    items={1}
+                   
                   >
                      <div className="item">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 col-lg-7 text-center align-self-center">
+              <div className="hmbannerquotes">
+                <img src="/images/bnrtexttop.png" className="tpquotelf" />
+                <h1 className="bnrhd">
+                  Cracking the <span>C<div className="ogcl">O</div>DE</span> to<br />
+                  Success</h1>
+                <p>Neque porro quisquam est qui dolorem ipsum </p>
+                <img src="/images/bnquotergs.png" className="bnquoterg" />
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-5 text-center">
+              <img src="/images/smartboys.png" className="rgtmds" />
+              <img src="/images/mobilebane.jpg" className="mobhomeshos" />
+            </div>
+          </div>
+        </div>	
+      </div>
+
+      <div className="item">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 col-lg-7 text-center align-self-center">
+              <div className="hmbannerquotes">
+                <img src="/images/bnrtexttop.png" className="tpquotelf" />
+                <h1 className="bnrhd">
+                  Cracking the <span>C<div className="ogcl">O</div>DE</span> to<br />
+                  Success</h1>
+                <p>Neque porro quisquam est qui dolorem ipsum </p>
+                <img src="/images/bnquotergs.png" className="bnquoterg" />
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-5 text-center">
+              <img src="/images/smartboys.png" className="rgtmds" />
+              <img src="/images/mobilebane.jpg" className="mobhomeshos" />
+            </div>
+          </div>
+        </div>	
+      </div>
+
+
+      <div className="item">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 col-lg-7 text-center align-self-center">
+              <div className="hmbannerquotes">
+                <img src="/images/bnrtexttop.png" className="tpquotelf" />
+                <h1 className="bnrhd">
+                  Cracking the <span>C<div className="ogcl">O</div>DE</span> to<br />
+                  Success</h1>
+                <p>Neque porro quisquam est qui dolorem ipsum </p>
+                <img src="/images/bnquotergs.png" className="bnquoterg" />
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-5 text-center">
+              <img src="/images/smartboys.png" className="rgtmds" />
+              <img src="/images/mobilebane.jpg" className="mobhomeshos" />
+            </div>
+          </div>
+        </div>	
+      </div>
+
+
+      <div className="item">
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-lg-7 text-center align-self-center">
@@ -275,7 +465,13 @@ const Index = () => {
         <a href="#" className="orangectathms">know more</a>
       </div>
       <div className="col-md-12 taglineabs">
-        <div className="homefirstbbn owl-theme owl-carousel">
+      <OwlCarousel
+                    className="featuredslide owl-theme owl-carousel"
+                    loop
+                    responsive={state.responsive_homefirstbbn}
+                    nav
+                   
+                  >
           <div className="item">
             <div className="mnboxstg">
               <div className="usericons">
@@ -336,7 +532,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </div>
+         </OwlCarousel>
       </div>
     </div>
   </section>
@@ -370,9 +566,9 @@ const Index = () => {
           <OwlCarousel
                     className="featuredslide owl-theme owl-carousel"
                     loop
-                    // margin={15}
+                    responsive={state.responsive_featuredslide}
                     nav
-                    items={3}
+                   
                   >
 
 <div className="item">
@@ -504,140 +700,20 @@ const Index = () => {
 
                       </OwlCarousel>
 
-            <div className="featuredslide owl-theme owl-carousel">
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        
           </div>
         </div>
         <div className="tab-pane fade" id="allprofileprg" role="tabpanel" aria-labelledby="allprofileprg-tab">
           <div className="coursespanels">
-            <div className="featuredslide owl-theme owl-carousel">
-              <div className="item">
+          <OwlCarousel
+                    className="featuredslide owl-theme owl-carousel"
+                    loop
+                    responsive={state.responsive_featuredslide}
+                    nav
+                   
+                  >
+
+<div className="item">
                 <div className="crsimgs">
                   <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
                   <a href="#" className="crcategs">Master</a>
@@ -763,7 +839,8 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
+
+                      </OwlCarousel>
           </div>
         </div>
         <div className="tab-pane fade" id="mastersprg" role="tabpanel" aria-labelledby="mastersprg-tab">
@@ -1044,80 +1121,81 @@ const Index = () => {
       <OwlCarousel
                     className="trustcmpcarso owl-theme owl-carousel"
                     loop
-                    // margin={15}
+                    responsive={state.responsive_trust_comp}
                     nav
-                    items={1}
+                   
                   >
-
 <div className="item">
-            <div className="row">
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
+<div className="lgocirc">
                   <img src="/images/client/1.png" />
                 </div>
-              </div>
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
+</div>
+
+<div className="item">
+<div className="lgocirc">
                   <img src="/images/client/2.png" />
                 </div>
-              </div>
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
+
+          </div>
+
+
+          <div className="item">
+<div className="lgocirc">
                   <img src="/images/client/3.png" />
                 </div>
-              </div>
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
-                  <img src="/images/client/4.png" />
-                </div>
-              </div>
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
-                  <img src="/images/client/5.png" />
-                </div>
-              </div>
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
-                  <img src="/images/client/6.png" />
-                </div>
-              </div>
-            </div>
+
           </div>
 
           <div className="item">
-            <div className="row">
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
+<div className="lgocirc">
+                  <img src="/images/client/4.png" />
+                </div>
+
+          </div>
+
+          <div className="item">
+<div className="lgocirc">
+                  <img src="/images/client/5.png" />
+                </div>
+
+          </div>
+
+          <div className="item">
+<div className="lgocirc">
+                  <img src="/images/client/6.png" />
+                </div>
+
+          </div>
+
+          <div className="item">
+<div className="lgocirc">
                   <img src="/images/client/7.png" />
                 </div>
-              </div>
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
+
+          </div>
+
+          <div className="item">
+<div className="lgocirc">
                   <img src="/images/client/8.png" />
                 </div>
-              </div>
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
+
+          </div>
+
+          <div className="item">
+<div className="lgocirc">
                   <img src="/images/client/9.png" />
                 </div>
-              </div>
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
-                  <img src="/images/client/1.png" />
-                </div>
-              </div>
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
-                  <img src="/images/client/2.png" />
-                </div>
-              </div>
-              <div className="col-6 col-md-2">
-                <div className="lgocirc">
-                  <img src="/images/client/3.png" />
-                </div>
-              </div>
-            </div>
+
           </div>
+
+          <div className="item">
+<div className="lgocirc">
+                  <img src="/images/client/12.png" />
+                </div>
+
+          </div>
+
+         
 
      </OwlCarousel>
        
@@ -1125,7 +1203,13 @@ const Index = () => {
 
 
       <div className="cpmslide mobilesds">
-        <div className="trustcmpcarsomobs owl-theme owl-carousel">
+      <OwlCarousel
+                    className="featuredslide owl-theme owl-carousel"
+                    loop
+                    responsive={state.responsive_trust_comp}
+                    nav                   
+                  >
+
           <div className="item">
             <div className="row">
               <div className="col-6 col-md-2">
@@ -1194,7 +1278,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </div>
+         </OwlCarousel>
       </div>
     </div>
   </section>
@@ -1213,7 +1297,8 @@ const Index = () => {
                     loop
                     // margin={15}
                     nav
-                    items={3}
+                    responsive={state.responsive_reviewtestim}
+                    
                     >
 
 <div className="item">
@@ -1265,7 +1350,7 @@ const Index = () => {
                     loop
                     // margin={15}
                     nav
-                    items={3}
+                    responsive={state.responsive_advantfeat}
                     >
 
 <div className="item">

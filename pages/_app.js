@@ -17,6 +17,11 @@ function MyApp({ Component, pageProps }) {
             <link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css?ver=5.3.2" rel="stylesheet" type="text/css" />
             <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet"/>
+
             <link rel="stylesheet" type="text/css" href={`/style.css`} />
         </Head>
         

@@ -128,7 +128,7 @@ const AboutUs = () => {
             dots: true,
           },
         },
-        responsive_trust_comp: {
+        responsive_reviewtestim: {
           0: {
             items: 1,
             nav: false,
@@ -156,10 +156,11 @@ const AboutUs = () => {
           },
     
           1200: {
-            items: 5,
-            nav: false,
-            dots: true,
+            items: 3,
+            nav: true,
+            dots: false,
             autoplay:true,
+            margin:40,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
             center: true,
@@ -252,7 +253,13 @@ const AboutUs = () => {
         <h2 className="mainhds">Awards &amp; Ranking</h2>
       </div>
       <div className="testimparts awardscrdsd">
-        <div className="reviewtestim owl-carousel owl-theme">
+      <OwlCarousel
+                    className="featuredslide owl-theme owl-carousel"
+                    loop
+                    responsive={state.responsive_reviewtestim}
+                    nav
+                   
+                  >
           <div className="item">
             <div className="testipnlpts">
               <div className="lgocirc">
@@ -289,7 +296,27 @@ const AboutUs = () => {
               <p>quia dolor sit amet, consectetur adipisci velit</p>
             </div>
           </div>
-        </div>
+
+          <div className="item">
+            <div className="testipnlpts">
+              <div className="lgocirc">
+                <img src="/images/awardscrd/1.png" />
+              </div>
+              <p className="usrnmtst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>quia dolor sit amet, consectetur adipisci velit</p>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="testipnlpts">
+              <div className="lgocirc">
+                <img src="/images/awardscrd/1.png" />
+              </div>
+              <p className="usrnmtst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>quia dolor sit amet, consectetur adipisci velit</p>
+            </div>
+          </div>
+         </OwlCarousel>
       </div>
     </div>
   </section>
