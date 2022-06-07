@@ -48,7 +48,7 @@ a:hover {color: #000000;text-decoration: none;}
 body{
 	font-family: 'Gilroy';
 	padding-top: 75px;
-font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
 scroll-padding-top: 70px; 
 }
 
@@ -1642,7 +1642,7 @@ footer.stfooter .collapse:not(.show) {
 .mnptsd ul li.active:nth-child(6) a {border-bottom: none;}
 
 .moreless-button,
-.moreless-button2 {font-size: 14px;margin-top: -13px;display: inherit;}
+.moreless-button2 {font-size: 14px;margin-top: -8px;display: inherit; color: #f28823;}
 
 .moretext2, .moretext {display: none;}
 
