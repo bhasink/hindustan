@@ -18,6 +18,30 @@ import Nav from '../components/Nav'
 const Index = () => {
 
   useEffect(() => {
+
+   
+
+    $(function(){
+      var tickerLength = $('.coursehnd ul li').length;
+      var tickerHeight = $('.coursehnd ul li').outerHeight();
+      $('.coursehnd ul li:last-child').prependTo('.coursehnd ul');
+      $('.coursehnd ul').css('marginTop',-tickerHeight);
+      function moveTop(){
+        $('.coursehnd ul').animate({
+          top : -tickerHeight
+        },600, function(){
+         $('.coursehnd ul li:first-child').appendTo('.coursehnd ul');
+          $('.coursehnd ul').css('top','');
+        });
+       }
+      setInterval( function(){
+        moveTop();
+      }, 3000);
+      }); 
+
+     
+
+      
     AOS.init({
       duration: 2000,
     })
@@ -292,10 +316,14 @@ const Index = () => {
       
       }
 
+    
+
     return (
         <>
 
   <Nav />
+
+
 
   <section className="homemainbanner">
 
@@ -1190,7 +1218,7 @@ const Index = () => {
 
           <div className="item">
 <div className="lgocirc">
-                  <img src="/images/client/12.png" />
+                  <img src="/images/client/1.png" />
                 </div>
 
           </div>
