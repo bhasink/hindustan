@@ -21,18 +21,22 @@ const CourseDetails = () => {
     const [courseDetails, setCourseDetails] = useState([])
 
     const router = useRouter()
-    const _id = router.query._id
   
     useEffect(() => {
     AOS.init({
       duration: 2000,
     })
 
-    getCourseDetails()
+    if (router.isReady) {
+      const _id = router.query._id
+      getCourseDetails(_id)
+      console.log(router.query);
+    }
 
-  }, [])
 
-  const getCourseDetails = async (value) => {
+  },[router.isReady])
+
+  const getCourseDetails = async (_id) => {
     try {
       const config = {
         headers: { 'Content-Type': 'application/json' },
