@@ -14,6 +14,7 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
   ssr: false,
 })
 import Nav from '../../components/Nav'
+import ReactHtmlParser from 'react-html-parser';
 
 const CourseDetails = () => {
 
@@ -274,7 +275,7 @@ const CourseDetails = () => {
               Ab<div className="ogcl">o</div>ut Program
             </h2>
             <p>
-                 {courseDetails.about_program}
+                 {ReactHtmlParser(courseDetails.about_program)}
             </p>
             <p className="moretext2">
               BBA program offers knowledge and training in management and
@@ -334,7 +335,7 @@ const CourseDetails = () => {
                 data-aos-duration={1000}
               >
                 <p>
-                    {courseDetails.about_specialization}
+                    {ReactHtmlParser(courseDetails.about_specialization)}
                 </p>
                 <p className="moretext">
                   {' '}
