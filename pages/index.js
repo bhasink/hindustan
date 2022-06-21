@@ -17,35 +17,74 @@ import Nav from '../components/Nav'
 
 const Index = () => {
 
+  const [allCourses, setAllCourses] = useState([])
+  const [mastersCourses, setMastersCourses] = useState([])
+  const [bachelorsCourses, setBachelorsCourses] = useState([])
+  const [trendingCourses, setTrendingCourses] = useState([])
+  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPageBach, setCurrentPageBach] = useState(1)
+  const [currentPageFilter, setCurrentPageFilter] = useState(1)
+
+  const [courseMode, setCourseMode] = useState('trending')
+
+  const [mastersCoursesLastPage, setMastersCoursesLastPage] = useState(false)
+  const [bachelorsCoursesLastPage, setBachelorsCoursesLastPage] = useState(
+    false,
+  )
+  const [filterCoursesLastPage, setFilterCoursesLastPage] = useState(
+    false,
+  )
+
+  const [loader, setLoader] = useState(false)
+
   useEffect(() => {
-
-   
-
-    $(function(){
-      var tickerLength = $('.coursehnd ul li').length;
-      var tickerHeight = $('.coursehnd ul li').outerHeight();
-      $('.coursehnd ul li:last-child').prependTo('.coursehnd ul');
-      $('.coursehnd ul').css('marginTop',-tickerHeight);
-      function moveTop(){
-        $('.coursehnd ul').animate({
-          top : -tickerHeight
-        },600, function(){
-         $('.coursehnd ul li:first-child').appendTo('.coursehnd ul');
-          $('.coursehnd ul').css('top','');
-        });
-       }
-      setInterval( function(){
-        moveTop();
-      }, 3000);
-      }); 
-
-     
-
-      
+    // $(function(){
+    //   var tickerLength = $('.coursehnd ul li').length;
+    //   var tickerHeight = $('.coursehnd ul li').outerHeight();
+    //   $('.coursehnd ul li:last-child').prependTo('.coursehnd ul');
+    //   $('.coursehnd ul').css('marginTop',-tickerHeight);
+    //   function moveTop(){
+    //     $('.coursehnd ul').animate({
+    //       top : -tickerHeight
+    //     },600, function(){
+    //      $('.coursehnd ul li:first-child').appendTo('.coursehnd ul');
+    //       $('.coursehnd ul').css('top','');
+    //     });
+    //    }
+    //   setInterval( function(){
+    //     moveTop();
+    //   }, 3000);
+    //   }); 
+  
     AOS.init({
       duration: 2000,
     })
+
+    getAllCourses()
   }, [])
+
+
+  const getAllCourses = async () => {
+    try {
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API}/listing`)
+
+      const getCourses = data.data.get_courses.data
+      const get_courses_masters = data.data.get_courses_masters.data
+      const get_courses_bachelors = data.data.get_courses_bachelors.data
+      const get_courses_trending = data.data.get_courses_trending.data
+
+      console.log(get_courses_trending)
+
+      setAllCourses(getCourses)
+      setMastersCourses(get_courses_masters)
+      setBachelorsCourses(get_courses_bachelors)
+      setTrendingCourses(get_courses_trending)
+
+      console.log(data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
     const state = {
         responsive: {
@@ -448,32 +487,60 @@ const Index = () => {
             <div className="tab-pane fade show active" id="trending" role="tabpanel" aria-labelledby="trending-tab">
               <div className="coursehnd">
                 <ul>
-                  <li><a href="#">MBA - Finance &amp; Marketing</a></li>
-                  <li><a href="#">MBA - Digital Marketing &amp; E-commerce</a></li>
-                  <li><a href="#">MBA - Data Science &amp; Analytics</a></li>
+                {trendingCourses &&
+                  trendingCourses.map((get_courses, key) => (
+
+<Link href={`courses/${get_courses.slug}`}>
+                  <li><a href="#">{get_courses.name}</a></li>
+                  </Link>
+
+                  ))}
+                 
                 </ul>
               </div>
             </div>
             <div className="tab-pane fade" id="allprofile" role="tabpanel" aria-labelledby="allprofile-tab">
               <div className="coursehnd">
                 <ul>
-                  <li><a href="#">MBA - Finance &amp; Marketing</a></li>
-                  <li><a href="#">MBA - Digital Marketing &amp; E-commerce</a></li>
+                {allCourses &&
+                  allCourses.map((get_courses, key) => (
+
+<Link href={`courses/${get_courses.slug}`}>
+                  <li><a href="#">{get_courses.name}</a></li>
+                  </Link>
+
+                  ))}
+                 
                 </ul>
               </div>
             </div>
             <div className="tab-pane fade" id="masters" role="tabpanel" aria-labelledby="masters-tab">
               <div className="coursehnd">
                 <ul>
-                  <li><a href="#">MBA - Digital Marketing &amp; E-commerce</a></li>
-                </ul>
+                {mastersCourses &&
+                  mastersCourses.map((get_courses, key) => (
+
+<Link href={`courses/${get_courses.slug}`}>
+                  <li><a href="#">{get_courses.name}</a></li>
+                  </Link>
+
+                  ))}
+                 
+                                 </ul>
               </div>
             </div>
             <div className="tab-pane fade" id="batchelors" role="tabpanel" aria-labelledby="batchelors-tab">
               <div className="coursehnd">
                 <ul>
-                  <li><a href="#">MBA - Finance &amp; Marketing</a></li>
-                </ul>
+                {bachelorsCourses &&
+                  bachelorsCourses.map((get_courses, key) => (
+
+<Link href={`courses/${get_courses.slug}`}>
+                  <li><a href="#">{get_courses.name}</a></li>
+                  </Link>
+
+                  ))}
+                                 </ul>
               </div>
             </div>
           </div>
@@ -490,7 +557,9 @@ const Index = () => {
         <p>The renowned Hindustan Group of Institutions in its non-stop endeavor to be at the forefront of quality education is has proudly launched Hindustan Online - CODE - the Centre for Open and Digital Education. The programs at CODE are all very contemporary with a well-curated and well-researched curriculum. Our programs do not just provide the theoretical learning of concepts, but we focus on the practical application of these concepts by following Outcome-based Learning concepts. {/* <a href="#">know more</a> */}</p>
       </div>
       <div className="text-center pt-4 pb-4">
-        <a href="#" className="orangectathms">know more</a>
+        <Link href="about">
+          <a className="orangectathms">know more</a>
+        </Link>
       </div>
       <div className="col-md-12 taglineabs">
       <OwlCarousel
@@ -599,132 +668,37 @@ const Index = () => {
                    
                   >
 
+{trendingCourses &&
+                  trendingCourses.map((get_courses, key) => (
+
+<Link href={`courses/${get_courses.slug}`}>
+
 <div className="item">
                 <div className="crsimgs">
                   <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
+                  <a href="#" className="crcategs">                          {get_courses.course_type == 1 ? 'Master' : 'Bachelor'}  
+</a>
                 </div>
                 <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
+                  <h5 className="csnms">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
+                    <p>{get_courses.duration} Months</p>
                   </div>
                   <div className="tmclcs">
                     <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
+                    <p>{get_courses.short_desc.substring(0, 50)}</p>
                   </div>
-                  <div className="tmclcs">
+                  {/* <div className="tmclcs">
                     <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
+
+              </Link>
+
+                  ))}
 
                       </OwlCarousel>
 
@@ -741,398 +715,131 @@ const Index = () => {
                    
                   >
 
+{allCourses && allCourses.map((get_courses, key) => (
+
+<Link href={`courses/${get_courses.slug}`}>
+
 <div className="item">
                 <div className="crsimgs">
                   <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
+                  <a href="#" className="crcategs">                          {get_courses.course_type == 1 ? 'Master' : 'Bachelor'}  
+</a>
                 </div>
                 <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
+                  <h5 className="csnms">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
+                    <p>{get_courses.duration} Months</p>
                   </div>
                   <div className="tmclcs">
                     <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
+                    <p>{get_courses.short_desc.substring(0, 50)}</p>
                   </div>
-                  <div className="tmclcs">
+                  {/* <div className="tmclcs">
                     <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
+
+              </Link>
+
+                  ))}
 
                       </OwlCarousel>
           </div>
         </div>
         <div className="tab-pane fade" id="mastersprg" role="tabpanel" aria-labelledby="mastersprg-tab">
           <div className="coursespanels">
-            <div className="featuredslide owl-theme owl-carousel">
-              <div className="item">
+          <OwlCarousel
+                    className="featuredslide owl-theme owl-carousel"
+                    loop
+                    responsive={state.responsive_featuredslide}
+                    nav
+                   
+                  >
+
+{mastersCourses &&
+                  mastersCourses.map((get_courses, key) => (
+
+<Link href={`courses/${get_courses.slug}`}>
+
+<div className="item">
                 <div className="crsimgs">
                   <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
+                  <a href="#" className="crcategs">                          {get_courses.course_type == 1 ? 'Master' : 'Bachelor'}  
+</a>
                 </div>
                 <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
+                  <h5 className="csnms">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
+                    <p>{get_courses.duration} Months</p>
                   </div>
                   <div className="tmclcs">
                     <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
+                    <p>{get_courses.short_desc.substring(0, 50)}</p>
                   </div>
-                  <div className="tmclcs">
+                  {/* <div className="tmclcs">
                     <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+              </Link>
+
+                  ))}
+
+                      </OwlCarousel>
+
+
           </div>
         </div>
         <div className="tab-pane fade" id="batchelorsprg" role="tabpanel" aria-labelledby="batchelorsprg-tab">
           <div className="coursespanels">
-            <div className="featuredslide owl-theme owl-carousel">
-              <div className="item">
+          <OwlCarousel
+                    className="featuredslide owl-theme owl-carousel"
+                    loop
+                    responsive={state.responsive_featuredslide}
+                    nav
+                   
+                  >
+
+{bachelorsCourses &&
+                  bachelorsCourses.map((get_courses, key) => (
+
+<Link href={`courses/${get_courses.slug}`}>
+
+<div className="item">
                 <div className="crsimgs">
                   <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
+                  <a href="#" className="crcategs">                          {get_courses.course_type == 1 ? 'Master' : 'Bachelor'}  
+</a>
+                  
                 </div>
                 <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
+                  <h5 className="csnms">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
+                    <p>{get_courses.duration} Months</p>
                   </div>
                   <div className="tmclcs">
                     <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
+                    <p>{get_courses.short_desc.substring(0, 50)}</p>
                   </div>
-                  <div className="tmclcs">
+                  {/* <div className="tmclcs">
                     <img src="/images/rupicon.png" className="tmicn" />
                     <p>45,000</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/2.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/3.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">Master</a>
-                </div>
-                <div className="panelcards">
-                  <h5 className="csnms">MBA</h5>
-                  <div className="tmclcs">
-                    <img src="/images/wallclock.png" className="tmicn" />
-                    <p>12 Months</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/scholors.png" className="tmicn" />
-                    <p>MBA with elective in FinTech</p>
-                  </div>
-                  <div className="tmclcs">
-                    <img src="/images/rupicon.png" className="tmicn" />
-                    <p>45,000</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+              </Link>
+
+                  ))}
+
+                      </OwlCarousel>
           </div>
         </div>
       </div>
