@@ -1449,7 +1449,7 @@ footer.stfooter .collapse:not(.show) {
 
 .semsylabsdsns .card-header button.btn.btn-link {color: #000;display: block;width: 100%;text-align: left;text-decoration: none;font-weight: 600;}
 
-.semsylabsdsns .card-header button.btn.btn-link i {border: 1px solid;border-radius: 100%;width: 20px;height: 20px;text-align: center;line-height: 19px;}
+.semsylabsdsns .card-header button.btn.btn-link i {border: 1px solid;border-radius: 100%;width: 20px;height: 20px;text-align: center;line-height: 19px; margin: 0 5px;}
 
 .semsylabsdsns .card-header button.btn.btn-link i.fa-plus {display: none;}
 
@@ -1627,7 +1627,7 @@ footer.stfooter .collapse:not(.show) {
 
 .higlgtsdd .cpmslide.desktopsds.pntrsbased p {padding: 0 0px 0 24px;}
 
-.higlgtsdd .cpmslide.desktopsds.pntrsbased .lgocirc {padding: 4px;width: 5px;height: 5px;border: 2px solid #f28909;display: inline-block;margin: 0;float: left;position: relative;top: 7px;}
+.higlgtsdd .cpmslide.desktopsds.pntrsbased .lgocirc {padding: 4px;width: 5px;height: 5px;border: 2px solid #f28909;display: inline-block;margin: 0;position: relative;top: 24px;}
 
 .bgrays .container {padding-bottom: 50px;}
 
@@ -2458,6 +2458,20 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
 
 @media screen and (max-width: 767px) and (min-width: 320px){
 	
+    .tabnormcta button {
+        padding: 7px 14px;
+    }
+    
+    .panelcards  .csnms.crlnts {
+        font-size: 15px;
+        min-height: 67px;
+    }
+
+    .courseallpnsd .col-6 {
+        padding: 0 10px;
+    }
+
+
 	.downbrochures h4 {
     font-size: 16px;
 }

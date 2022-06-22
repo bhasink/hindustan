@@ -359,6 +359,44 @@ const Listing = () => {
         center: true,
       },
     },
+
+    responsive_hrngcomps: {
+      0: {
+        items: 1,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        autoplayHoverPause: true,
+        loop: true,
+      },
+      300: {
+        items: 3,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        autoplayHoverPause: true,
+        loop: true,
+      },
+
+      766: {
+        items: 3,
+        nav: false,
+        dots: false,
+        loop: true,
+      },
+
+      1200: {
+        items: 6,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        autoplayHoverPause: true,
+        center:false,
+      },
+    },
   }
 
   return (
@@ -501,7 +539,7 @@ const Listing = () => {
                   {loader ? (
                     <p> Loading ... .. .</p>
                   ) : (
-                    <a onClick={filtersLoadMoreData} className="orangectathms">
+                    <a href='javascript:void(0)' onClick={filtersLoadMoreData} className="orangectathms">
                       View more
                     </a>
                   )}
@@ -574,7 +612,7 @@ const Listing = () => {
                   {loader ? (
                     <p> Loading ... .. .</p>
                   ) : (
-                    <a onClick={bachelorsLoadMore} className="orangectathms">
+                    <a href='javascript:void(0)' onClick={bachelorsLoadMore} className="orangectathms">
                       View more
                     </a>
                   )}
@@ -645,7 +683,7 @@ const Listing = () => {
                   {loader ? (
                     <p> Loading ... .. .</p>
                   ) : (
-                    <a onClick={mastersLoadMore} className="orangectathms">
+                    <a href='javascript:void(0)' onClick={mastersLoadMore} className="orangectathms">
                       View more
                     </a>
                   )}
@@ -672,8 +710,8 @@ const Listing = () => {
               className="hrngcomps owl-theme owl-carousel"
               loop
               // margin={15}
-              nav
-              items={6}
+              responsive={state.responsive_hrngcomps}
+              
             >
               <div className="item">
                 <div className="lgocirc">
