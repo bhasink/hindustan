@@ -1069,7 +1069,9 @@ const Index = () => {
                         </OwlCarousel>
 
         <div className="text-center pt-4">
-          <a href="#" className="orangectathms">View All</a>
+        <Link href="media">
+          <a  className="orangectathms">View All</a>
+          </Link>
         </div> 
       </div>
     </div>
