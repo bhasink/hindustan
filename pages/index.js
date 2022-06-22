@@ -681,12 +681,12 @@ const Index = () => {
 </a>
                 </div>
                 <div className="panelcards">
-                  <h5 className="csnms">{get_courses.name}</h5>
+                  <h5 className="csnms crlnts">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
                     <p>{get_courses.duration} Months</p>
                   </div>
-                  <div className="tmclcs">
+                  <div className="tmclcs crsinfs">
                     <img src="/images/scholors.png" className="tmicn" />
                     <p>{get_courses.short_desc.substring(0, 50)}</p>
                   </div>
@@ -727,12 +727,12 @@ const Index = () => {
 </a>
                 </div>
                 <div className="panelcards">
-                  <h5 className="csnms">{get_courses.name}</h5>
+                  <h5 className="csnms crlnts">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
                     <p>{get_courses.duration} Months</p>
                   </div>
-                  <div className="tmclcs">
+                  <div className="tmclcs crsinfs">
                     <img src="/images/scholors.png" className="tmicn" />
                     <p>{get_courses.short_desc.substring(0, 50)}</p>
                   </div>
@@ -772,12 +772,12 @@ const Index = () => {
 </a>
                 </div>
                 <div className="panelcards">
-                  <h5 className="csnms">{get_courses.name}</h5>
+                  <h5 className="csnms crlnts">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
                     <p>{get_courses.duration} Months</p>
                   </div>
-                  <div className="tmclcs">
+                  <div className="tmclcs crsinfs">
                     <img src="/images/scholors.png" className="tmicn" />
                     <p>{get_courses.short_desc.substring(0, 50)}</p>
                   </div>
@@ -820,12 +820,12 @@ const Index = () => {
                   
                 </div>
                 <div className="panelcards">
-                  <h5 className="csnms">{get_courses.name}</h5>
+                  <h5 className="csnms crlnts">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
                     <p>{get_courses.duration} Months</p>
                   </div>
-                  <div className="tmclcs">
+                  <div className="tmclcs crsinfs">
                     <img src="/images/scholors.png" className="tmicn" />
                     <p>{get_courses.short_desc.substring(0, 50)}</p>
                   </div>

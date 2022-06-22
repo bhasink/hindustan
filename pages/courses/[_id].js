@@ -264,12 +264,12 @@ const CourseDetails = () => {
             <div className="crctsinf">
               <div className="row">
                 <div className="col-6 col-lg-6 col-md-6">
-                  <a href="#" className="orangectathms nobrd">
+                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter" className="orangectathms nobrd">
                     Apply Now
                   </a>
                 </div>
                 <div className="col-6 col-lg-6 col-md-6">
-                  <a href="#" className="blackctathms nobrd">
+                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter2" className="blackctathms nobrd">
                     <img src="/images/downldico.png" />
                     Brochure
                   </a>
@@ -278,6 +278,60 @@ const CourseDetails = () => {
             </div>
           </div>
         </div>
+
+        <div className="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div className="modal-dialog modal-dialog-centered" role="document">
+    <div className="modal-content">
+      
+      <div className="modal-body">
+						  
+						  <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">×</span>
+							</button>
+							
+							<div className="basicenqforms">
+								<div className="row">
+									<div className="col-lg-12 mx-auto">
+										<h3>Download Brochure</h3>
+										<div className="form-groupsets">
+										<label>Name</label>
+										<input type="text" className="form-control" placeholder=""/>
+										</div>
+										
+										<div className="form-groupsets">
+										<label>Email id</label>
+										<input type="email" className="form-control" placeholder=""/>
+										</div>
+										
+										
+										<div className="form-groupsets">
+										<label>Phone No.</label>
+										<input type="text" className="form-control" placeholder=""/>
+										</div>
+										
+										<div className="form-groupsets">
+										<label>Query</label>
+										<textarea type="text" class="form-control" placeholder=""></textarea>
+										</div>
+
+									
+										
+									</div>
+									
+									
+									<div className="col-lg-12 text-center roundbotms">
+										<button className="orangectadms">Submit</button>
+									</div>
+							
+								</div>
+							</div>
+						
+						  </div>
+      
+    </div>
+  </div>
+</div>
+
       </section>
       <section className="aboutsect innerprograms">
         <div className="container">

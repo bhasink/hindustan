@@ -43,7 +43,7 @@ const Nav = () => {
                     </Link>
                   </li>
                   <li className="nav-item nosublnk active">
-                    <a className="nav-link bidevices orangebtns" href="#">Apply Now</a>
+                    <a className="nav-link bidevices orangebtns" href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter">Apply Now</a>
                   </li>
                   {/*
                       
@@ -77,6 +77,76 @@ const Nav = () => {
             </div>
           </div>
         </nav>
+
+
+       
+<div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div className="modal-dialog modal-dialog-centered" role="document">
+    <div className="modal-content">
+      
+      <div className="modal-body">
+						  
+						  <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+							  <span aria-hidden="true">×</span>
+							</button>
+							
+							<div className="basicenqforms">
+								<div className="row">
+									<div className="col-lg-12 mx-auto">
+										<h3>Apply Now !</h3>
+										<div className="form-groupsets">
+										<label>Name</label>
+										<input type="text" className="form-control" placeholder=""/>
+										</div>
+										
+										<div className="form-groupsets">
+										<label>Email id</label>
+										<input type="email" className="form-control" placeholder=""/>
+										</div>
+										
+										
+										<div className="form-groupsets">
+										<label>Phone No.</label>
+										<input type="text" className="form-control" placeholder=""/>
+										</div>
+										
+										<div className="form-groupsets">
+										<label>courses</label>
+                    <select>
+												<option value="hide">---</option>
+												<option value="2010">Course 1</option>
+												<option value="2011">Course 2</option>
+												<option value="2012">Course 3</option>
+												<option value="2013">Course 4</option>
+												<option value="2014">Course 5</option>
+												
+											</select>
+										</div>
+
+										<div className="form-groupsets">
+										<label>How We can Help</label>
+										<textarea type="text" class="form-control" placeholder=""></textarea>
+										</div>
+										
+										
+										
+									</div>
+									
+									
+									<div className="col-lg-12 text-center roundbotms">
+										<button className="orangectadms">Submit</button>
+									</div>
+							
+								</div>
+							</div>
+						
+						  </div>
+      
+    </div>
+  </div>
+</div>
+
+
       </header>    
     );
 
