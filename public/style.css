@@ -46,10 +46,10 @@ a:hover {color: #000000;text-decoration: none;}
 }
 
 body{
-	
-	padding-top: 75px;
+padding-top: 75px;
 font-family: 'Poppins', sans-serif !important;
 scroll-padding-top: 70px; 
+overflow-anchor: none;
 }
 
 html{
