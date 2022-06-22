@@ -19,6 +19,7 @@ import ReactHtmlParser from 'react-html-parser';
 const CourseDetails = () => {
 
     const [courseDetails, setCourseDetails] = useState([])
+    const [errorCode , setErrorCode] = useState(0);
 
     const router = useRouter()
   
@@ -51,6 +52,11 @@ const CourseDetails = () => {
       )
 
       const getCoursesDetails = data.get_course_details
+      
+
+      if(getCoursesDetails == null){
+        router.push('/404')
+      }
 
       console.log(getCoursesDetails);
 
@@ -217,6 +223,9 @@ const CourseDetails = () => {
   return (
     <>
       <Nav />
+
+      {courseDetails && courseDetails.name && (
+          <>
 
       <section className="vdobanners">
         <img src="/images/coursevdothumbs.jpg" className="fllimg" />
@@ -1646,6 +1655,9 @@ consectetur, adipisci velit...</p>
           </div>
         </div>
       </footer>
+      </>
+)}
+
     </>
   )
 }
