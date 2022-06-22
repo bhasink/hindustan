@@ -57,6 +57,10 @@ html{
 	  scroll-padding-top: 70px; 
 }
 
+.react-toast-notifications__container{
+    z-index: 2000 !important;
+}
+
 /* megamenu css */
 
 h3.mobclick {
