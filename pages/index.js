@@ -241,20 +241,19 @@ const Index = () => {
             items: 1,
             nav: false,
             dots: true,
-            animateOut: 'slideOutUp',
-            animateIn: 'slideInUp',
+            animateOut: 1,
+            animateIn: 0,
             loop: true
           },
           300: {
+            loop: true,
+            autoplay: true,
             items: 1,
-           nav: false,
-            dots: true,
-            autoplay:true,
-        margin: 10,
-        autoplaySpeed: 6000,
-      animateOut: 'slideOutUp',
-      animateIn: 'slideInUp',
-            loop: true
+            nav: false,
+            autoplaySpeed: 6000,
+            autoplayHoverPause: true,
+            animateOut: 'slideOutUp',
+            animateIn: 'slideInUp'
           },
     
           766: {
@@ -268,12 +267,14 @@ const Index = () => {
             items: 6,
             nav: false,
             autoplay:true,
-            autoplaySpeed: 3000,
-		animateOut: 'slideInLeft',
-	animateIn: 'slideInLeft',
+            animate:true,
+            autoplaySpeed: 6000,
+            animateOut: 'slideOutUp',
+            animateIn: 'slideInUp',
             dots: true, 
             loop: true
-          }
+          },
+          
         },
         
         responsive_top_catnew: {
@@ -1232,7 +1233,7 @@ const Index = () => {
 
       <div className="cpmslide mobilesds">
       <OwlCarousel
-                    className="featuredslide owl-theme owl-carousel"
+                    className=" owl-theme owl-carousel"
                     loop
                     responsive={state.responsive_trust_comp}
                     nav                   

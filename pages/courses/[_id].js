@@ -170,7 +170,9 @@ const CourseDetails = () => {
         dots: true,
       },
     },
-    responsive_trust_comp: {
+
+    
+    responsive_hrngcomps: {
       0: {
         items: 1,
         nav: false,
@@ -198,13 +200,13 @@ const CourseDetails = () => {
       },
 
       1200: {
-        items: 5,
+        items: 6,
         nav: false,
         dots: true,
         autoplay: true,
         autoplaySpeed: 3000,
         autoplayHoverPause: true,
-        center: true,
+        center: false,
       },
     },
   }
@@ -847,7 +849,14 @@ const CourseDetails = () => {
           </div>
           <div className="hirecomparts ">
             <div className="container">
-              <div className="hrngcomps owl-carousel owl-theme">
+            <OwlCarousel
+                    className="hrngcomps owl-theme owl-carousel"
+                    loop
+                    responsive={state.responsive_hrngcomps}
+                    nav
+                   
+                  >
+              
                 <div className="item">
                   <div className="lgocirc">
                     <img src="/images/client/1.png" />
@@ -893,7 +902,8 @@ const CourseDetails = () => {
                     <img src="/images/client/9.png" />
                   </div>
                 </div>
-              </div>
+              
+              </OwlCarousel>
             </div>
           </div>
         </section>
