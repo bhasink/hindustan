@@ -14,24 +14,29 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
   ssr: false,
 })
 import Nav from '../../components/Nav'
+import ReactHtmlParser from 'react-html-parser';
 
 const CourseDetails = () => {
 
     const [courseDetails, setCourseDetails] = useState([])
 
     const router = useRouter()
-    const _id = router.query._id
   
     useEffect(() => {
     AOS.init({
       duration: 2000,
     })
 
-    getCourseDetails()
+    if (router.isReady) {
+      const _id = router.query._id
+      getCourseDetails(_id)
+      console.log(router.query);
+    }
 
-  }, [])
 
-  const getCourseDetails = async (value) => {
+  },[router.isReady])
+
+  const getCourseDetails = async (_id) => {
     try {
       const config = {
         headers: { 'Content-Type': 'application/json' },
@@ -276,7 +281,7 @@ const CourseDetails = () => {
               Ab<div className="ogcl">o</div>ut Program
             </h2>
             <p>
-                 {courseDetails.about_program}
+                 {ReactHtmlParser(courseDetails.about_program)}
             </p>
             <p className="moretext2">
               BBA program offers knowledge and training in management and
@@ -336,7 +341,7 @@ const CourseDetails = () => {
                 data-aos-duration={1000}
               >
                 <p>
-                    {courseDetails.about_specialization}
+                    {ReactHtmlParser(courseDetails.about_specialization)}
                 </p>
                 <p className="moretext">
                   {' '}

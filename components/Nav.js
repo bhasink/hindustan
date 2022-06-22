@@ -33,7 +33,9 @@ const Nav = () => {
                     <a className="nav-link bidevices" href="tel:+91 9945580408" style={{color: '#fe982c'}}><i className="fas fa-phone-alt" /> +91 9945580408 </a>
                   </li>
                   <li className="nav-item nosublnk active">
-                    <a className="nav-link bidevices" href="#">Programs </a>
+                    <Link href="/courses">
+                      <a className="nav-link bidevices">Programs </a>
+                    </Link>
                   </li>
                   <li className="nav-item nosublnk active">
                     <Link href="about">
