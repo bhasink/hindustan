@@ -19,6 +19,11 @@ import ReactHtmlParser from 'react-html-parser';
 const CourseDetails = () => {
 
     const [courseDetails, setCourseDetails] = useState([])
+    const [courseSemesters, setCourseSemesters] = useState([])
+    const [courseFees, setCourseFees] = useState([])
+    const [isReadMore, setIsReadMore] = useState(true);
+
+    
     const [errorCode , setErrorCode] = useState(0);
 
     const router = useRouter()
@@ -52,7 +57,8 @@ const CourseDetails = () => {
       )
 
       const getCoursesDetails = data.get_course_details
-      
+      const getCoursesSemesters = data.get_semesters
+      const getCoursesFees = data.get_fees
 
       if(getCoursesDetails == null){
         router.push('/404')
@@ -65,6 +71,9 @@ const CourseDetails = () => {
     //   setKeyHighlightss(keyHlits)
 
       setCourseDetails(getCoursesDetails)
+      setCourseSemesters(getCoursesSemesters)
+      setCourseFees(getCoursesFees)
+
     } catch (err) {
       console.log(err)
     }
@@ -290,19 +299,13 @@ const CourseDetails = () => {
               Ab<div className="ogcl">o</div>ut Program
             </h2>
             <p>
-                 {ReactHtmlParser(courseDetails.about_program)}
+
+              
+            {isReadMore && courseDetails.about_program.length > 450 ? ReactHtmlParser(courseDetails.about_program.slice(0, 450)) : ReactHtmlParser(courseDetails.about_program) }
+
+                 
             </p>
-            <p className="moretext2">
-              BBA program offers knowledge and training in management and
-              leadership skills to prepare the learners for managerial roles and
-              entrepreneurship. The program will equip the learners with a clear
-              understanding of various aspects of business administration,
-              market trends and managerial decision making. Some of the
-              significant job profiles that one can opt for after completing a
-              BBA are Human Resource Executive, Marketing Executive, Marketing
-              Manager, Sales Executive, Operations Executive and Finance
-              Associate.
-            </p>
+           
             <a href="javascript:void(0);" className="moreless-button2">
               Read more{' '}
             </a>
@@ -384,42 +387,17 @@ const CourseDetails = () => {
             {/*<img src="/images/longdots.png" class="lngdts">*/}
             <div className="container">
               <div className="row lengtheds">
+             
+              {courseDetails && courseDetails.specialization_highlights.split('#').map((specialization_highlights_data, key) => (
+
                 <div className="col-md-6">
                   <div className="lgocirc"></div>
                   <p>
-                    Be thoroughly equipped with the breadth of aircraft,
-                    airline, and airport operations courses
+                  {specialization_highlights_data}
                   </p>
                 </div>
-                <div className="col-md-6">
-                  <div className="lgocirc"></div>
-                  <p>
-                    Learn new age courses like Aviation Safety &amp; Security,
-                    Aviation Supply Chain, and Travel &amp; Tourism Management
-                  </p>
-                </div>
-                <div className="col-md-6">
-                  <div className="lgocirc"></div>
-                  <p>
-                    Gain business mastery with a unique blend of aviation and
-                    management courses
-                  </p>
-                </div>
-                <div className="col-md-6">
-                  <div className="lgocirc"></div>
-                  <p>
-                    Obtain in-depth knowledge of business and business processes
-                    of the aviation industry
-                  </p>
-                </div>
-                <div className="col-md-6">
-                  <div className="lgocirc"></div>
-                  <p>
-                    Be proficient in professional skills required to tackle
-                    challenges in aviation with the help of an industry-aligned
-                    curriculum.
-                  </p>
-                </div>
+              ))}
+             
               </div>
               <a href="javascript:void(0);" className="rdspecials">
                 Read more{' '}
@@ -438,7 +416,7 @@ const CourseDetails = () => {
                 </div>
                 <img src="/images/checklistind.png" className="chdatalsts" />
                 <p>
-                    {courseDetails.eligibility}
+                    {ReactHtmlParser(courseDetails.eligibility)}
                 </p>
               </div>
               <div className="col-lg-6 grelgbg " id="syllabus">
@@ -447,306 +425,49 @@ const CourseDetails = () => {
                 </div>
                 <div className="semsylabsdsns">
                   <div id="accordion10">
+
+                    {courseSemesters && courseSemesters.map((get_sems, key) => (
+                  
+                   
                     <div className="card">
-                      <div className="card-header" id="headingOneSb">
+                      <div className="card-header" id={`headingTwoSb${key+1}`}>
                         <h5 className="mb-0">
                           <button
-                            className="btn btn-link"
+                            className={key == 0 ? 'btn btn-link' : ' btn btn-link collapsed'}
                             data-toggle="collapse"
-                            data-target="#collapseOneSb"
-                            aria-expanded="true"
-                            aria-controls="collapseOneSb"
+                            data-target={`#collapseTwoSb${key+1}`}
+                            aria-expanded={key == 0 ? 'true' : 'false'}
+                            aria-controls={`collapseTwoSb${key+1}`}
                           >
-                            Semester 1
+                            {get_sems.name}
                             <i className="fal fa-plus" />
                             <i className="fal fa-minus" />
                           </button>
                         </h5>
                       </div>
                       <div
-                        id="collapseOneSb"
-                        className="collapse show"
-                        aria-labelledby="headingOneSb"
+                        id={`collapseTwoSb${key+1}`}
+                        className={key == 0 ? 'collapse show' : 'collapse'}
+                        aria-labelledby={`headingTwoSb${key+1}`}
                         data-parent="#accordion10"
                       >
                         <div className="card-body">
                           <ul>
+
+                          {courseSemesters && get_sems.data.split('#').map((get_sems_data, key) => (
                             <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
+                              {get_sems_data}
                             </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry{' '}
-                            </li>
+
+                          ))}
+                           
                           </ul>
                         </div>
                       </div>
                     </div>
-                    <div className="card">
-                      <div className="card-header" id="headingTwoSb">
-                        <h5 className="mb-0">
-                          <button
-                            className="btn btn-link collapsed"
-                            data-toggle="collapse"
-                            data-target="#collapseTwoSb"
-                            aria-expanded="false"
-                            aria-controls="collapseTwoSb"
-                          >
-                            Semester 2
-                            <i className="fal fa-plus" />
-                            <i className="fal fa-minus" />
-                          </button>
-                        </h5>
-                      </div>
-                      <div
-                        id="collapseTwoSb"
-                        className="collapse"
-                        aria-labelledby="headingTwoSb"
-                        data-parent="#accordion10"
-                      >
-                        <div className="card-body">
-                          <ul>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="card">
-                      <div className="card-header" id="headingThreeSb">
-                        <h5 className="mb-0">
-                          <button
-                            className="btn btn-link collapsed"
-                            data-toggle="collapse"
-                            data-target="#collapseThreeSb"
-                            aria-expanded="false"
-                            aria-controls="collapseThreeSb"
-                          >
-                            Semester 3
-                            <i className="fal fa-plus" />
-                            <i className="fal fa-minus" />
-                          </button>
-                        </h5>
-                      </div>
-                      <div
-                        id="collapseThreeSb"
-                        className="collapse"
-                        aria-labelledby="headingThreeSb"
-                        data-parent="#accordion10"
-                      >
-                        <div className="card-body">
-                          <ul>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="card">
-                      <div className="card-header" id="headingFourSb">
-                        <h5 className="mb-0">
-                          <button
-                            className="btn btn-link collapsed"
-                            data-toggle="collapse"
-                            data-target="#collapseFourSb"
-                            aria-expanded="false"
-                            aria-controls="collapseFourSb"
-                          >
-                            Semester 4
-                            <i className="fal fa-plus" />
-                            <i className="fal fa-minus" />
-                          </button>
-                        </h5>
-                      </div>
-                      <div
-                        id="collapseFourSb"
-                        className="collapse"
-                        aria-labelledby="headingFourSb"
-                        data-parent="#accordion10"
-                      >
-                        <div className="card-body">
-                          <ul>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="card">
-                      <div className="card-header" id="headingFiveSb">
-                        <h5 className="mb-0">
-                          <button
-                            className="btn btn-link collapsed"
-                            data-toggle="collapse"
-                            data-target="#collapseFiveSb"
-                            aria-expanded="false"
-                            aria-controls="collapseFiveSb"
-                          >
-                            Semester 5
-                            <i className="fal fa-plus" />
-                            <i className="fal fa-minus" />
-                          </button>
-                        </h5>
-                      </div>
-                      <div
-                        id="collapseFiveSb"
-                        className="collapse"
-                        aria-labelledby="headingFiveSb"
-                        data-parent="#accordion10"
-                      >
-                        <div className="card-body">
-                          <ul>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                            <li>
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting{' '}
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+
+                    ))}
+                
                   </div>
                 </div>
               </div>
@@ -788,6 +509,7 @@ const CourseDetails = () => {
                   </a>
                 </li>
               </ul>
+
               <div className="tab-content" id="myTabContent">
                 <div
                   className="tab-pane fade show active"
@@ -800,19 +522,19 @@ const CourseDetails = () => {
                       <div className="col-6 col-lg-6">
                         <div className=" crds">
                           <p className="tmevse">Semester - wise</p>
-                          <h3 className="feecst">17,500</h3>
-                          <p className="ttsms">x 6 Semester</p>
+                          <h3 className="feecst">{courseFees[0].national_semester_price}</h3>
+                          <p className="ttsms">x {courseFees[0].national_semester_month} Semester</p>
                           <p className="sbintr">Total Fees</p>
-                          <p className="ttlcrs">1,05, 000</p>
+                          <p className="ttlcrs">{courseFees[0].national_semester_price * courseFees[0].national_semester_month} </p>
                         </div>
                       </div>
                       <div className="col-6  col-lg-6">
                         <div className=" crds">
                           <p className="tmevse">Year - wise</p>
-                          <h3 className="feecst">35,000</h3>
-                          <p className="ttsms">x 3 Years</p>
+                          <h3 className="feecst">{courseFees[0].national_yearly_price}</h3>
+                          <p className="ttsms">x {courseFees[0].national_yearly_month} Years</p>
                           <p className="sbintr">Total Fees</p>
-                          <p className="ttlcrs">1,05, 000</p>
+                          <p className="ttlcrs">{courseFees[0].national_yearly_price * courseFees[0].national_yearly_month} </p>
                         </div>
                       </div>
                     </div>
@@ -829,19 +551,19 @@ const CourseDetails = () => {
                       <div className="col-6  col-lg-6">
                         <div className=" crds">
                           <p className="tmevse">Semester - wise</p>
-                          <h3 className="feecst">750$</h3>
-                          <p className="ttsms">x 6 Semester</p>
+                          <h3 className="feecst">{courseFees[0].international_semester_price}$</h3>
+                          <p className="ttsms">x {courseFees[0].international_semester_month} Semester</p>
                           <p className="sbintr">Total Fees</p>
-                          <p className="ttlcrs">4,500$</p>
+                          <p className="ttlcrs">{courseFees[0].international_semester_price * courseFees[0].international_semester_month}$</p>
                         </div>
                       </div>
                       <div className="col-6  col-lg-6">
                         <div className=" crds">
                           <p className="tmevse">Year - wise</p>
-                          <h3 className="feecst">1500$</h3>
-                          <p className="ttsms">x 3 Years</p>
+                          <h3 className="feecst"> {courseFees[0].international_yearly_price}$</h3>
+                          <p className="ttsms">x {courseFees[0].international_yearly_month} Years</p>
                           <p className="sbintr">Total Fees</p>
-                          <p className="ttlcrs">4,500$</p>
+                          <p className="ttlcrs">{courseFees[0].international_yearly_price * courseFees[0].international_yearly_month}$</p>
                         </div>
                       </div>
                     </div>
