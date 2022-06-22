@@ -2458,6 +2458,9 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
     color: #fff;
 }
 
+.newshmbs .crds a {
+    color: #f28823;
+}
 
 /* css for new forms */
 

@@ -236,8 +236,26 @@ const AboutUs = () => {
           <div className="hdingst dsktop">
             <h2 className="mainhds">leadership n<span className="ogx">o</span>te</h2>
           </div>
-          <p className="text-center text-lg-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
-            make a type specimen book. </p>
+          <p className="text-center text-lg-left">Hindustan Institute of Technology and Science(HITS), is one amongst the first few Universities in India to be entitled by AICTE to offer online professional Master Degree Programs of MBA and MCA. In the rapidly changing world with increasing movement, flexibility, and information overflow, HITS is determined to create new learning experiences through Hindustan Online - CODE.
+
+Inclusive education is the new mantra for the knowledge society. Our vision is where anyone, anywhere can acquire knowledge and learn new business and management skills faster than ever before. This is feasible due to digital technology and our expertise in delivering quality online education.
+
+Crossing all geographical boundaries CODE is offering online PG Degree programs of MBA and MCA apart from BBA, B.Com. and BCA and many more in the years to come.
+
+Even during the pandemic year our faculty were continuously engaged in updating their knowledge and skills through courses offered by Ed X, Coursera and various MOOCs. All these digital assets worth millions were procured by the University.
+
+HITS holds the World Record of Excellence for “HIGHEST NUMBER OF ONLINE LESSONS COMPLETED” awarded by the International Book of Records. 4359 participants completed 2,20,745 online lessons as on November 2020. It is a very unique distinction to HITS.
+
+In a pioneering effort, HITS has partnered with the Global EdTech Giant Coursera, to deliver industry-ready learning pathways to students.
+
+I wish all the learners from across the globe the very best and welcome you all to Hindustan.
+
+Affordable, quality education at the convenience of the Learner at their door steps is our mission in shaping the future of our nation.
+
+I wish all the teachers and learners success in exploring the world of education. in the new normal.</p>
+
+<p><b>Mr. Ashok Verghese</b><br/>
+<b>Director</b></p>
         </div>
       </div>
     </div>
@@ -258,61 +276,66 @@ const AboutUs = () => {
                    
                   >
           <div className="item">
-            <div className="testipnlpts">
-              <div className="lgocirc">
-                <img src="/images/awardscrd/1.png" />
-              </div>
-              <p className="usrnmtst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p>quia dolor sit amet, consectetur adipisci velit</p>
-            </div>
-          </div>
-          <div className="item">
-            <div className="testipnlpts">
-              <div className="lgocirc">
-                <img src="/images/awardscrd/1.png" />
-              </div>
-              <p className="usrnmtst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p>quia dolor sit amet, consectetur adipisci velit</p>
-            </div>
-          </div>
-          <div className="item">
-            <div className="testipnlpts">
-              <div className="lgocirc">
-                <img src="/images/awardscrd/1.png" />
-              </div>
-              <p className="usrnmtst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p>quia dolor sit amet, consectetur adipisci velit</p>
-            </div>
-          </div>
-          <div className="item">
-            <div className="testipnlpts">
-              <div className="lgocirc">
-                <img src="/images/awardscrd/1.png" />
-              </div>
-              <p className="usrnmtst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p>quia dolor sit amet, consectetur adipisci velit</p>
-            </div>
-          </div>
-
-          <div className="item">
-            <div className="testipnlpts">
-              <div className="lgocirc">
-                <img src="/images/awardscrd/1.png" />
-              </div>
-              <p className="usrnmtst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p>quia dolor sit amet, consectetur adipisci velit</p>
-            </div>
-          </div>
-
-          <div className="item">
-            <div className="testipnlpts">
-              <div className="lgocirc">
-                <img src="/images/awardscrd/1.png" />
-              </div>
-              <p className="usrnmtst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p>quia dolor sit amet, consectetur adipisci velit</p>
-            </div>
-          </div>
+					<div className="testipnlpts">
+					<div className="lgocirc">
+						<img src="./images/awardscrd/1.jpg"/>
+					</div>
+						
+					<p className="usrnmtst">Ranked No.2 Deemed to be University in India,2020  </p>
+					<p>INDIA TODAY</p>
+					
+					</div>
+				</div>
+				
+				<div className="item">
+					<div className="testipnlpts">
+					<div className="lgocirc">
+						<img src="./images/awardscrd/2.jpg"/>
+					</div>
+						
+					<p className="usrnmtst">Ranked 107th position amongst the top Engineering Institutions</p>
+					<p>NIRF</p>
+					
+					</div>
+				</div>
+				
+				<div className="item">
+					<div className="testipnlpts">
+					<div className="lgocirc">
+						<img src="./images/awardscrd/3.jpg"/>
+					</div>
+						
+					<p className="usrnmtst">QS BRICS Ranking.  </p>
+					<p>Rated 301-350 band in the World University Rankings 2019</p>
+					
+					</div>
+				</div>
+				
+				
+				<div className="item">
+					<div className="testipnlpts">
+					<div className="lgocirc">
+						<img src="./images/awardscrd/4.jpg"/>
+					</div>
+						
+					<p className="usrnmtst">Rated GOLD (overall) in the QS I-GAUGE Indian University Rating  </p>
+					<p>QS I-GAUGE Indian University</p>
+					
+					</div>
+				</div>
+				
+				<div className="item">
+					<div className="testipnlpts">
+					<div className="lgocirc">
+						<img src="./images/awardscrd/5.jpg"/>
+					</div>
+						
+					<p className="usrnmtst">Awarded “HIGHEST NUMBER OF ONLINE LESSONS COMPLETED”  </p>
+					<p>INTERNATIONAL BOOK OF RECORDS</p>
+					
+					</div>
+				</div>
+				
          </OwlCarousel>
       </div>
     </div>
