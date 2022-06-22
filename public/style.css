@@ -1642,7 +1642,7 @@ footer.stfooter .collapse:not(.show) {
 .mnptsd ul li.active:nth-child(6) a {border-bottom: none;}
 
 .moreless-button,
-.moreless-button2 {font-size: 14px;margin-top: -13px;display: inherit;}
+.moreless-button2 {font-size: 14px;margin-top: -13px;display: inherit; color: #f28823;}
 
 .moretext2, .moretext {display: none;}
 
@@ -2453,6 +2453,82 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
 .csnms.crlnts {
     min-height: 56px;
 }
+
+.orangectathms:hover {
+    color: #fff;
+}
+
+
+/* css for new forms */
+
+.basicenqforms  h3 {font-weight: bold;color: #000;text-align: center;margin: 29px 0;text-transform: uppercase;}
+
+.basicenqforms .form-groupsets  .dropdown.bootstrap-select {width: 100%;border: 1.2px solid #302e59;background: #fff;}
+
+
+.basicenqforms .form-groupsets  .dropdown.bootstrap-select .btn-light {background: transparent;}
+
+.basicenqforms .dropdown-item.active, .dropdown-item:active {background: #302e59;}
+
+.basicenqforms .bootstrap-select .dropdown-menu {width: 100% !important;}
+
+.basicenqforms .bootstrap-select .dropdown-toggle:focus {color: #000; outline:none;}
+
+ .basicenqforms .form-groupsets label {
+      font-weight: bold;
+    color: #7d7373;
+}
+
+ .basicenqforms .form-groupsets {
+    margin-bottom: 0.9rem;
+    text-align: left;
+}
+
+ .basicenqforms .form-groupsets .form-control {
+    border-radius: 0px;
+    border: 1.2px solid #302e59;
+    box-shadow: none;
+    outline: none;
+    padding: 2px 5px;
+    height: auto;
+    
+}
+
+
+.basicenqforms .orangectadms {
+    border: none;
+    background: #f89c37;
+    color: #fff;
+    padding: 4px 0px;
+    width: 150px;
+    margin: 20px 0;
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+
+
+.basicenqforms .form-groupsets select {
+    border-radius: 0px;
+    border: 1.2px solid #302e59;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    padding: 2px 5px;
+    height: auto;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
 
 /* Responsive css */
 
@@ -3392,13 +3468,15 @@ h3.mobclick {
 
 
 .panelcards .csnms {
-    font-size: 19px;
+    font-size: 14px;
     border-bottom: none;
     color: #676d76;
-
+    margin-left: 0;
 }
 
-
+.panelcards p{
+    font-size: 11px;
+}
 
 .testimparts .owl-item.active.center {
      -webkit-transform: scale3d(1.0, 1.0, 1);
@@ -3689,7 +3767,7 @@ display: flex;}
 	    font-weight: 300;
 }
 
-.mobileiconpanel ul li  img {width: 23px;     margin-bottom: 7px;}
+.mobileiconpanel ul li  img {width: 15px;     margin-bottom: 7px;}
 
 	.sideaassets{
 		display:none;
