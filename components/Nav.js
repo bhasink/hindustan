@@ -42,6 +42,13 @@ const Nav = () => {
                         <a className="nav-link bidevices">About Us</a>
                     </Link>
                   </li>
+
+                  <li className="nav-item nosublnk active">
+                    <Link href="contact">
+                        <a className="nav-link bidevices">Contact</a>
+                    </Link>
+                  </li>
+
                   <li className="nav-item nosublnk active">
                     <a className="nav-link bidevices orangebtns" href="#">Apply Now</a>
                   </li>
