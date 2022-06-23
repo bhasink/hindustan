@@ -762,6 +762,7 @@ color: #f28823;font-weight: 100;}
 .owl-carousel .owl-item 
  .tmclcs .tmicn {
     width: 18px;
+    margin-top: 0;
 }
 
 .owl-carousel .owl-nav button span {
@@ -2462,6 +2463,11 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
     color: #f28823;
 }
 
+
+a.orangectathms:not([href]):not([tabindex]) {
+    color: #fff;
+}
+
 /* css for new forms */
 
 .basicenqforms  h3 {font-weight: bold;color: #000;text-align: center;margin: 29px 0;text-transform: uppercase;}
@@ -2532,6 +2538,30 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
     opacity: .5;
 }
 
+
+a:not([href]):not([tabindex]),
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #f18600;
+}
+
+.whoarewes  .moretext {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    height: 0px;
+    transition: all ease 0.5s;
+    overflow: hidden;
+    margin-top: -13px;
+}
+
+p.moretext.showtexts {
+    transition: all ease 0.5s;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: all ease 0.5s;
+    margin-top: 0;
+}
 
 /* Responsive css */
 
@@ -3763,7 +3793,8 @@ display: flex;}
     width: 100%;
 }
 
-.mobileiconpanel ul li a {
+.mobileiconpanel ul li a,
+.mobileiconpanel ul li a:not([href]):not([tabindex]) {
     color: #fff;
     text-decoration: none;
     display: block;

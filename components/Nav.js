@@ -3,8 +3,14 @@ import Link from 'next/link'
 
 const Nav = () => {
 
+  const [isActive, setActive] = useState("false");
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+
     return(
-        <header className="site-header topmain mobexheight norm">
+        <header className={`site-header topmain mobexheight norm ${isActive ? "" : "heightexps"}`}>
         {/*--New Updates---*/}   
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container">
@@ -15,7 +21,7 @@ const Nav = () => {
                 </a>
             </Link>
             {/* Toggler */}
-            <button className="navbar-toggler openhdas" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button onClick={handleToggle} className={`navbar-toggler openhdas ${isActive ? "" : "crossshwos"}`}  type="button" >
               <i className="fal fa-bars" />
               <i className="fal fa-times" />
             </button>
@@ -38,19 +44,19 @@ const Nav = () => {
                     </Link>
                   </li>
                   <li className="nav-item nosublnk active">
-                    <Link href="about">
+                    <Link href="../about">
                         <a className="nav-link bidevices">About Us</a>
                     </Link>
                   </li>
 
                   <li className="nav-item nosublnk active">
-                    <Link href="contact">
+                    <Link href="../contact">
                         <a className="nav-link bidevices">Contact</a>
                     </Link>
                   </li>
 
                   <li className="nav-item nosublnk active">
-                    <a className="nav-link bidevices orangebtns" href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter">Apply Now</a>
+                    <a className="nav-link bidevices orangebtns" href  data-toggle="modal" data-target="#exampleModalCenter">Apply Now</a>
                   </li>
                   {/*
                       
@@ -87,7 +93,7 @@ const Nav = () => {
 
 
        
-<div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div className="modal fade" id="exampleModalCenter"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div className="modal-dialog modal-dialog-centered" role="document">
     <div className="modal-content">
       
@@ -132,7 +138,7 @@ const Nav = () => {
 
 										<div className="form-groupsets">
 										<label>How We can Help</label>
-										<textarea type="text" class="form-control" placeholder=""></textarea>
+										<textarea type="text" className="form-control" placeholder=""></textarea>
 										</div>
 										
 										

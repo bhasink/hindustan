@@ -539,7 +539,7 @@ const Listing = () => {
                   {loader ? (
                     <p> Loading ... .. .</p>
                   ) : (
-                    <a href='javascript:void(0)' onClick={filtersLoadMoreData} className="orangectathms">
+                    <a href onClick={filtersLoadMoreData} className="orangectathms">
                       View more
                     </a>
                   )}
@@ -612,7 +612,7 @@ const Listing = () => {
                   {loader ? (
                     <p> Loading ... .. .</p>
                   ) : (
-                    <a href='javascript:void(0)' onClick={bachelorsLoadMore} className="orangectathms">
+                    <a href onClick={bachelorsLoadMore} className="orangectathms">
                       View more
                     </a>
                   )}
@@ -683,7 +683,7 @@ const Listing = () => {
                   {loader ? (
                     <p> Loading ... .. .</p>
                   ) : (
-                    <a href='javascript:void(0)' onClick={mastersLoadMore} className="orangectathms">
+                    <a  onClick={mastersLoadMore} className="orangectathms">
                       View more
                     </a>
                   )}
