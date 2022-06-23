@@ -184,7 +184,7 @@ const ContactUs = () => {
       </div>
       <div className="addressportns text-center">
         <div className="row">
-          <div className="col-lg-4 bdbtms">
+          <div className="col-lg-4 col-md-6 bdbtms">
             <img src="/images/contic1.png" />
             <h5>Admission enquiry</h5>
             <div className="adlnone">
@@ -193,7 +193,7 @@ const ContactUs = () => {
               <p><b>Email Us:</b> admission@hindustancode.com</p>
             </div>
           </div>
-          <div className="col-lg-4 bdbtms">
+          <div className="col-lg-4 col-md-6 bdbtms">
             <img src="/images/contic2.png" />
             <h5>International enquiry</h5>
             <div className="adlnone">
@@ -202,7 +202,7 @@ const ContactUs = () => {
               <p><b>Email Us:</b> info@hindustanuniv.ac.in</p>
             </div>
           </div>
-          <div className="col-lg-4 bdbtms">
+          <div className="col-lg-4 col-md-6 bdbtms">
             <img src="/images/contic3.png" />
             <h5>Other enquiry</h5>
             <div className="adlnone">
@@ -211,7 +211,7 @@ const ContactUs = () => {
               <p><b>Email Us:</b> enquiry@hindustancode.com</p>
             </div>
           </div>
-          <div className="col-lg-4 mx-auto">
+          <div className="col-lg-4 col-md-6 mx-auto">
             <img src="/images/contic4.png" />
             <h5>Media enquiry</h5>
             <div className="adlnone">
@@ -221,10 +221,10 @@ const ContactUs = () => {
         </div>
       </div><div className="addresspnorgs">
         <div className="row">
-          <div className="col-lg-4 icmds text-center align-self-center">
+          <div className="col-lg-4 col-md-4 icmds text-center align-self-center">
             <img src="/images/mapcont.png" />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-md-6">
             <h4 className="adhds">UNIVERSITY CAMPUS</h4>
             <p> Rajiv Gandhi Salai (OMR), Padur,<br />
               (Via) Kelambakkam,<br />
@@ -238,11 +238,10 @@ const ContactUs = () => {
     <div className="container">
       <div className="row">
         <div className="col-lg-7  text-center text-lg-left p-2">
-          <h4>Lorum Ipsum</h4>
-          <p>Best-in-class content by leading faculty and industry leaders<br /> in the 
-            form of videos, cases and projects</p>
+          <h4>Learn future-ready and industry-relevant skills and build a promising career</h4>
+          
         </div>
-        <div className="col-lg-5 text-lg-right text-center align-self-center">
+        <div className="col-lg-4 text-lg-right text-center align-self-center">
           <a href="#" className="blackctathms nobrd"><img src="/images/downldico.png" />Download Brochure</a>
         </div>
       </div>

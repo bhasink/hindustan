@@ -145,9 +145,9 @@ const AboutUs = () => {
             loop: true,
           },
           300: {
-            items: 3,
-            nav: false,
-            dots: true,
+            items: 1,
+            nav: true,
+            dots: false,
             autoplay:true,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
@@ -157,7 +157,7 @@ const AboutUs = () => {
           766: {
             items: 3,
             nav: false,
-            dots: false,
+            dots: true,
             loop: true,
           },
     
@@ -184,7 +184,7 @@ const AboutUs = () => {
       <img src="/images/aboutmainban.jpg" className="bgdeskmb" />
       <div className="container">
         <div className="row">
-          <div className="col-md-6 col-lg-7 text-center align-self-center">
+          <div className="col-md-8 col-lg-7 text-center align-self-center">
             <div className="hmbannerquotes">
               <img src="/images/bnrtexttop.png" className="tpquotelf" />
               <h1 className="bnrhd">
@@ -194,7 +194,7 @@ const AboutUs = () => {
               <img src="/images/bnquotergs.png" className="bnquoterg" />
             </div>
           </div>
-          <div className="col-md-6 col-lg-5 text-center">
+          <div className="col-md-4 col-lg-5 text-center">
             <img src="/images/aboutmobiles.jpg" className="mobhomeshos" />
           </div>
         </div>
@@ -213,7 +213,7 @@ const AboutUs = () => {
               <img src="/images/aboutthmbs.jpg" className="fllimg" />
             </div>
           </div>
-          <div className="col-md-6 col-lg-6 text-lg-left text-center mt-lg-0 mt-5 align-self-center">
+          <div className="col-md-6 col-lg-6 text-lg-left text-center text-md-left mt-lg-0 mt-5 mt-md-0 align-self-center">
             <div className="hdingst dsktop">
               <h2 className="mainhds">Wh<span className="ogx">o</span> we are</h2>
             </div>
@@ -238,11 +238,11 @@ const AboutUs = () => {
             <img src="/images/aboutleader.jpg" className="fllimg" />
           </div>
         </div>
-        <div className="col-md-6 col-lg-7 align-self-center mt-lg-0 mt-5">
+        <div className="col-md-6 col-lg-7 align-self-center mt-lg-0 mt-5 mt-md-0">
           <div className="hdingst dsktop">
             <h2 className="mainhds">leadership n<span className="ogx">o</span>te</h2>
           </div>
-          <p className="text-center text-lg-left">Hindustan Institute of Technology and Science(HITS), is one amongst the first few Universities in India to be entitled by AICTE to offer online professional Master Degree Programs of MBA and MCA. In the rapidly changing world with increasing movement, flexibility, and information overflow, HITS is determined to create new learning experiences through Hindustan Online - CODE.
+          <p className="text-center text-lg-left text-md-left">Hindustan Institute of Technology and Science(HITS), is one amongst the first few Universities in India to be entitled by AICTE to offer online professional Master Degree Programs of MBA and MCA. In the rapidly changing world with increasing movement, flexibility, and information overflow, HITS is determined to create new learning experiences through Hindustan Online - CODE.
 
 Inclusive education is the new mantra for the knowledge society. Our vision is where anyone, anywhere can acquire knowledge and learn new business and management skills faster than ever before. This is feasible due to digital technology and our expertise in delivering quality online education.
 

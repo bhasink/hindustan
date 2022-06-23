@@ -23,23 +23,6 @@ const Index = () => {
   const [trendingCourses, setTrendingCourses] = useState([])
   
   useEffect(() => {
-    $(function(){
-      var tickerLength = $('.coursehnd ul li').length;
-      var tickerHeight = $('.coursehnd ul li').outerHeight();
-      $('.coursehnd ul li:last-child').prependTo('.coursehnd ul');
-      $('.coursehnd ul').css('marginTop',-tickerHeight);
-      function moveTop(){
-        $('.coursehnd ul').animate({
-          top : -tickerHeight
-        },600, function(){
-         $('.coursehnd ul li:first-child').appendTo('.coursehnd ul');
-          $('.coursehnd ul').css('top','');
-        });
-       }
-      setInterval( function(){
-        moveTop();
-      }, 3000);
-      }); 
   
     AOS.init({
       duration: 2000,
@@ -129,8 +112,9 @@ const Index = () => {
             },
       
             766: {
-              items: 2,
+              items: 3,
               nav: true,
+              center:true,
               dots: false,
               loop: true
             },
@@ -173,8 +157,9 @@ const Index = () => {
           },
     
           766: {
-            items: 3,
+            items: 2,
             nav: true,
+            margin: 0,
             dots: false,
             loop: true,
           },
@@ -217,7 +202,7 @@ const Index = () => {
           },
     
           766: {
-            items:3,
+            items:2,
             nav: true,
             dots: false,
             loop: true
@@ -282,7 +267,7 @@ const Index = () => {
           },
     
           766: {
-            items: 1,
+            items: 4,
            nav: false,
           dots: false,
             loop: true
@@ -453,7 +438,7 @@ const Index = () => {
   <section className="onestopcourse">
     <div className="container">
       <img src="/images/bluedots.png" className="bldotslefts" />
-      <div className="mx-auto col-md-8 bgorngs text-center">
+      <div className="mx-auto col-md-10 col-lg-8 bgorngs text-center">
         <div className="coursetextmoreinf">
           <h2 className="mdbldshds">Our one stop <b>study destination</b></h2>
           <ul className="nav nav-tabs" id="myTab" role="tablist">

@@ -171,7 +171,7 @@ const Nav = () => {
                     </Link>
                   </li>
 
-                  <li className="nav-item nosublnk active">
+                  <li className="nav-item  active">
                     <a className="nav-link bidevices orangebtns"   data-toggle="modal" data-target="#exampleModalCenter">Apply Now</a>
                   </li>
                   {/*
@@ -213,7 +213,7 @@ const Nav = () => {
       <div
                     className="modal fade"
                     id="exampleModalCenter"
-                    tabindex="-1"
+                    tabIndex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalEnquirenowTitle3"
                     aria-hidden="true"

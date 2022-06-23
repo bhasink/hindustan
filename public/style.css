@@ -1236,7 +1236,11 @@ footer.stfooter .collapse:not(.show) {
 	
 	.featuredcls .borblfts.mobmls {display: none;}
 	
-	.coursehnd {height: 75px;overflow: hidden;padding: 0 28px;}
+	.coursehnd {height: 75px;overflow: auto;padding: 0 28px;}
+    .coursehnd::-webkit-scrollbar {
+        display:none;
+      }
+
 .coursehnd ul li:nth-child(2){
     background:#000;
 	padding:0 2px;
@@ -3040,7 +3044,7 @@ p.moretext.showtexts {
 }
 
 
-.coursehnd {height: 146px;overflow: hidden; padding: 0px 0 0 21px;;}
+.coursehnd {height: 146px;overflow: auto; padding: 0px 0 0 21px;;}
 .onestopcourse .coursetextmoreinf .nav-tabs a.active{
 		border-bottom: 5px solid #ffffff;
 }
@@ -3445,7 +3449,8 @@ h3.mobclick {
 }
 
 
-.homemainbanner .col-md-6:nth-child(1) {
+.homemainbanner .col-md-6:nth-child(1),
+.homemainbanner .col-md-8:nth-child(1) {
     order: 2;
 	    display: none;
 }
@@ -3971,6 +3976,23 @@ display: flex;}
 
 @media screen and (max-width: 900px) and (min-width: 768px){
 	
+.site-header.topmain .navbar ul li.nav-item .orangebtns, header.topmain.navfixed .navbar ul li.nav-item .orangebtns {
+    text-align: center;
+    margin-top: 15px;
+}
+
+footer.stfooter .collapse:not(.show) {
+    display: block;
+    position: relative;
+    height: auto;
+    left: 0;
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+    background: transparent;
+}
+
 .jnadvts .innerlrs {
     height: 305px;
 }
@@ -4111,6 +4133,39 @@ h3.mobclick {
 .site-header.topmain .navbar ul li:hover .collapse:not(.show) {
     opacity: 0;
     visibility: hidden;
+}
+
+.homemainbanner.aboutbgbacks {
+    overflow: hidden;
+    padding-top: 20px;
+    height: 425px;
+}
+
+.aboutbgbacks .hmbannerquotes .bnrhd {
+    font-size: 40px;
+}
+
+.homemainbanner.aboutbgbacks .owl-carousel .owl-item .hmbannerquotes .tpquotelf, 
+.homemainbanner.aboutbgbacks .tpquotelf {
+    width: 20px;
+    top: 44px;
+    left: -32px;
+}
+
+.aboutbgbacks .bgdeskmb {
+    width: 121%;
+}
+
+.aboutbgbacks .container {
+    top: 2%;
+}
+
+.testimparts .owl-theme .owl-nav button.owl-next, .owl-theme .owl-nav button.owl-next {
+    right: 0;
+}
+
+.testimparts .owl-theme .owl-nav button.owl-prev, .owl-theme .owl-nav button.owl-prev {
+    left: 0;
 }
 
 
