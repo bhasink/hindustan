@@ -554,9 +554,9 @@ const CourseDetails = () => {
               ))}
              
               </div>
-              <a href="javascript:void(0);" className="rdspecials">
+              {/* <a href="javascript:void(0);" className="rdspecials">
                 Read more{' '}
-              </a>
+              </a> */}
             </div>
           </div>
         </section>
