@@ -3970,6 +3970,17 @@ display: flex;}
 
 .trustbycoms .container .cpmslide.mobilesds .owl-dots span {width: 54px;}
 
+.aboutsect .owl-theme .owl-dots .owl-dot span,
+.coursespanels .owl-theme .owl-dots .owl-dot span {
+    background: #d4d4d4;
+    border-radius: 0px;
+}
+
+.coursespanels .owl-theme .owl-dots .owl-dot.active span {
+    background: #f28823;
+    border-radius: 4px;
+    width: 40px;
+}
 
 }
 
