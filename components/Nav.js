@@ -172,7 +172,7 @@ const Nav = () => {
                   </li>
 
                   <li className="nav-item nosublnk active">
-                    <a className="nav-link bidevices orangebtns" href  data-toggle="modal" data-target="#exampleModalCenter">Apply Now</a>
+                    <a className="nav-link bidevices orangebtns"   data-toggle="modal" data-target="#exampleModalCenter">Apply Now</a>
                   </li>
                   {/*
                       

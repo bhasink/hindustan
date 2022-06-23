@@ -2576,8 +2576,13 @@ p.moretext.showtexts {
     }
     
     .panelcards  .csnms.crlnts {
-        font-size: 15px;
-        min-height: 67px;
+        font-size: 14px;
+        min-height: auto;
+        padding-right: 0;
+        padding-left: 0;
+        height: 43px;
+        overflow: hidden;
+        margin-bottom: 0;
     }
 
     .courseallpnsd .col-6 {
