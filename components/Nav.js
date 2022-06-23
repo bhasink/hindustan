@@ -160,7 +160,7 @@ const Nav = () => {
                     </Link>
                   </li>
                   <li className="nav-item nosublnk active">
-                    <Link href="../about">
+                    <Link href="/about">
                         <a className="nav-link bidevices">About Us</a>
                     </Link>
                   </li>

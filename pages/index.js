@@ -523,7 +523,7 @@ const Index = () => {
                   bachelorsCourses.map((get_courses, key) => (
 
 <Link href={`courses/${get_courses.slug}`}>
-                  <li><a href="#">{get_courses.name}</a></li>
+                  <li><a>{get_courses.name}</a></li>
                   </Link>
 
                   ))}
