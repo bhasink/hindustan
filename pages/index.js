@@ -657,6 +657,9 @@ const Index = () => {
           </li>
         </ul>
       </div>
+
+      {trendingCourses.length && (
+
       <div className="tab-content" id="myTabContent2">
         <div className="tab-pane fade show active" id="trendingprg" role="tabpanel" aria-labelledby="trendingprg-tab">
           <div className="coursespanels">
@@ -669,8 +672,7 @@ const Index = () => {
                    
                   >
 
-{trendingCourses &&
-                  trendingCourses.map((get_courses, key) => (
+{trendingCourses.map((get_courses, key) => (
 
 <Link href={`courses/${get_courses.slug}`}>
 
@@ -844,6 +846,10 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      )}
+
+
     </div>
   </section>
   <section className="whtsects trustbycoms">
