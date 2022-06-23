@@ -454,15 +454,16 @@ const CourseDetails = () => {
             </h2>
             <p>
 
+            {ReactHtmlParser(courseDetails.about_program)}
               
-            {isReadMore && courseDetails.about_program.length > 450 ? ReactHtmlParser(courseDetails.about_program.slice(0, 450)) : ReactHtmlParser(courseDetails.about_program) }
+            {/* {isReadMore && courseDetails.about_program.length > 450 ? ReactHtmlParser(courseDetails.about_program.slice(0, 450)) : ReactHtmlParser(courseDetails.about_program) } */}
 
                  
             </p>
            
-            <a href="javascript:void(0);" className="moreless-button2">
+            {/* <a href="javascript:void(0);" className="moreless-button2">
               Read more{' '}
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -509,7 +510,7 @@ const CourseDetails = () => {
                 <p>
                     {ReactHtmlParser(courseDetails.about_specialization)}
                 </p>
-                <p className="moretext">
+                {/* <p className="moretext">
                   {' '}
                   Our program uses a unique blend of industry-relevant content
                   on par with IATA standards resulting in an increased
@@ -523,7 +524,7 @@ const CourseDetails = () => {
                 </p>
                 <a href="javascript:void(0);" className="moreless-button">
                   Read more{' '}
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
