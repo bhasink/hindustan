@@ -1,15 +1,131 @@
-import { useContext,useState,useEffect } from "react";
+import { useState,useEffect } from "react";
 import Link from 'next/link'
+import { useToasts } from 'react-toast-notifications'
+import axios from 'axios'
+import { useRouter } from 'next/router'
 
 const Nav = () => {
-
   const [isActive, setActive] = useState("false");
 
   const handleToggle = () => {
     setActive(!isActive);
   };
 
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [mobileNo, setMobileNo] = useState('')
+  const [query, setQuery] = useState('')
+  const [course, setCourse] = useState('')
+
+  const [courseData, setCourseData] = useState([])
+
+  const router = useRouter()
+  const { addToast } = useToasts()
+
+  useEffect(() => {
+   
+    getAllCourses()
+  }, [])
+  
+  const getAllCourses = async () => {
+    try {
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API}/listing`)
+
+      const getCourses = data.data.get_all_courses
+
+      setCourseData(getCourses)
+
+      console.log(data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    if (name == '') {
+      addToast('Please enter the name!', { appearance: 'error' })
+
+      return false
+    }
+
+    if (email == '') {
+      addToast('Please enter the email!', { appearance: 'error' })
+      return false
+    }
+
+    if (IsEmail(email) == false) {
+      addToast('Incorrect email!', { appearance: 'error' })
+
+      return false
+    }
+
+    if (mobileNo == '') {
+      addToast('Please enter the mobile number!', { appearance: 'error' })
+      return false
+    }
+
+    if (mobileNo.length != 10) {
+      addToast('Mobile number must be of ten digits!', { appearance: 'error' })
+      return false
+    }
+
+    if (course == '') {
+      addToast('Please select the course!', { appearance: 'error' })
+
+      return false
+    }
+
+    if (query == '') {
+      addToast('Please enter the query!', { appearance: 'error' })
+      return false
+    }
+
+    $('body').removeClass('modal-open')
+    $('.modal-backdrop').remove()
+    $('#exampleModalEnquirenow').hide()
+
+    try {
+      const data = await axios.post(
+        `${process.env.NEXT_PUBLIC_API}/course-leads`,
+        {
+          name: name,
+          email: email,
+          mobile_no: mobileNo,
+          query: query,
+          course_id: course,
+        },
+      )
+
+      if (data.status == 200) {
+        addToast('Success!', { appearance: 'success' })
+        router.push('/thanks')
+      }
+
+      //
+    } catch (err) {
+      console.log(err)
+      addToast('Invalid! Please try again.', { appearance: 'error' })
+    }
+  }
+
+  const IsEmail = (email) => {
+    let regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+    if (!regex.test(email)) {
+      return false
+    } else {
+      return true
+    }
+  }
+
+
+
     return(
+
+      <>
+
         <header className={`site-header topmain mobexheight norm ${isActive ? "" : "heightexps"}`}>
         {/*--New Updates---*/}   
         <nav className="navbar navbar-expand-lg navbar-light">
@@ -21,7 +137,7 @@ const Nav = () => {
                 </a>
             </Link>
             {/* Toggler */}
-            <button onClick={handleToggle} className={`navbar-toggler openhdas ${isActive ? "" : "crossshwos"}`}  type="button" >
+            <button  onClick={handleToggle} className={`navbar-toggler openhdas ${isActive ? "" : "crossshwos"}`}  type="button" >
               <i className="fal fa-bars" />
               <i className="fal fa-times" />
             </button>
@@ -91,76 +207,126 @@ const Nav = () => {
           </div>
         </nav>
 
-
-       
-<div className="modal fade" id="exampleModalCenter"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div className="modal-dialog modal-dialog-centered" role="document">
-    <div className="modal-content">
-      
-      <div className="modal-body">
-						  
-						  <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">×</span>
-							</button>
-							
-							<div className="basicenqforms">
-								<div className="row">
-									<div className="col-lg-12 mx-auto">
-										<h3>Apply Now !</h3>
-										<div className="form-groupsets">
-										<label>Name</label>
-										<input type="text" className="form-control" placeholder=""/>
-										</div>
-										
-										<div className="form-groupsets">
-										<label>Email id</label>
-										<input type="email" className="form-control" placeholder=""/>
-										</div>
-										
-										
-										<div className="form-groupsets">
-										<label>Phone No.</label>
-										<input type="text" className="form-control" placeholder=""/>
-										</div>
-										
-										<div className="form-groupsets">
-										<label>courses</label>
-                    <select>
-												<option value="hide">---</option>
-												<option value="2010">Course 1</option>
-												<option value="2011">Course 2</option>
-												<option value="2012">Course 3</option>
-												<option value="2013">Course 4</option>
-												<option value="2014">Course 5</option>
-												
-											</select>
-										</div>
-
-										<div className="form-groupsets">
-										<label>How We can Help</label>
-										<textarea type="text" className="form-control" placeholder=""></textarea>
-										</div>
-										
-										
-										
-									</div>
-									
-									
-									<div className="col-lg-12 text-center roundbotms">
-										<button className="orangectadms">Submit</button>
-									</div>
-							
-								</div>
-							</div>
-						
-						  </div>
-      
-    </div>
-  </div>
-</div>
-
-
       </header>    
+
+      
+      <div
+                    className="modal fade"
+                    id="exampleModalCenter"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="exampleModalEnquirenowTitle3"
+                    aria-hidden="true"
+                  >
+                    <div
+                      className="modal-dialog modal-dialog-centered   jncustm trasntypes"
+                      role="document"
+                    >
+                      <div className="modal-content">
+                        <div className="modal-body">
+                          <button
+                            type="button"
+                            className="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                          >
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+
+                          <div className="basicenqforms">
+                            <form onSubmit={handleSubmit}>
+                              <div className="row">
+                                <div className="col-lg-12 mx-auto">
+                                  <h3>Enquire Now !</h3>
+                                  <div className="form-groupsets">
+                                    <label>Name</label>
+                                    <input
+                                      type="text"
+                                      className="form-control"
+                                      placeholder=""
+                                      value={name}
+                                      onChange={(e) => setName(e.target.value)}
+                                    />
+                                  </div>
+
+                                  <div className="form-groupsets">
+                                    <label>Email id</label>
+                                    <input
+                                      type="text"
+                                      className="form-control"
+                                      placeholder=""
+                                      value={email}
+                                      onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                  </div>
+
+                                  <div className="form-groupsets">
+                                    <label>Mobile No.</label>
+                                    <input
+                                      type="text"
+                                      className="form-control"
+                                      placeholder=""
+                                      value={mobileNo}
+                                      onChange={(e) =>
+                                        setMobileNo(e.target.value)
+                                      }
+                                    />
+                                  </div>
+
+
+                                  <div className="form-groupsets">
+                                    <label>Course</label>
+
+                                    <select 
+                                      className="form-control"
+                                      placeholder=""
+                                      value={course}
+                                      onChange={(e) =>
+                                        setCourse(e.target.value)
+                                      }
+                                    >
+
+                                      <option>Select Course</option>
+
+                                      {courseData && courseData.map((get_courses_data, key) => (
+                                      <option value={get_courses_data.id}>{get_courses_data.name}</option>
+                                      ))}
+
+                                    </select>
+                                
+                                  </div>
+
+                                  <div className="form-groupsets">
+                                    <label>Query</label>
+                                    <textarea
+                                      type="text"
+                                      className="form-control"
+                                      placeholder=""
+                                      value={query}
+                                      onChange={(e) => setQuery(e.target.value)}
+                                    ></textarea>
+                                  </div>
+                                </div>
+
+                                <div className="col-lg-12 text-center roundbotms">
+                                  <button
+                                    type="submit"
+                                    className="orangectadms"
+                                  >
+                                    Submit
+                                  </button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+      </>
+
     );
 
 };

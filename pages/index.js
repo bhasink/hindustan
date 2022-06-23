@@ -21,40 +21,25 @@ const Index = () => {
   const [mastersCourses, setMastersCourses] = useState([])
   const [bachelorsCourses, setBachelorsCourses] = useState([])
   const [trendingCourses, setTrendingCourses] = useState([])
-  const [currentPage, setCurrentPage] = useState(1)
-  const [currentPageBach, setCurrentPageBach] = useState(1)
-  const [currentPageFilter, setCurrentPageFilter] = useState(1)
-
-  const [courseMode, setCourseMode] = useState('trending')
-
-  const [mastersCoursesLastPage, setMastersCoursesLastPage] = useState(false)
-  const [bachelorsCoursesLastPage, setBachelorsCoursesLastPage] = useState(
-    false,
-  )
-  const [filterCoursesLastPage, setFilterCoursesLastPage] = useState(
-    false,
-  )
-
-  const [loader, setLoader] = useState(false)
-
+  
   useEffect(() => {
-    // $(function(){
-    //   var tickerLength = $('.coursehnd ul li').length;
-    //   var tickerHeight = $('.coursehnd ul li').outerHeight();
-    //   $('.coursehnd ul li:last-child').prependTo('.coursehnd ul');
-    //   $('.coursehnd ul').css('marginTop',-tickerHeight);
-    //   function moveTop(){
-    //     $('.coursehnd ul').animate({
-    //       top : -tickerHeight
-    //     },600, function(){
-    //      $('.coursehnd ul li:first-child').appendTo('.coursehnd ul');
-    //       $('.coursehnd ul').css('top','');
-    //     });
-    //    }
-    //   setInterval( function(){
-    //     moveTop();
-    //   }, 3000);
-    //   }); 
+    $(function(){
+      var tickerLength = $('.coursehnd ul li').length;
+      var tickerHeight = $('.coursehnd ul li').outerHeight();
+      $('.coursehnd ul li:last-child').prependTo('.coursehnd ul');
+      $('.coursehnd ul').css('marginTop',-tickerHeight);
+      function moveTop(){
+        $('.coursehnd ul').animate({
+          top : -tickerHeight
+        },600, function(){
+         $('.coursehnd ul li:first-child').appendTo('.coursehnd ul');
+          $('.coursehnd ul').css('top','');
+        });
+       }
+      setInterval( function(){
+        moveTop();
+      }, 3000);
+      }); 
   
     AOS.init({
       duration: 2000,
@@ -86,6 +71,7 @@ const Index = () => {
     }
   }
 
+  
     const state = {
         responsive: {
           0: {
@@ -657,6 +643,9 @@ const Index = () => {
           </li>
         </ul>
       </div>
+
+      {trendingCourses.length && (
+
       <div className="tab-content" id="myTabContent2">
         <div className="tab-pane fade show active" id="trendingprg" role="tabpanel" aria-labelledby="trendingprg-tab">
           <div className="coursespanels">
@@ -669,8 +658,7 @@ const Index = () => {
                    
                   >
 
-{trendingCourses &&
-                  trendingCourses.map((get_courses, key) => (
+{trendingCourses.map((get_courses, key) => (
 
 <Link href={`courses/${get_courses.slug}`}>
 
@@ -844,6 +832,10 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      )}
+
+
     </div>
   </section>
   <section className="whtsects trustbycoms">
