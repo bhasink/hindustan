@@ -374,7 +374,7 @@ const Index = () => {
           <div className="row">
             <div className="col-md-6 col-lg-6 text-center align-self-center commonbnlyts">
               <div className="hmbannerquotes">
-              <a class="orangectathms" href="about">Apply Now</a>
+              <a class="orangectathms" href  data-toggle="modal" data-target="#exampleModalCenter">Apply Now</a>
                 <h1 className="bnrhd">
                  <span>#CrackTheC<div className="ogcl">O</div>DE</span><br />
                   with our superlative set of programs</h1>
@@ -385,7 +385,7 @@ const Index = () => {
             <div className="col-md-6 col-lg-6 text-center appmbctas">
               <img src="/images/smartboys2.png" className="rgtmds" />
               <img src="/images/homebanners/2mobbn.jpg" className="mobhomeshos" />
-              <a class="orangectathms" href="about">Apply Now</a>
+              <a class="orangectathms" href data-toggle="modal" data-target="#exampleModalCenter">Apply Now</a>
             </div>
           </div>
         </div>	

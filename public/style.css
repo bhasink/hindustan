@@ -2643,12 +2643,21 @@ p.moretext.showtexts {
     font-weight: 700;
 }
 
+.hmbannerquotes a:not([href]):not([tabindex]), .hmbannerquotes a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #fff;
+}
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){
 	
+    .site-header.topmain .navbar ul li.nav-item .orangebtns {
+        margin-top: 20px;
+    }
+    
     .homemainbanner.mainfnbans .owl-theme .owl-nav {
-        top: 153px;
+        top: -199px;
+        position: relative;
     }
 
     .mainfnbans .item {
