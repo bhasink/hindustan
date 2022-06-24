@@ -944,10 +944,11 @@ consectetur, adipisci velit...</p>
         </div>
         <div className="col-lg-4 col-md-6 align-self-center">
           <div className="ftad">
-            <p>40, G.S.T Road, St. Thomas Mount,
-              Chennai - 600 016, India.</p>
-            <a href="tel:+91-9606333232"> +91-44-2234 1389</a>
-            <a href="mailto:enquiry@jainxacademy.com">info@hindustanuniv.ac.in</a>
+            <p>(Address) 1, Rajiv Gandhi Salai (OMR), Padur,
+(Via) Kelambakkam,
+Chennai - 603 103, India.</p>
+            <a href="tel:+919945580408"> +91 9945580408</a>
+            <a href="mailto:enquiry@jainxacademy.com">admission@hindustancode.com</a>
             {/*<div class="sclics">
 					<ul>
 						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -969,8 +970,8 @@ consectetur, adipisci velit...</p>
               <div id="collapseOneft" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample2">
                 <ul>
                   <li><a href="../about#whoweare">Who We Are</a></li>
-                  <li><a href="#">Leadership Note</a></li>
-                  <li><a href="#">Awards & Ranking</a></li>
+                  <li><a href="../about#leadership">Leadership Note</a></li>
+                  <li><a href="../about#awardsranking">Awards & Ranking</a></li>
                  
                   
                 </ul>
@@ -983,9 +984,9 @@ consectetur, adipisci velit...</p>
               <h4>All PROGRAMS</h4>
               <div id="collapseTwoft" className="collapse" aria-labelledby="headingTwoft" data-parent="#accordionExample2">  
                 <ul>
-                 <li><a href="#">Our One Stop Study DesTination</a></li>
-                 <li><a href="#">Bachelors</a></li>
-                 <li><a href="#">Masters</a></li>
+                 <li><a href="../courses#onestop">Our One Stop Study DesTination</a></li>
+                 <li><a href="../courses#bachelors">Bachelors</a></li>
+                 <li><a href="../courses#masters">Masters</a></li>
                   
                 </ul>
               </div>
@@ -997,13 +998,13 @@ consectetur, adipisci velit...</p>
               <h4>PROGRAMS OFFERED</h4>
               <div id="collapseThreeft" className="collapse" aria-labelledby="headingThreeft" data-parent="#accordionExample2">  
                 <ul>
-                  <li><a href="#">Data Analytics </a></li>
-                  <li><a href="#">Multimedia and Animation</a></li>
-                  <li><a href="#">BBA Aviation Management</a></li>
-                  <li><a href="#"><b>UG PROGRAMS</b> </a></li>
-                  <li><a href="#">Accounting and Finance</a></li>
-                  <li><a href="#">Human Resource Management</a></li>
-                  <li><a href="#">Tourism and Hospitality Management</a></li>
+                  <li><a href="../courses/data-analytics">Data Analytics </a></li>
+                  <li><a href="../courses/multimedia-and-animation">Multimedia and Animation</a></li>
+                  <li><a href="../courses/bba-aviation-management">BBA Aviation Management</a></li>
+                  <li><a href="../courses/"><b>UG PROGRAMS</b> </a></li>
+                  <li><a href="../courses/accounting-and-finance">Accounting and Finance</a></li>
+                  <li><a href="../courses/human-resource-management">Human Resource Management</a></li>
+                  <li><a href="../courses/tourism-and-hospitality-management">Tourism and Hospitality Management</a></li>
                 </ul>
               </div>
             </div>
@@ -1014,9 +1015,9 @@ consectetur, adipisci velit...</p>
               <h4>LATEST NEWS</h4>
               <div id="collapseFourft" className="collapse" aria-labelledby="headingFourft" data-parent="#accordionExample2">  
                 <ul>
-                  <li><a href="#">Hindustan Online - CODE introduces new specializations for the Academic year (2022-2023)</a></li>
-                  <li><a href="#">Hindustan Online - opportunities in Aviation Management</a></li>
-                  <li><a href="#">Hindustan CODE bets big on nation's 'Digital Education'</a></li>
+                  <li><a href="https://www.indiatoday.in/pr-newswire?rkey=20220525EN68796&filter=4315" target="_blank">Hindustan Online - CODE introduces new specializations for the Academic year (2022-2023)</a></li>
+                  <li><a href="https://www.aninews.in/news/business/hindustan-online-code-to-host-a-webinar-on-career-opportunities-in-aviation-management20220525142658/" target="_blank">Hindustan Online - opportunities in Aviation Management</a></li>
+                  <li><a href="https://timesofindia.indiatimes.com/hindustan-code-bets-big-on-nations-digital-education-mandate-prepares-to-welcome-its-students-for-the-academic-year-2022-23/articleshow/89496899.cms" target="_blank">Hindustan CODE bets big on nation's 'Digital Education'</a></li>
                   
                 </ul>
               </div>
