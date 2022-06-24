@@ -336,7 +336,7 @@ const Index = () => {
 
 
 
-  <section className="homemainbanner">
+  <section className="homemainbanner mainfnbans">
 
 
   <OwlCarousel
@@ -347,64 +347,45 @@ const Index = () => {
                    
                   >
                      <div className="item">
+                     <img src="/images/homebanners/1Banner.jpg" className="backdeksbgs" />
         <div className="container">
           <div className="row">
-            <div className="col-md-6 col-lg-7 text-center align-self-center">
+            <div className="col-md-6 col-lg-6 text-center align-self-center commonbnlyts">
               <div className="hmbannerquotes">
-                <img src="/images/bnrtexttop.png" className="tpquotelf" />
+               
                 <h1 className="bnrhd">
                   Cracking the <span>C<div className="ogcl">O</div>DE</span> to<br />
                   Success</h1>
-                <p>Neque porro quisquam est qui dolorem ipsum </p>
-                <img src="/images/bnquotergs.png" className="bnquoterg" />
+               
+               
               </div>
             </div>
-            <div className="col-md-6 col-lg-5 text-center">
-              <img src="/images/smartboys.png" className="rgtmds" />
-              <img src="/images/mobilebane.jpg" className="mobhomeshos" />
+            <div className="col-md-6 col-lg-6 text-center">
+              <img src="/images/smartboysbn1.png" className="rgtmds" />
+              <img src="/images/homebanners/1mobbn.jpg" className="mobhomeshos" />
             </div>
           </div>
         </div>	
       </div>
 
       <div className="item">
+      <img src="/images/homebanners/2Banner.jpg" className="backdeksbgs" />
         <div className="container">
           <div className="row">
-            <div className="col-md-6 col-lg-7 text-center align-self-center">
+            <div className="col-md-6 col-lg-6 text-center align-self-center commonbnlyts">
               <div className="hmbannerquotes">
-                <img src="/images/bnrtexttop.png" className="tpquotelf" />
+              <a class="orangectathms" href="about">Apply Now</a>
                 <h1 className="bnrhd">
-                  Cracking the <span>C<div className="ogcl">O</div>DE</span> to<br />
-                  Success</h1>
-                <p>Neque porro quisquam est qui dolorem ipsum </p>
-                <img src="/images/bnquotergs.png" className="bnquoterg" />
+                 <span>#CrackTheC<div className="ogcl">O</div>DE</span><br />
+                  with our superlative set of programs</h1>
+                
+              
               </div>
             </div>
-            <div className="col-md-6 col-lg-5 text-center">
-              <img src="/images/smartboys.png" className="rgtmds" />
-              <img src="/images/mobilebane.jpg" className="mobhomeshos" />
-            </div>
-          </div>
-        </div>	
-      </div>
-
-
-      <div className="item">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 col-lg-7 text-center align-self-center">
-              <div className="hmbannerquotes">
-                <img src="/images/bnrtexttop.png" className="tpquotelf" />
-                <h1 className="bnrhd">
-                  Cracking the <span>C<div className="ogcl">O</div>DE</span> to<br />
-                  Success</h1>
-                <p>Neque porro quisquam est qui dolorem ipsum </p>
-                <img src="/images/bnquotergs.png" className="bnquoterg" />
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-5 text-center">
-              <img src="/images/smartboys.png" className="rgtmds" />
-              <img src="/images/mobilebane.jpg" className="mobhomeshos" />
+            <div className="col-md-6 col-lg-6 text-center appmbctas">
+              <img src="/images/smartboys2.png" className="rgtmds" />
+              <img src="/images/homebanners/2mobbn.jpg" className="mobhomeshos" />
+              <a class="orangectathms" href="about">Apply Now</a>
             </div>
           </div>
         </div>	
@@ -412,25 +393,29 @@ const Index = () => {
 
 
       <div className="item">
+      <img src="/images/homebanners/3Banner.jpg" className="backdeksbgs" />
         <div className="container">
           <div className="row">
-            <div className="col-md-6 col-lg-7 text-center align-self-center">
+            <div className="col-md-6 col-lg-6 text-center align-self-center  commonbnlyts">
               <div className="hmbannerquotes">
-                <img src="/images/bnrtexttop.png" className="tpquotelf" />
+                
                 <h1 className="bnrhd">
                   Cracking the <span>C<div className="ogcl">O</div>DE</span> to<br />
                   Success</h1>
-                <p>Neque porro quisquam est qui dolorem ipsum </p>
-                <img src="/images/bnquotergs.png" className="bnquoterg" />
+               
+                
               </div>
             </div>
-            <div className="col-md-6 col-lg-5 text-center">
-              <img src="/images/smartboys.png" className="rgtmds" />
-              <img src="/images/mobilebane.jpg" className="mobhomeshos" />
+            <div className="col-md-6 col-lg-6 text-center">
+              <img src="/images/smartboysbn3.png" className="rgtmds" />
+              <img src="/images/homebanners/3mobbn.jpg" className="mobhomeshos" />
             </div>
           </div>
         </div>	
       </div>
+
+
+     
                   </OwlCarousel>
                   
 
@@ -508,7 +493,7 @@ const Index = () => {
                   bachelorsCourses.map((get_courses, key) => (
 
 <Link href={`courses/${get_courses.slug}`}>
-                  <li><a>{get_courses.name}</a></li>
+                  <li><a href="#">{get_courses.name}</a></li>
                   </Link>
 
                   ))}
@@ -1060,11 +1045,11 @@ const Index = () => {
           
                         </OwlCarousel>
 
-        <div className="text-center pt-4">
+        {/*<div className="text-center pt-4">
         <Link href="media">
           <a  className="orangectathms">View All</a>
           </Link>
-        </div> 
+        </div> */}
       </div>
     </div>
   </section>

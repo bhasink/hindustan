@@ -2575,10 +2575,86 @@ p.moretext.showtexts {
     padding-top: 70px;
 }
 
+/* csss for new banners */
+
+.mainfnbans .container {
+    max-width: initial;
+    padding: 0 0;
+}
+
+
+.mainfnbans .commonbnlyts {
+    max-width: 502px;
+    margin: auto;
+}
+
+.mainfnbans .backdeksbgs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.mainfnbans .owl-carousel .owl-item .rgtmds {
+    opacity: 0;
+}
+
+.mainfnbans .commonbnlyts .bnrhd {
+    opacity: 0;
+}
+
+.mainfnbans {
+    position: relative;
+    height: 700px;
+}
+
+.homemainbanner.mainfnbans  .owl-theme .owl-nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 233px;
+}
+
+.homemainbanner.mainfnbans .owl-theme .owl-dots {
+    position: absolute;
+    bottom: 128px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 4;
+    top: inherit;
+}
+
+.mainfnbans .hmbannerquotes .orangectathms {
+    position: relative;
+    top: 270px;
+    left: -195px;
+}
+
+.appmbctas .orangectathms {
+    display:none;
+}
+
+.mainfnbans .item {
+    height: 100vh;
+}
+
+.aboutbgbacks .hmbannerquotes .bnrhd {
+    font-weight: 700;
+}
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){
 	
+    .homemainbanner.mainfnbans .owl-theme .owl-nav {
+        top: 153px;
+    }
+
+    .mainfnbans .item {
+        height: auto;
+    }
+
     .tabnormcta button {
         padding: 7px 14px;
     }
@@ -3986,6 +4062,26 @@ display: flex;}
     width: 40px;
 }
 
+.mainfnbans .backdeksbgs {
+    display: none;
+}
+
+.homemainbanner.mainfnbans .owl-theme .owl-dots {
+    bottom: 35px;
+}
+
+.appmbctas {
+    position: relative;
+}
+
+.appmbctas .orangectathms {
+    position: absolute;
+    top: 170px;
+    z-index: 4;
+    left: 46px;
+    display: block;
+}
+
 }
 
 
@@ -4187,6 +4283,16 @@ h3.mobclick {
 }
 
 
+@media screen and (max-width: 1300px) and (min-width: 1280px){
+.mainfnbans {
+    height: 587px;
+}
+
+.mainfnbans .hmbannerquotes .orangectathms{
+    left: -153px;
+}
+}
+
 
 @media screen and (max-width: 3500px) and (min-width: 1600px){
 	.container {
@@ -4197,4 +4303,23 @@ h3.mobclick {
 	    height: 767px;
 }
 
+.mainfnbans{
+    height: 809px;
 }
+
+.mainfnbans .hmbannerquotes .orangectathms{
+    top: 291px;
+    left: -272px;
+}
+
+.homemainbanner.mainfnbans .owl-theme .owl-dots{
+    bottom: 220px;
+}
+
+.homemainbanner.mainfnbans .owl-theme .owl-nav{
+    top: 297px
+}
+
+}
+
+

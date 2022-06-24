@@ -188,14 +188,13 @@ const AboutUs = () => {
             <div className="hmbannerquotes">
               <img src="/images/bnrtexttop.png" className="tpquotelf" />
               <h1 className="bnrhd">
-                <b>Lorem Ipsum</b> is simply<br />
-                dummy text</h1>
-              <p>Neque porro quisquam est qui dolorem ipsum </p>
+                <b>About <br/> Hindustan Online</b></h1>
+              
               <img src="/images/bnquotergs.png" className="bnquoterg" />
             </div>
           </div>
           <div className="col-md-4 col-lg-5 text-center">
-            <img src="/images/aboutmobiles.jpg" className="mobhomeshos" />
+            <img src="/images/aboutmobilesnew.jpg" className="mobhomeshos" />
           </div>
         </div>
       </div>	
