@@ -793,6 +793,29 @@ const CourseDetails = () => {
                     <img src="/images/client/9.png" />
                   </div>
                 </div>
+
+                <div className="item">
+                  <div className="lgocirc">
+                    <img src="/images/client/10.png" />
+                  </div>
+                </div>
+
+
+                <div className="item">
+                  <div className="lgocirc">
+                    <img src="/images/client/11.png" />
+                  </div>
+                </div>
+
+
+                <div className="item">
+                  <div className="lgocirc">
+                    <img src="/images/client/12.png" />
+                  </div>
+                </div>
+
+
+
               
               </OwlCarousel>
             </div>

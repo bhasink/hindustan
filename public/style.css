@@ -2571,6 +2571,10 @@ p.moretext.showtexts {
     margin-top: 0;
 }
 
+.faqnewtys {
+    padding-top: 70px;
+}
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){

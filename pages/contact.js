@@ -275,7 +275,7 @@ const ContactUs = () => {
             <p>40, G.S.T Road, St. Thomas Mount,
               Chennai - 600 016, India.</p>
             <a href="tel:+91-9606333232"> +91-44-2234 1389</a>
-            <a href="mailto:enquiry@jainxacademy.com">info@hindustanuniv.ac.in</a>
+            <a href="mailto:codeadmissions@hindustanuniv.ac.in ">codeadmissions@hindustanuniv.ac.in </a>
             {/*<div class="sclics">
 					<ul>
 						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>

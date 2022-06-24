@@ -526,7 +526,7 @@ const Index = () => {
     <div className="container">
       <div className="col-md-12 col-lg-12 align-self-center text-center" data-aos="fade-up" data-aos-duration={1000}>
         <h2 className="mainhds mb-lg-4 ">Ab<div className="ogcl">o</div>ut Us</h2>
-        <p>The renowned Hindustan Group of Institutions in its non-stop endeavor to be at the forefront of quality education is has proudly launched Hindustan Online - CODE - the Centre for Open and Digital Education. The programs at CODE are all very contemporary with a well-curated and well-researched curriculum. Our programs do not just provide the theoretical learning of concepts, but we focus on the practical application of these concepts by following Outcome-based Learning concepts. {/* <a href="#">know more</a> */}</p>
+        <p>Hindustan Online - CODE - the Centre for Open and Digital Education, the newest addition to the renowned Hindustan Group of Institutions is an endeavor in making world-class education accessible. With a well-curated, well-researched curriculum- we believe in the power of Outcome-based Learning. Our programs do not just provide theoretical learning, but focus on practical application of concepts.  {/* <a href="#">know more</a> */}</p>
       </div>
       <div className="text-center pt-4 pb-4">
         <Link href="about">
@@ -903,7 +903,21 @@ const Index = () => {
 
           <div className="item">
 <div className="lgocirc">
-                  <img src="/images/client/1.png" />
+                  <img src="/images/client/10.png" />
+                </div>
+
+          </div>
+
+          <div className="item">
+<div className="lgocirc">
+                  <img src="/images/client/11.png" />
+                </div>
+
+          </div>
+
+          <div className="item">
+<div className="lgocirc">
+                  <img src="/images/client/12.png" />
                 </div>
 
           </div>
@@ -976,17 +990,17 @@ const Index = () => {
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="/images/client/1.png" />
+                  <img src="/images/client/10.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="/images/client/2.png" />
+                  <img src="/images/client/11.png" />
                 </div>
               </div>
               <div className="col-6 col-md-2">
                 <div className="lgocirc">
-                  <img src="/images/client/3.png" />
+                  <img src="/images/client/12.png" />
                 </div>
               </div>
             </div>
@@ -1054,7 +1068,7 @@ const Index = () => {
       </div>
     </div>
   </section>
-  <section className="whtsects jnadvts galhnds taglineabs">
+   {/* <section className="whtsects jnadvts galhnds taglineabs">
     <div className="container">
       <div className="text-center hdingst">
         <h2 className="mainhds">Gallery</h2>
@@ -1098,7 +1112,7 @@ const Index = () => {
                     
       
     </div>
-  </section>
+  </section> */}
   <section className="faqnewtys">
     <img src="/images/topbllefts.png" className="topblfts" />
     <img src="/images/abbots.png" className="borblfts" />
@@ -1267,10 +1281,11 @@ const Index = () => {
         </div>
         <div className="col-lg-4 col-md-6 align-self-center">
           <div className="ftad">
-            <p>40, G.S.T Road, St. Thomas Mount,
-              Chennai - 600 016, India.</p>
-            <a href="tel:+91-9606333232"> +91-44-2234 1389</a>
-            <a href="mailto:enquiry@jainxacademy.com">info@hindustanuniv.ac.in</a>
+            <p>(Address) 1, Rajiv Gandhi Salai (OMR), Padur,
+(Via) Kelambakkam,
+Chennai - 603 103, India.</p>
+            <a href="tel:+919945580408"> +91 9945580408</a>
+            <a href="mailto:enquiry@jainxacademy.com">admission@hindustancode.com</a>
             {/*<div class="sclics">
 					<ul>
 						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -1292,8 +1307,8 @@ const Index = () => {
               <div id="collapseOneft" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample2">
                 <ul>
                   <li><a href="../about#whoweare">Who We Are</a></li>
-                  <li><a href="#">Leadership Note</a></li>
-                  <li><a href="#">Awards & Ranking</a></li>
+                  <li><a href="../about#leadership">Leadership Note</a></li>
+                  <li><a href="../about#awardsranking">Awards & Ranking</a></li>
                  
                   
                 </ul>
@@ -1306,9 +1321,9 @@ const Index = () => {
               <h4>All PROGRAMS</h4>
               <div id="collapseTwoft" className="collapse" aria-labelledby="headingTwoft" data-parent="#accordionExample2">  
                 <ul>
-                 <li><a href="#">Our One Stop Study DesTination</a></li>
-                 <li><a href="#">Bachelors</a></li>
-                 <li><a href="#">Masters</a></li>
+                 <li><a href="../courses#onestop">Our One Stop Study DesTination</a></li>
+                 <li><a href="../courses#bachelors">Bachelors</a></li>
+                 <li><a href="../courses#masters">Masters</a></li>
                   
                 </ul>
               </div>
@@ -1320,13 +1335,13 @@ const Index = () => {
               <h4>PROGRAMS OFFERED</h4>
               <div id="collapseThreeft" className="collapse" aria-labelledby="headingThreeft" data-parent="#accordionExample2">  
                 <ul>
-                  <li><a href="#">Data Analytics </a></li>
-                  <li><a href="#">Multimedia and Animation</a></li>
-                  <li><a href="#">BBA Aviation Management</a></li>
-                  <li><a href="#"><b>UG PROGRAMS</b> </a></li>
-                  <li><a href="#">Accounting and Finance</a></li>
-                  <li><a href="#">Human Resource Management</a></li>
-                  <li><a href="#">Tourism and Hospitality Management</a></li>
+                  <li><a href="../courses/data-analytics">Data Analytics </a></li>
+                  <li><a href="../courses/multimedia-and-animation">Multimedia and Animation</a></li>
+                  <li><a href="../courses/bba-aviation-management">BBA Aviation Management</a></li>
+                  <li><a href="../courses/"><b>UG PROGRAMS</b> </a></li>
+                  <li><a href="../courses/accounting-and-finance">Accounting and Finance</a></li>
+                  <li><a href="../courses/human-resource-management">Human Resource Management</a></li>
+                  <li><a href="../courses/tourism-and-hospitality-management">Tourism and Hospitality Management</a></li>
                 </ul>
               </div>
             </div>
@@ -1337,9 +1352,9 @@ const Index = () => {
               <h4>LATEST NEWS</h4>
               <div id="collapseFourft" className="collapse" aria-labelledby="headingFourft" data-parent="#accordionExample2">  
                 <ul>
-                  <li><a href="#">Hindustan Online - CODE introduces new specializations for the Academic year (2022-2023)</a></li>
-                  <li><a href="#">Hindustan Online - opportunities in Aviation Management</a></li>
-                  <li><a href="#">Hindustan CODE bets big on nation's 'Digital Education'</a></li>
+                  <li><a href="https://www.indiatoday.in/pr-newswire?rkey=20220525EN68796&filter=4315" target="_blank">Hindustan Online - CODE introduces new specializations for the Academic year (2022-2023)</a></li>
+                  <li><a href="https://www.aninews.in/news/business/hindustan-online-code-to-host-a-webinar-on-career-opportunities-in-aviation-management20220525142658/" target="_blank">Hindustan Online - opportunities in Aviation Management</a></li>
+                  <li><a href="https://timesofindia.indiatimes.com/hindustan-code-bets-big-on-nations-digital-education-mandate-prepares-to-welcome-its-students-for-the-academic-year-2022-23/articleshow/89496899.cms" target="_blank">Hindustan CODE bets big on nation's 'Digital Education'</a></li>
                   
                 </ul>
               </div>

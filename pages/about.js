@@ -238,7 +238,7 @@ const AboutUs = () => {
             <img src="/images/aboutleader.jpg" className="fllimg" />
           </div>
         </div>
-        <div className="col-md-6 col-lg-7 align-self-center mt-lg-0 mt-5 mt-md-0">
+        <div className="col-md-6 col-lg-7 align-self-center mt-lg-0 mt-5 mt-md-0" id="leadership">
           <div className="hdingst dsktop">
             <h2 className="mainhds">leadership n<span className="ogx">o</span>te</h2>
           </div>
@@ -266,7 +266,7 @@ I wish all the teachers and learners success in exploring the world of education
       </div>
     </div>
   </section>
-  <section className="rnkers">
+  <section className="rnkers" id="awardsranking">
     <div className="container">
       <div className="dotsptns" />
       <img src="/images/abbots.png" className="bottomabuis" />

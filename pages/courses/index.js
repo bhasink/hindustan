@@ -420,7 +420,7 @@ const Listing = () => {
           </div>
         </div>
       </section>
-      <section className="onestopallcrs">
+      <section className="onestopallcrs" id="onestop">
         <div className="container">
           <div className="text-center hdingst mt-5 mt-lg-0 mb-lg-4">
             <h2 className="mainhds">
@@ -544,7 +544,7 @@ const Listing = () => {
           </div>
         </div>
       </section>
-      <section className="showextcourses">
+      <section className="showextcourses" id="bachelors">
         <div className="container">
           <div className="text-center hdingst">
             <h2 className="mainhds">
@@ -617,7 +617,7 @@ const Listing = () => {
           </div>
         </div>
       </section>
-      <section className="showextcourses">
+      <section className="showextcourses" id="masters">
         <div className="container">
           <div className="text-center hdingst">
             <h2 className="mainhds">Masters</h2>
@@ -751,6 +751,26 @@ const Listing = () => {
               <div className="item">
                 <div className="lgocirc">
                   <img src="/images/client/9.png" />
+                </div>
+              </div>
+
+              <div className="item">
+                <div className="lgocirc">
+                  <img src="/images/client/10.png" />
+                </div>
+              </div>
+
+
+              <div className="item">
+                <div className="lgocirc">
+                  <img src="/images/client/11.png" />
+                </div>
+              </div>
+
+
+              <div className="item">
+                <div className="lgocirc">
+                  <img src="/images/client/12.png" />
                 </div>
               </div>
             </OwlCarousel>
