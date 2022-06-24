@@ -2647,14 +2647,31 @@ p.moretext.showtexts {
     color: #fff;
 }
 
+.vdobanners .moblinndicourse {
+    display: none;
+}
+
+.vdobanners .dekindicourse {
+    display: block;
+}
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){
 	
+
+    .vdobanners .moblinndicourse {
+        display: block;
+    }
+    
+    .vdobanners .dekindicourse {
+        display: none;
+    }
+
     .site-header.topmain .navbar ul li.nav-item .orangebtns {
         margin-top: 20px;
     }
-    
+
     .homemainbanner.mainfnbans .owl-theme .owl-nav {
         top: -199px;
         position: relative;

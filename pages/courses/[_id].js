@@ -391,7 +391,13 @@ const CourseDetails = () => {
           <>
 
       <section className="vdobanners">
-        <img src="/images/coursevdothumbs.jpg" className="fllimg" />
+
+         {/* for  Desktop course */}
+        <img src="/images/indicourse/finance.jpg" className="fllimg dekindicourse" />
+
+        {/* for mobile course */}
+        <img src="/images/indicourse/mob_finance.jpg" className="fllimg moblinndicourse" />
+
         <img src="/images/playicon.png" className="plicon" />
       </section>
       <section className="coursenmeinfos onestopcourse text-center">
