@@ -206,8 +206,8 @@ const CourseDetails = () => {
 
       if (data.status == 200) {
         FileSaver.saveAs(
-          process.env.NEXT_PUBLIC_B_API + '/brochure/1639503210_41536.csv',
-          '1639503210_41536.csv',
+          process.env.NEXT_PUBLIC_B_API + '/brochure/ho-brochure.pdf',
+          'ho-brochure.pdf',
         )
 
         addToast('Success!', { appearance: 'success' })
@@ -393,10 +393,25 @@ const CourseDetails = () => {
       <section className="vdobanners">
 
          {/* for  Desktop course */}
-        <img src="/images/indicourse/finance.jpg" className="fllimg dekindicourse" />
+
+        <img
+                            src={
+                              `${process.env.NEXT_PUBLIC_B_API}banners/` +
+                              courseDetails.banner
+                            }
+                            className="fllimg dekindicourse"
+                          />
 
         {/* for mobile course */}
-        <img src="/images/indicourse/mob_finance.jpg" className="fllimg moblinndicourse" />
+
+        <img
+                            src={
+                              `${process.env.NEXT_PUBLIC_B_API}banners_mob/` +
+                              courseDetails.mob_banner
+                            }
+                            className="fllimg moblinndicourse"
+                          />
+
 
         <img src="/images/playicon.png" className="plicon" />
       </section>
@@ -754,74 +769,22 @@ const CourseDetails = () => {
                    
                   >
               
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/1.png" />
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/2.png" />
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/3.png" />
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/4.png" />
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/5.png" />
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/6.png" />
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/7.png" />
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/8.png" />
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/9.png" />
-                  </div>
-                </div>
+              {courseDetails && courseDetails.hiring_companies.split(',').map((hiring_companies_data, key) => (
 
                 <div className="item">
                   <div className="lgocirc">
-                    <img src="/images/client/10.png" />
+
+                    <img
+                            src={
+                              `${process.env.NEXT_PUBLIC_B_API}hiring-companies/` +
+                              hiring_companies_data
+                            }
+                          />
+
                   </div>
                 </div>
 
-
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/11.png" />
-                  </div>
-                </div>
-
-
-                <div className="item">
-                  <div className="lgocirc">
-                    <img src="/images/client/12.png" />
-                  </div>
-                </div>
-
-
-
+              ))}
               
               </OwlCarousel>
             </div>
@@ -1292,11 +1255,8 @@ consectetur, adipisci velit...</p>
                 <i className="fas fa-phone-alt" /> +919945580408{' '}
               </span>
             </li>
-            <li>
-              <a href="#">
-                <img src="/images/whatsappcta.png" />
-              </a>
-            </li>
+            <li><a href="https://wa.me/9945580408/?text="><img src="/images/whatsappcta.png" /></a></li>
+
           </ul>
         </div>
       </div>
@@ -1321,7 +1281,7 @@ consectetur, adipisci velit...</p>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://wa.me/9945580408/?text=">
               <img src="/images/whatsappicos.png" />
               <span>
                 Whatsapp Us

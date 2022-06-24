@@ -13,9 +13,21 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
   ssr: false,
 })
 import Nav from '../components/Nav'
+import FileSaver from 'file-saver'
 
 
 const ContactUs = () => {
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    
+    FileSaver.saveAs(
+      process.env.NEXT_PUBLIC_B_API + '/brochure/ho-brochure.pdf',
+      'ho-brochure.pdf',
+    )
+
+
+  }
 
     const state = {
         responsive: {
@@ -242,7 +254,7 @@ const ContactUs = () => {
           
         </div>
         <div className="col-lg-4 text-lg-right text-center align-self-center">
-          <a href="#" className="blackctathms nobrd"><img src="/images/downldico.png" />Download Brochure</a>
+          <a href="#" className="blackctathms nobrd" onClick={handleSubmit}><img src="/images/downldico.png" />Download Brochure</a>
         </div>
       </div>
     </div>
@@ -252,7 +264,7 @@ const ContactUs = () => {
     <div className="ctatcs">
       <ul>
         <li><a href="#"><img src="/images/telnumb.png" /></a><span className="hntps"><i className="fas fa-phone-alt" /> +919945580408 </span></li>
-        <li><a href="#"><img src="/images/whatsappcta.png" /></a></li>
+        <li><a href="https://wa.me/9945580408/?text="><img src="/images/whatsappcta.png" /></a></li>
       </ul>
     </div>
   </div>
@@ -260,7 +272,7 @@ const ContactUs = () => {
     <ul>
       <li><a href="#"><img src="/images/applyico.png" /><span>Apply Now<span /></span></a></li>
       <li style={{width: 300}}><a href="tel:+919945580408"><img src="/images/callicos.png" /><span>Call us<span /></span></a></li>
-      <li><a href="#"><img src="/images/whatsappicos.png" /><span>Whatsapp Us<span /></span></a></li>
+      <li><a href="https://wa.me/9945580408/?text="><img src="/images/whatsappicos.png" /><span>Whatsapp Us<span /></span></a></li>
       <li style={{border: 'none'}}><a href="#"><img src="/images/downldico.png" /><span>Brochure<span /></span></a></li>
     </ul>
   </section>

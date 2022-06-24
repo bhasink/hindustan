@@ -350,7 +350,7 @@ I wish all the teachers and learners success in exploring the world of education
     <div className="ctatcs">
       <ul>
         <li><a href="#"><img src="/images/telnumb.png" /></a><span className="hntps"><i className="fas fa-phone-alt" /> +919945580408 </span></li>
-        <li><a href="#"><img src="/images/whatsappcta.png" /></a></li>
+        <li><a href="https://wa.me/9945580408/?text="><img src="/images/whatsappcta.png" /></a></li>
       </ul>
     </div>
   </div>
@@ -358,7 +358,7 @@ I wish all the teachers and learners success in exploring the world of education
     <ul>
       <li><a href="#"><img src="/images/applyico.png" /><span>Apply Now<span /></span></a></li>
       <li style={{width: 300}}><a href="tel:+919945580408"><img src="/images/callicos.png" /><span>Call us<span /></span></a></li>
-      <li><a href="#"><img src="/images/whatsappicos.png" /><span>Whatsapp Us<span /></span></a></li>
+      <li><a href="https://wa.me/9945580408/?text="><img src="/images/whatsappicos.png" /><span>Whatsapp Us<span /></span></a></li>
       <li style={{border: 'none'}}><a href="#"><img src="/images/downldico.png" /><span>Brochure<span /></span></a></li>
     </ul>
   </section>
