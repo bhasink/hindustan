@@ -205,7 +205,7 @@ const AboutUs = () => {
     <div className="container">
       <div className>
         <div className="row">
-          <div className="col-md-6 col-lg-6 pr-lg-5">
+          <div className="col-md-6 col-lg-6 pr-lg-5" id="whoweare">
             <div className="hdingst  text-center mbltop">
               <h2 className="mainhds">Wh<span className="ogx">o</span> we are</h2>
             </div>
@@ -395,15 +395,11 @@ I wish all the teachers and learners success in exploring the world of education
               <h4>ABOUT US</h4>
               <div id="collapseOneft" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample2">
                 <ul>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Blogs</a></li>
-                  <li><a href="#">Vision &amp; Mission Of CODE</a></li>
-                  <li><a href="#">Uniqueness Of CODE</a></li>
-                  <li><a href="#">CODE Coursera Advantage</a></li>
-                  <li><a href="#">CODE Brochure</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Vision &amp; Mission</a></li>
-                  <li><a href="#">Awards</a></li>
+                  <li><a href="../about#whoweare">Who We Are</a></li>
+                  <li><a href="#">Leadership Note</a></li>
+                  <li><a href="#">Awards & Ranking</a></li>
+                 
+                  
                 </ul>
               </div>
             </div>
@@ -411,16 +407,13 @@ I wish all the teachers and learners success in exploring the world of education
               <h4 data-toggle="collapse" data-target="#collapseTwoft" aria-expanded="false" aria-controls="collapseTwoft" className="mobclick collapsed">PROGRAMS
                 <i className="fal fa-plus" /> <i className="fal fa-minus" />
               </h4>
-              <h4>PROGRAMS</h4>
+              <h4>All PROGRAMS</h4>
               <div id="collapseTwoft" className="collapse" aria-labelledby="headingTwoft" data-parent="#accordionExample2">  
                 <ul>
-                  <li><a href="#">MBA</a></li>
-                  <li><a href="#">MCA</a></li>
-                  <li><a href="#">MA</a></li>
-                  <li><a href="#"><b>UG PROGRAMS</b> </a></li>
-                  <li><a href="#">BBA</a></li>
-                  <li><a href="#">BCA</a></li>
-                  <li><a href="#">B.COM</a></li>
+                 <li><a href="#">Our One Stop Study DesTination</a></li>
+                 <li><a href="#">Bachelors</a></li>
+                 <li><a href="#">Masters</a></li>
+                  
                 </ul>
               </div>
             </div>
@@ -428,18 +421,16 @@ I wish all the teachers and learners success in exploring the world of education
               <h4 data-toggle="collapse" data-target="#collapseThreeft" aria-expanded="false" aria-controls="collapseThreeft" className="mobclick collapsed">ACADEMICS
                 <i className="fal fa-plus" /> <i className="fal fa-minus" />
               </h4>
-              <h4>ACADEMICS</h4>
+              <h4>PROGRAMS OFFERED</h4>
               <div id="collapseThreeft" className="collapse" aria-labelledby="headingThreeft" data-parent="#accordionExample2">  
                 <ul>
-                  <li><a href="#">Pedagogy</a></li>
-                  <li><a href="#">Evaluation Methodology</a></li>
-                  <li><a href="#">Credit System</a></li>
-                  <li><a href="#">CIQA </a></li>
-                  <li><a href="#">Digital Library</a></li>
-                  <li><a href="#"><b>LEADERSHIP MESSAGE</b></a></li>
-                  <li><a href="#">Chancellor's Message</a></li>
-                  <li><a href="#">Pro Chancellor</a></li>
-                  <li><a href="#">Directors</a></li>
+                  <li><a href="#">Data Analytics </a></li>
+                  <li><a href="#">Multimedia and Animation</a></li>
+                  <li><a href="#">BBA Aviation Management</a></li>
+                  <li><a href="#"><b>UG PROGRAMS</b> </a></li>
+                  <li><a href="#">Accounting and Finance</a></li>
+                  <li><a href="#">Human Resource Management</a></li>
+                  <li><a href="#">Tourism and Hospitality Management</a></li>
                 </ul>
               </div>
             </div>
@@ -447,17 +438,13 @@ I wish all the teachers and learners success in exploring the world of education
               <h4 data-toggle="collapse" data-target="#collapseFourft" aria-expanded="false" aria-controls="collapseFourft" className="mobclick collapsed">SERVICES
                 <i className="fal fa-plus" /> <i className="fal fa-minus" />
               </h4>
-              <h4>SERVICES</h4>
+              <h4>LATEST NEWS</h4>
               <div id="collapseFourft" className="collapse" aria-labelledby="headingFourft" data-parent="#accordionExample2">  
                 <ul>
-                  <li><a href="#">Student Counselling</a></li>
-                  <li><a href="#">Grievance Redressal</a></li>
-                  <li><a href="#">Alumni Association</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Faculty</a></li>
-                  <li><a href="#">Event Gallery</a></li>
-                  <li><a href="#">Events At HITS</a></li>
-                  <li><a href="#">Digitalk</a></li>
+                  <li><a href="#">Hindustan Online - CODE introduces new specializations for the Academic year (2022-2023)</a></li>
+                  <li><a href="#">Hindustan Online - opportunities in Aviation Management</a></li>
+                  <li><a href="#">Hindustan CODE bets big on nation's 'Digital Education'</a></li>
+                  
                 </ul>
               </div>
             </div>
