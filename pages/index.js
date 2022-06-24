@@ -24,6 +24,7 @@ const Index = () => {
   
   useEffect(() => {
   
+    
     AOS.init({
       duration: 2000,
     })
@@ -443,7 +444,7 @@ const Index = () => {
           <div className="tab-content" id="myTabContent">
             <div className="tab-pane fade show active" id="trending" role="tabpanel" aria-labelledby="trending-tab">
               <div className="coursehnd">
-                <ul>
+                <ul class="data-list" data-autoscroll>
                 {trendingCourses &&
                   trendingCourses.map((get_courses, key) => (
 
