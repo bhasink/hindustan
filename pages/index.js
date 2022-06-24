@@ -634,7 +634,15 @@ const Index = () => {
 
 <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
+                  <a href="#">
+                    <img
+                            src={
+                              `${process.env.NEXT_PUBLIC_B_API}thumbnail/` +
+                              get_courses.thumbnail
+                            }
+                            className="fllimg"
+                          />
+                    </a>
                   <a href="#" className="crcategs">                          {get_courses.course_type == 1 ? 'Master' : 'Bachelor'}  
 </a>
                 </div>
@@ -680,8 +688,16 @@ const Index = () => {
 
 <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
-                  <a href="#" className="crcategs">                          {get_courses.course_type == 1 ? 'Master' : 'Bachelor'}  
+                <a href="#">
+                    <img
+                            src={
+                              `${process.env.NEXT_PUBLIC_B_API}thumbnail/` +
+                              get_courses.thumbnail
+                            }
+                            className="fllimg"
+                          />
+                    </a>
+                    <a href="#" className="crcategs">                          {get_courses.course_type == 1 ? 'Master' : 'Bachelor'}  
 </a>
                 </div>
                 <div className="panelcards">
@@ -725,7 +741,15 @@ const Index = () => {
 
 <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
+                <a href="#">
+                    <img
+                            src={
+                              `${process.env.NEXT_PUBLIC_B_API}thumbnail/` +
+                              get_courses.thumbnail
+                            }
+                            className="fllimg"
+                          />
+                    </a>
                   <a href="#" className="crcategs">                          {get_courses.course_type == 1 ? 'Master' : 'Bachelor'}  
 </a>
                 </div>
@@ -772,7 +796,17 @@ const Index = () => {
 
 <div className="item">
                 <div className="crsimgs">
-                  <a href="#"><img src="/images/ftcourses/1.jpg" className="fllimg" /></a>
+                  
+                <a href="#">
+                    <img
+                            src={
+                              `${process.env.NEXT_PUBLIC_B_API}thumbnail/` +
+                              get_courses.thumbnail
+                            }
+                            className="fllimg"
+                          />
+                    </a>
+
                   <a href="#" className="crcategs">                          {get_courses.course_type == 1 ? 'Master' : 'Bachelor'}  
 </a>
                   
