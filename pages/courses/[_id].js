@@ -206,8 +206,8 @@ const CourseDetails = () => {
 
       if (data.status == 200) {
         FileSaver.saveAs(
-          process.env.NEXT_PUBLIC_B_API + '/brochure/1639503210_41536.csv',
-          '1639503210_41536.csv',
+          process.env.NEXT_PUBLIC_B_API + '/brochure/ho-brochure.pdf',
+          'ho-brochure.pdf',
         )
 
         addToast('Success!', { appearance: 'success' })

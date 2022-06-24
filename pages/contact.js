@@ -13,9 +13,21 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
   ssr: false,
 })
 import Nav from '../components/Nav'
+import FileSaver from 'file-saver'
 
 
 const ContactUs = () => {
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    
+    FileSaver.saveAs(
+      process.env.NEXT_PUBLIC_B_API + '/brochure/ho-brochure.pdf',
+      'ho-brochure.pdf',
+    )
+
+
+  }
 
     const state = {
         responsive: {
@@ -242,7 +254,7 @@ const ContactUs = () => {
           
         </div>
         <div className="col-lg-4 text-lg-right text-center align-self-center">
-          <a href="#" className="blackctathms nobrd"><img src="/images/downldico.png" />Download Brochure</a>
+          <a href="#" className="blackctathms nobrd" onClick={handleSubmit}><img src="/images/downldico.png" />Download Brochure</a>
         </div>
       </div>
     </div>
