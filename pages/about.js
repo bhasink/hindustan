@@ -259,7 +259,7 @@ Affordable, quality education at the convenience of the Learner at their door st
 
 I wish all the teachers and learners success in exploring the world of education. in the new normal.</p>
 
-<p><b>Mr. Ashok Verghese</b><br/>
+<p className="text-center text-lg-left text-md-left"><b>Mr. Ashok Verghese</b><br/>
 <b>Director</b></p>
         </div>
       </div>
@@ -370,7 +370,7 @@ I wish all the teachers and learners success in exploring the world of education
         </div>
         <div className="col-lg-4 col-md-6 align-self-center">
           <div className="ftad">
-            <p>(Address) 1, Rajiv Gandhi Salai (OMR), Padur,
+            <p>Rajiv Gandhi Salai (OMR), Padur,
 (Via) Kelambakkam,
 Chennai - 603 103, India.</p>
             <a href="tel:+919945580408"> +91 9945580408</a>

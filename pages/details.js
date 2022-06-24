@@ -1401,13 +1401,11 @@ consectetur, adipisci velit...</p>
             </div>
             <div className="col-lg-4 col-md-6 align-self-center">
               <div className="ftad">
-                <p>
-                  40, G.S.T Road, St. Thomas Mount, Chennai - 600 016, India.
-                </p>
-                <a href="tel:+91-9606333232"> +91-44-2234 1389</a>
-                <a href="mailto:enquiry@jainxacademy.com">
-                  info@hindustanuniv.ac.in
-                </a>
+              <p>Rajiv Gandhi Salai (OMR), Padur,
+(Via) Kelambakkam,
+Chennai - 603 103, India.</p>
+            <a href="tel:+919945580408"> +91 9945580408</a>
+            <a href="mailto:enquiry@jainxacademy.com">admission@hindustancode.com</a>
                 {/*<div class="sclics">
 					<ul>
 						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>

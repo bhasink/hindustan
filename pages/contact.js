@@ -284,7 +284,7 @@ const ContactUs = () => {
         </div>
         <div className="col-lg-4 col-md-6 align-self-center">
           <div className="ftad">
-            <p>(Address) 1, Rajiv Gandhi Salai (OMR), Padur,
+            <p>Rajiv Gandhi Salai (OMR), Padur,
 (Via) Kelambakkam,
 Chennai - 603 103, India.</p>
             <a href="tel:+919945580408"> +91 9945580408</a>

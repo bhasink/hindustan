@@ -1147,7 +1147,7 @@ const Index = () => {
           <div className="card-header" id="headingOne">
             <h5 className="mb-0">
               <button className="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Is Hindustan Online - CODE Post Graduate Degree valid?
+              Is Hindustan Online - CODE Post Graduate Degree valid?
                 <i className="fal fa-plus" />
                 <i className="fal fa-minus" />
               </button>
@@ -1163,7 +1163,7 @@ const Index = () => {
           <div className="card-header" id="headingTwo">
             <h5 className="mb-0">
               <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Are the programs offered by Hindustan Online - CODE Entitled by UGC?
+              Are the programs offered by Hindustan Online - CODE Entitled by UGC?
                 <i className="fal fa-plus" />
                 <i className="fal fa-minus" />
               </button>
@@ -1179,7 +1179,7 @@ const Index = () => {
           <div className="card-header" id="headingThree">
             <h5 className="mb-0">
               <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                What are the courses offered by Hindustan Online - CODE?
+                What programs does Hindustan Online - CODE offer?
                 <i className="fal fa-plus" />
                 <i className="fal fa-minus" />
               </button>
@@ -1187,16 +1187,17 @@ const Index = () => {
           </div>
           <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion8">
             <div className="card-body">
-              <p>Hindustan Online - CODE offers PG &amp; UG Degree programs. 
-                The name of the programs are as follows:</p>
+              <p>Hindustan Online - CODE offers an array of under-graduate and post- graduate programs. These include-</p>
               <ul>
+              
+                <li>BBA</li>
+                <li>BCA</li>
+                <li>B. Com</li>
                 <li>MBA</li>
                 <li>MCA</li>
-                <li>BBA</li>
-                <li>B Com</li>
-                <li>BCA</li>
+                <li>MA</li>
               </ul>
-              <p>The student can choose any of the programs depending on one's flair, aptitude and eligibility.</p>
+            
             </div>
           </div>
         </div>
@@ -1204,7 +1205,7 @@ const Index = () => {
           <div className="card-header" id="headingThree">
             <h5 className="mb-0">
               <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                What are the eligibility criteria for admission?
+              What are the eligibility criteria for admission?
                 <i className="fal fa-plus" />
                 <i className="fal fa-minus" />
               </button>
@@ -1213,15 +1214,15 @@ const Index = () => {
           <div id="collapseFour" className="collapse" aria-labelledby="headingFour" data-parent="#accordion8">
             <div className="card-body">
               <p><b>Master of Business Administration (MBA)</b><br />
-                Graduates / Bachelor's Degree holders of any discipline from a recognized University who have scored a minimum of 50% aggregate are eligible to apply.</p>
+              Graduates / Bachelor's Degree holders of any discipline from a recognized University who have scored a minimum of 50% aggregate are eligible to apply.</p>
               <p><b>Master of Computer Applications (MCA)</b><br />
-                Under graduate degree with science or applied science in Computer Applications or Computer Science or Information Technology or other computer related areas with minimum 50% of marks. The candidates should have studied core Mathematics either at +2 level or Mathematics/statistics as one of the subjects at degree level.</p>
+              Under graduate degree with science or applied science in Computer Applications or Computer Science or Information Technology or other computer related areas with minimum 50% of marks. The candidates should have studied core Mathematics either at +2 level or Mathematics/statistics as one of the subjects at degree level.</p>
               <p><b>B.Com. (Bachelor of Commerce)</b><br />
-                Three year program CommerceFintech. Banking and Finance Candidates who have passed Class 12th/PUC/HSC from any stream are eligible for Admission to B.Com. Program.</p>
+              Three year program CommerceFintech. Banking and Finance Candidates who have passed Class 12th/PUC/HSC from any stream are eligible for Admission to B.Com. Program.</p>
               <p><b>BBA(Bachelor of Business Administration)</b><br />
-                Three year program Travel and Tourism Aviation Logistics Candidates who have passed Class 12th/PUC/HSC from any stream are eligible for Admission to BBA Program.</p>
+              Three year program Travel and Tourism Aviation Logistics Candidates who have passed Class 12th/PUC/HSC from any stream are eligible for Admission to BBA Program.</p>
               <p><b>BCA(Bachelor of Computer Applications)</b><br />
-                Three year program Data Base Systems Multimedia and Animation Data Analytics Candidate from any stream (Science, Commerce or Arts) securing 50% or more at 10+2 level without any approximation is eligible to take Admission to BCA program.</p>
+              Three year program Data Base Systems Multimedia and Animation Data Analytics Candidate from any stream (Science, Commerce or Arts) securing 50% or more at 10+2 level without any approximation is eligible to take Admission to BCA program.</p>
             </div>
           </div>
         </div>
@@ -1229,7 +1230,7 @@ const Index = () => {
           <div className="card-header" id="headingFive">
             <h5 className="mb-0">
               <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                How should I pay the fees at the time of admission?
+              What are the fee payment methods available? 
                 <i className="fal fa-plus" />
                 <i className="fal fa-minus" />
               </button>
@@ -1237,7 +1238,10 @@ const Index = () => {
           </div>
           <div id="collapseFive" className="collapse" aria-labelledby="headingFive" data-parent="#accordion8">
             <div className="card-body">
-              <p>A Candidate can pay the program fee online. Candidates seeking admission at the HITS office in person can remit their fees directly through challan at Indian Overseas Bank, HITS Branch.</p>
+              <p>There are two fee payment methods available-</p>
+<ol> <li>Students can pay the program fee online </li>
+<li>Candidates seeking admission at the HITS office in person can remit their fees directly through challan at Indian Overseas Bank, HITS Branch
+Students can opt for any one of the above mentioned methods available</li> </ol>
             </div>
           </div>
         </div>
@@ -1245,7 +1249,7 @@ const Index = () => {
           <div className="card-header" id="headingSix">
             <h5 className="mb-0">
               <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                How will I be notified about the admission confirmation?
+              How will I be notified about the admission confirmation?
                 <i className="fal fa-plus" />
                 <i className="fal fa-minus" />
               </button>
@@ -1261,7 +1265,7 @@ const Index = () => {
           <div className="card-header" id="headingSeven">
             <h5 className="mb-0">
               <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                What learning methodology does Hindustan Online - CODE use?
+              What learning methodology does Hindustan Online - CODE use?
                 <i className="fal fa-plus" />
                 <i className="fal fa-minus" />
               </button>
@@ -1269,7 +1273,7 @@ const Index = () => {
           </div>
           <div id="collapseSeven" className="collapse" aria-labelledby="headingSeven" data-parent="#accordion8">
             <div className="card-body">
-              <p>Hindustan Online - CODE use a blended approach to student learning with a combination of recorded lectures, online study materials, and faculty &amp; group interactions.</p>
+              <p>Hindustan Online - CODE use a blended approach to student learning with a combination of recorded lectures, online study materials, and faculty & group interactions.</p>
             </div>
           </div>
         </div>
@@ -1301,7 +1305,7 @@ const Index = () => {
         </div>
         <div className="col-lg-4 col-md-6 align-self-center">
           <div className="ftad">
-            <p>(Address) 1, Rajiv Gandhi Salai (OMR), Padur,
+            <p>Rajiv Gandhi Salai (OMR), Padur,
 (Via) Kelambakkam,
 Chennai - 603 103, India.</p>
             <a href="tel:+919945580408"> +91 9945580408</a>

@@ -375,12 +375,7 @@ const Listing = () => {
               Programs <div className="ogcl">o</div>ffered
             </h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially.
+            Hindustan Online - CODE has an array of specializations for undergraduate and postgraduate programs. The programs are future-focused with well-curated and well-researched curriculums. Through outcome-based learning, the programs not only provide a theoretical understanding of concepts, but also practical application of these concepts.
             </p>
           </div>
         </div>
@@ -459,7 +454,7 @@ const Listing = () => {
                           </a>
                         </div>
                         <div className="panelcards">
-                          <h5 className="csnms">{get_courses.name}</h5>
+                          <h5 className="csnms crlnts">{get_courses.name}</h5>
                           <div className="ondrs">
                             <div className="tmclcs">
                               <img
@@ -468,7 +463,7 @@ const Listing = () => {
                               />
                               <p>{get_courses.duration} Months</p>
                             </div>
-                            <div className="tmclcs">
+                            <div className="tmclcs crsinfs">
                               <img
                                 src="/images/scholors.png"
                                 className="tmicn"
@@ -542,7 +537,7 @@ const Listing = () => {
                         </a>
                       </div>
                       <div className="panelcards">
-                        <h5 className="csnms">{get_courses.name}</h5>
+                        <h5 className="csnms crlnts">{get_courses.name}</h5>
                         <div className="ondrs">
                           <div className="tmclcs">
                             <img
@@ -551,7 +546,7 @@ const Listing = () => {
                             />
                             <p>{get_courses.duration} Months</p>
                           </div>
-                          <div className="tmclcs">
+                          <div className="tmclcs crsinfs">
                             <img src="/images/scholors.png" className="tmicn" />
                             <p>{get_courses.short_desc.substring(0, 50)}</p>
                           </div>
@@ -740,267 +735,141 @@ const Listing = () => {
             </h2>
           </div>
           <div id="accordion8">
-            <div className="card">
-              <div className="card-header" id="headingOne">
-                <h5 className="mb-0">
-                  <button
-                    className="btn btn-link"
-                    data-toggle="collapse"
-                    data-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                  >
-                    Is Hindustan Online - CODE Post Graduate Degree valid?
-                    <i className="fal fa-plus" />
-                    <i className="fal fa-minus" />
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseOne"
-                className="collapse show"
-                aria-labelledby="headingOne"
-                data-parent="#accordion8"
-              >
-                <div className="card-body">
-                  <p>
-                    Yes, a Post Graduate Degree from HITS is valid and accepted
-                    by all major corporates in India as well as in foreign
-                    countries. HITS is a globally entitled institution by UGC
-                    and AICTE. HITS is accredited by NAAC, NBA, NIRF, etc.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-header" id="headingTwo">
-                <h5 className="mb-0">
-                  <button
-                    className="btn btn-link collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo"
-                  >
-                    Are the programs offered by Hindustan Online - CODE Entitled
-                    by UGC?
-                    <i className="fal fa-plus" />
-                    <i className="fal fa-minus" />
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseTwo"
-                className="collapse"
-                aria-labelledby="headingTwo"
-                data-parent="#accordion8"
-              >
-                <div className="card-body">
-                  <p>Yes, the programs are entitled by AICTE/UGC.</p>
-                </div>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-header" id="headingThree">
-                <h5 className="mb-0">
-                  <button
-                    className="btn btn-link collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseThree"
-                    aria-expanded="false"
-                    aria-controls="collapseThree"
-                  >
-                    What are the courses offered by Hindustan Online - CODE?
-                    <i className="fal fa-plus" />
-                    <i className="fal fa-minus" />
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseThree"
-                className="collapse"
-                aria-labelledby="headingThree"
-                data-parent="#accordion8"
-              >
-                <div className="card-body">
-                  <p>
-                    Hindustan Online - CODE offers PG &amp; UG Degree programs.
-                    The name of the programs are as follows:
-                  </p>
-                  <ul>
-                    <li>MBA</li>
-                    <li>MCA</li>
-                    <li>BBA</li>
-                    <li>B Com</li>
-                    <li>BCA</li>
-                  </ul>
-                  <p>
-                    The student can choose any of the programs depending on
-                    one's flair, aptitude and eligibility.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-header" id="headingThree">
-                <h5 className="mb-0">
-                  <button
-                    className="btn btn-link collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseFour"
-                    aria-expanded="false"
-                    aria-controls="collapseThree"
-                  >
-                    What are the eligibility criteria for admission?
-                    <i className="fal fa-plus" />
-                    <i className="fal fa-minus" />
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseFour"
-                className="collapse"
-                aria-labelledby="headingFour"
-                data-parent="#accordion8"
-              >
-                <div className="card-body">
-                  <p>
-                    <b>Master of Business Administration (MBA)</b>
-                    <br />
-                    Graduates / Bachelor's Degree holders of any discipline from
-                    a recognized University who have scored a minimum of 50%
-                    aggregate are eligible to apply.
-                  </p>
-                  <p>
-                    <b>Master of Computer Applications (MCA)</b>
-                    <br />
-                    Under graduate degree with science or applied science in
-                    Computer Applications or Computer Science or Information
-                    Technology or other computer related areas with minimum 50%
-                    of marks. The candidates should have studied core
-                    Mathematics either at +2 level or Mathematics/statistics as
-                    one of the subjects at degree level.
-                  </p>
-                  <p>
-                    <b>B.Com. (Bachelor of Commerce)</b>
-                    <br />
-                    Three year program CommerceFintech. Banking and Finance
-                    Candidates who have passed Class 12th/PUC/HSC from any
-                    stream are eligible for Admission to B.Com. Program.
-                  </p>
-                  <p>
-                    <b>BBA(Bachelor of Business Administration)</b>
-                    <br />
-                    Three year program Travel and Tourism Aviation Logistics
-                    Candidates who have passed Class 12th/PUC/HSC from any
-                    stream are eligible for Admission to BBA Program.
-                  </p>
-                  <p>
-                    <b>BCA(Bachelor of Computer Applications)</b>
-                    <br />
-                    Three year program Data Base Systems Multimedia and
-                    Animation Data Analytics Candidate from any stream (Science,
-                    Commerce or Arts) securing 50% or more at 10+2 level without
-                    any approximation is eligible to take Admission to BCA
-                    program.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-header" id="headingFive">
-                <h5 className="mb-0">
-                  <button
-                    className="btn btn-link collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseFive"
-                    aria-expanded="false"
-                    aria-controls="collapseFive"
-                  >
-                    How should I pay the fees at the time of admission?
-                    <i className="fal fa-plus" />
-                    <i className="fal fa-minus" />
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseFive"
-                className="collapse"
-                aria-labelledby="headingFive"
-                data-parent="#accordion8"
-              >
-                <div className="card-body">
-                  <p>
-                    A Candidate can pay the program fee online. Candidates
-                    seeking admission at the HITS office in person can remit
-                    their fees directly through challan at Indian Overseas Bank,
-                    HITS Branch.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-header" id="headingSix">
-                <h5 className="mb-0">
-                  <button
-                    className="btn btn-link collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseSix"
-                    aria-expanded="false"
-                    aria-controls="collapseSix"
-                  >
-                    How will I be notified about the admission confirmation?
-                    <i className="fal fa-plus" />
-                    <i className="fal fa-minus" />
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseSix"
-                className="collapse"
-                aria-labelledby="headingSix"
-                data-parent="#accordion8"
-              >
-                <div className="card-body">
-                  <p>
-                    Our admission office will contact you about your admission
-                    status via your registered email or phone number.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-header" id="headingSeven">
-                <h5 className="mb-0">
-                  <button
-                    className="btn btn-link collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseSeven"
-                    aria-expanded="false"
-                    aria-controls="collapseSeven"
-                  >
-                    What learning methodology does Hindustan Online - CODE use?
-                    <i className="fal fa-plus" />
-                    <i className="fal fa-minus" />
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseSeven"
-                className="collapse"
-                aria-labelledby="headingSeven"
-                data-parent="#accordion8"
-              >
-                <div className="card-body">
-                  <p>
-                    Hindustan Online - CODE use a blended approach to student
-                    learning with a combination of recorded lectures, online
-                    study materials, and faculty &amp; group interactions.
-                  </p>
-                </div>
-              </div>
+        <div className="card">
+          <div className="card-header" id="headingOne">
+            <h5 className="mb-0">
+              <button className="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Is Hindustan Online - CODE Post Graduate Degree valid?
+                <i className="fal fa-plus" />
+                <i className="fal fa-minus" />
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion8">
+            <div className="card-body">
+              <p>Yes, a Post Graduate Degree from HITS is valid and accepted by all major corporates in India as well as in foreign countries. HITS is a globally entitled institution by UGC and AICTE. HITS is accredited by NAAC, NBA, NIRF, etc.</p>
             </div>
           </div>
+        </div>
+        <div className="card">
+          <div className="card-header" id="headingTwo">
+            <h5 className="mb-0">
+              <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Are the programs offered by Hindustan Online - CODE Entitled by UGC?
+                <i className="fal fa-plus" />
+                <i className="fal fa-minus" />
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion8">
+            <div className="card-body">
+              <p>Yes, the programs are entitled by AICTE/UGC.</p>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-header" id="headingThree">
+            <h5 className="mb-0">
+              <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                What programs does Hindustan Online - CODE offer?
+                <i className="fal fa-plus" />
+                <i className="fal fa-minus" />
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion8">
+            <div className="card-body">
+              <p>Hindustan Online - CODE offers an array of under-graduate and post- graduate programs. These include-</p>
+              <ul>
+              
+                <li>BBA</li>
+                <li>BCA</li>
+                <li>B. Com</li>
+                <li>MBA</li>
+                <li>MCA</li>
+                <li>MA</li>
+              </ul>
+            
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-header" id="headingThree">
+            <h5 className="mb-0">
+              <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+              What are the eligibility criteria for admission?
+                <i className="fal fa-plus" />
+                <i className="fal fa-minus" />
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" className="collapse" aria-labelledby="headingFour" data-parent="#accordion8">
+            <div className="card-body">
+              <p><b>Master of Business Administration (MBA)</b><br />
+              Graduates / Bachelor's Degree holders of any discipline from a recognized University who have scored a minimum of 50% aggregate are eligible to apply.</p>
+              <p><b>Master of Computer Applications (MCA)</b><br />
+              Under graduate degree with science or applied science in Computer Applications or Computer Science or Information Technology or other computer related areas with minimum 50% of marks. The candidates should have studied core Mathematics either at +2 level or Mathematics/statistics as one of the subjects at degree level.</p>
+              <p><b>B.Com. (Bachelor of Commerce)</b><br />
+              Three year program CommerceFintech. Banking and Finance Candidates who have passed Class 12th/PUC/HSC from any stream are eligible for Admission to B.Com. Program.</p>
+              <p><b>BBA(Bachelor of Business Administration)</b><br />
+              Three year program Travel and Tourism Aviation Logistics Candidates who have passed Class 12th/PUC/HSC from any stream are eligible for Admission to BBA Program.</p>
+              <p><b>BCA(Bachelor of Computer Applications)</b><br />
+              Three year program Data Base Systems Multimedia and Animation Data Analytics Candidate from any stream (Science, Commerce or Arts) securing 50% or more at 10+2 level without any approximation is eligible to take Admission to BCA program.</p>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-header" id="headingFive">
+            <h5 className="mb-0">
+              <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              What are the fee payment methods available? 
+                <i className="fal fa-plus" />
+                <i className="fal fa-minus" />
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFive" className="collapse" aria-labelledby="headingFive" data-parent="#accordion8">
+            <div className="card-body">
+              <p>There are two fee payment methods available-</p>
+<ol> <li>Students can pay the program fee online </li>
+<li>Candidates seeking admission at the HITS office in person can remit their fees directly through challan at Indian Overseas Bank, HITS Branch
+Students can opt for any one of the above mentioned methods available</li> </ol>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-header" id="headingSix">
+            <h5 className="mb-0">
+              <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              How will I be notified about the admission confirmation?
+                <i className="fal fa-plus" />
+                <i className="fal fa-minus" />
+              </button>
+            </h5>
+          </div>
+          <div id="collapseSix" className="collapse" aria-labelledby="headingSix" data-parent="#accordion8">
+            <div className="card-body">
+              <p>Our admission office will contact you about your admission status via your registered email or phone number.</p>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-header" id="headingSeven">
+            <h5 className="mb-0">
+              <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              What learning methodology does Hindustan Online - CODE use?
+                <i className="fal fa-plus" />
+                <i className="fal fa-minus" />
+              </button>
+            </h5>
+          </div>
+          <div id="collapseSeven" className="collapse" aria-labelledby="headingSeven" data-parent="#accordion8">
+            <div className="card-body">
+              <p>Hindustan Online - CODE use a blended approach to student learning with a combination of recorded lectures, online study materials, and faculty & group interactions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
         </div>
       </section>
       <div className="sideaassets">
@@ -1077,13 +946,11 @@ const Listing = () => {
             </div>
             <div className="col-lg-4 col-md-6 align-self-center">
               <div className="ftad">
-                <p>
-                  40, G.S.T Road, St. Thomas Mount, Chennai - 600 016, India.
-                </p>
-                <a href="tel:+91-9606333232"> +91-44-2234 1389</a>
-                <a href="mailto:enquiry@jainxacademy.com">
-                  info@hindustanuniv.ac.in
-                </a>
+              <p>Rajiv Gandhi Salai (OMR), Padur,
+(Via) Kelambakkam,
+Chennai - 603 103, India.</p>
+            <a href="tel:+919945580408"> +91 9945580408</a>
+            <a href="mailto:enquiry@jainxacademy.com">admission@hindustancode.com</a>
                 {/*<div class="sclics">
 					<ul>
 						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>

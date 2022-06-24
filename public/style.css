@@ -2658,7 +2658,19 @@ p.moretext.showtexts {
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){
-	
+
+    .awardscrdsd .owl-item.active img {
+        filter: none;
+        opacity: 1;
+    }
+
+    .tabnormcta {
+        text-align: center;
+    }
+
+    .testipnlpts p {
+        min-height: 41px;
+    }	
 
     .vdobanners .moblinndicourse {
         display: block;
