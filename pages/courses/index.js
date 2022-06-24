@@ -1018,11 +1018,8 @@ const Listing = () => {
                 <i className="fas fa-phone-alt" /> +919945580408{' '}
               </span>
             </li>
-            <li>
-              <a href="#">
-                <img src="/images/whatsappcta.png" />
-              </a>
-            </li>
+            <li><a href="https://wa.me/9945580408/?text="><img src="/images/whatsappcta.png" /></a></li>
+
           </ul>
         </div>
       </div>

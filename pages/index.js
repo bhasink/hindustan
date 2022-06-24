@@ -1280,7 +1280,7 @@ const Index = () => {
     <div className="ctatcs">
       <ul>
         <li><a href="#"><img src="/images/telnumb.png" /></a><span className="hntps"><i className="fas fa-phone-alt" /> +919945580408 </span></li>
-        <li><a href="#"><img src="/images/whatsappcta.png" /></a></li>
+        <li><a href="https://wa.me/9945580408/?text=urlencodedtext"><img src="/images/whatsappcta.png" /></a></li>
       </ul>
     </div>
   </div>
