@@ -27,6 +27,7 @@ const Thanks = () => {
        
             </div>
             <p>Form has been submitted successfully!  we'll get back to you ASAP</p>
+            <button className='orangectathms' style={{border: 'none'}}>Back to Home</button>
           </div>
         </div>
       </div>
