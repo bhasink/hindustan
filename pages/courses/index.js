@@ -248,43 +248,8 @@ const Listing = () => {
         loop: true,
       },
     },
-    responsive_top_cat: {
-      0: {
-        items: 1,
-        nav: false,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        autoplayHoverPause: true,
-        loop: true,
-      },
-      300: {
-        items: 1,
-        nav: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        autoplayHoverPause: true,
-        dots: false,
-        loop: true,
-      },
-
-      766: {
-        items: 3,
-        nav: true,
-        dots: false,
-        loop: true,
-      },
-
-      1200: {
-        items: 3,
-        nav: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        autoplayHoverPause: true,
-        dots: true,
-      },
-    },
-    responsive_top_catnew: {
+    
+    responsive_hrngs: {
       0: {
         items: 1,
         nav: false,
@@ -320,7 +285,7 @@ const Listing = () => {
         dots: true,
       },
     },
-    responsive_trust_comp: {
+    responsive_hrngcomps: {
       0: {
         items: 1,
         nav: false,
@@ -348,13 +313,13 @@ const Listing = () => {
       },
 
       1200: {
-        items: 5,
+        items: 6,
         nav: false,
         dots: true,
         autoplay: true,
         autoplaySpeed: 3000,
         autoplayHoverPause: true,
-        center: true,
+        center: false,
       },
     },
   }
@@ -671,7 +636,8 @@ const Listing = () => {
           <div className="dotsptns" />
           <div className="container">
             <OwlCarousel
-              className="hrngcomps owl-theme owl-carousel" loop >
+              className="hrngcomps owl-theme owl-carousel" loop 
+              responsive={state.responsive_hrngcomps}>
               <div className="item">
                 <div className="lgocirc">
                   <img src="/images/client/1.png" />

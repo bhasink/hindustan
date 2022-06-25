@@ -261,6 +261,7 @@ const Index = () => {
             autoplay: true,
             items: 1,
             nav: false,
+            animate:true,
             autoplaySpeed: 6000,
             autoplayHoverPause: true,
             animateOut: 'slideOutUp',
@@ -951,10 +952,10 @@ const Index = () => {
 
       <div className="cpmslide mobilesds">
       <OwlCarousel
-                    className=" owl-theme owl-carousel"
-                    loop
+                    className="trustcmpcarso owl-theme owl-carousel"
+                   
                     responsive={state.responsive_trust_comp}
-                    nav                   
+                                      
                   >
 
           <div className="item">
