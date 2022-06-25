@@ -280,7 +280,8 @@ const ContactUs = () => {
     <div className="container">
       <div className="row">
         <div className="col-lg-8 col-md-6">
-          <iframe className="ftaddrs" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d9772.811866649241!2d77.15170263339316!3d28.525641134925795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e2!4m3!3m2!1d28.531875699999997!2d77.1553133!4m5!1s0x390d1e7892180119%3A0x4e0f72dc6aef31a7!2sHindustan%20University%2C%20Commercial%20Space%20No.%20S-5%2C%20Vasant%20Square%20Mall%2C%20Vasant%20Kunj%2C%20New%20Delhi%2C%20Delhi%20110070!3m2!1d28.5246544!2d77.1563467!5e0!3m2!1sen!2sin!4v1652362293526!5m2!1sen!2sin" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+        <iframe className="ftaddrs" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28041.587045186683!2d77.12252401562505!3d28.533756324031703!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1c3fdb9b9f8f%3A0xd261102f628a137b!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e0!3m2!1sen!2sin!4v1656139144837!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         
         </div>
         <div className="col-lg-4 col-md-6 align-self-center">
           <div className="ftad">
@@ -318,13 +319,13 @@ Chennai - 603 103, India.</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-3">
-              <h4 data-toggle="collapse" data-target="#collapseTwoft" aria-expanded="false" aria-controls="collapseTwoft" className="mobclick collapsed">PROGRAMS
+              <h4 data-toggle="collapse" data-target="#collapseTwoft" aria-expanded="false" aria-controls="collapseTwoft" className="mobclick collapsed">All PROGRAMS
                 <i className="fal fa-plus" /> <i className="fal fa-minus" />
               </h4>
               <h4>All PROGRAMS</h4>
               <div id="collapseTwoft" className="collapse" aria-labelledby="headingTwoft" data-parent="#accordionExample2">  
                 <ul>
-                 <li><a href="../courses#onestop">Our One Stop Study DesTination</a></li>
+                 <li><a href="../courses#onestop">Our One Stop Study Destination</a></li>
                  <li><a href="../courses#bachelors">Bachelors</a></li>
                  <li><a href="../courses#masters">Masters</a></li>
                   
@@ -332,7 +333,7 @@ Chennai - 603 103, India.</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-3">
-              <h4 data-toggle="collapse" data-target="#collapseThreeft" aria-expanded="false" aria-controls="collapseThreeft" className="mobclick collapsed">ACADEMICS
+              <h4 data-toggle="collapse" data-target="#collapseThreeft" aria-expanded="false" aria-controls="collapseThreeft" className="mobclick collapsed">PROGRAMS OFFERED
                 <i className="fal fa-plus" /> <i className="fal fa-minus" />
               </h4>
               <h4>PROGRAMS OFFERED</h4>
@@ -341,7 +342,7 @@ Chennai - 603 103, India.</p>
                   <li><a href="../courses/data-analytics">Data Analytics </a></li>
                   <li><a href="../courses/multimedia-and-animation">Multimedia and Animation</a></li>
                   <li><a href="../courses/bba-aviation-management">BBA Aviation Management</a></li>
-                  <li><a href="../courses/"><b>UG PROGRAMS</b> </a></li>
+                  
                   <li><a href="../courses/accounting-and-finance">Accounting and Finance</a></li>
                   <li><a href="../courses/human-resource-management">Human Resource Management</a></li>
                   <li><a href="../courses/tourism-and-hospitality-management">Tourism and Hospitality Management</a></li>
@@ -349,7 +350,7 @@ Chennai - 603 103, India.</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-3">
-              <h4 data-toggle="collapse" data-target="#collapseFourft" aria-expanded="false" aria-controls="collapseFourft" className="mobclick collapsed">SERVICES
+              <h4 data-toggle="collapse" data-target="#collapseFourft" aria-expanded="false" aria-controls="collapseFourft" className="mobclick collapsed">LATEST NEWS
                 <i className="fal fa-plus" /> <i className="fal fa-minus" />
               </h4>
               <h4>LATEST NEWS</h4>
