@@ -587,7 +587,7 @@ const CourseDetails = () => {
             <img className="elemidrghts" src="/images/elegdotsnew.png" />
             <img className="whtsmidrghts" src="/images/elegdotsnewbts.png" />
             <div className="row">
-              <div className="col-lg-6  whtsbga text-center">
+              <div className="col-lg-6 col-md-6  whtsbga text-center">
                 <div className=" hdingst text-center">
                   <h2 className="mainhds">Eligiblity</h2>
                 </div>
@@ -596,7 +596,7 @@ const CourseDetails = () => {
                     {ReactHtmlParser(courseDetails.eligibility)}
                 </p>
               </div>
-              <div className="col-lg-6 grelgbg " id="syllabus">
+              <div className="col-lg-6 col-md-6 grelgbg " id="syllabus">
                 <div className="hdingst text-center text-lg-left">
                   <h2 className="mainhds">Syllabus</h2>
                 </div>

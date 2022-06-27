@@ -18,8 +18,8 @@ const Footer = () => {
         </div>
         <div className="col-lg-4 col-md-6 align-self-center">
           <div className="ftad">
-            <p>Rajiv Gandhi Salai (OMR), Padur,
-(Via) Kelambakkam,
+            <p>1, Rajiv Gandhi Salai (OMR), Padur,<br></br>
+(Via) Kelambakkam,<br></br>
 Chennai - 603 103, India.</p>
             <a href="tel:+919945580408"> +91 9945580408</a>
             <a href="mailto:enquiry@jainxacademy.com">admission@hindustancode.com</a>
@@ -131,8 +131,8 @@ Chennai - 603 103, India.</p>
               <div id="collapseFourft" className="collapse" aria-labelledby="headingFourft" data-parent="#accordionExample2">  
                 <ul>
                   <li><a href="https://www.indiatoday.in/pr-newswire?rkey=20220525EN68796&filter=4315" target="_blank">Hindustan Online - CODE introduces new specializations for the Academic year (2022-2023)</a></li>
-                  <li><a href="https://www.aninews.in/news/business/hindustan-online-code-to-host-a-webinar-on-career-opportunities-in-aviation-management20220525142658/" target="_blank">Hindustan Online - opportunities in Aviation Management</a></li>
-                  <li><a href="https://timesofindia.indiatimes.com/hindustan-code-bets-big-on-nations-digital-education-mandate-prepares-to-welcome-its-students-for-the-academic-year-2022-23/articleshow/89496899.cms" target="_blank">Hindustan CODE bets big on nation's 'Digital Education'</a></li>
+                  <li><a href="https://www.aninews.in/news/business/hindustan-online-code-to-host-a-webinar-on-career-opportunities-in-aviation-management20220525142658/" target="_blank">Hindustan Online - CODE to host a webinar on career opportunities in Aviation Management</a></li>
+                  <li><a href="https://timesofindia.indiatimes.com/hindustan-code-bets-big-on-nations-digital-education-mandate-prepares-to-welcome-its-students-for-the-academic-year-2022-23/articleshow/89496899.cms" target="_blank">Hindustan CODE bets big on nation's 'Digital Education' mandate; prepares to welcome its students for the academic year 2022-23 </a></li>
                   
                 </ul>
               </div>
