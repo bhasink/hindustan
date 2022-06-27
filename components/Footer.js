@@ -110,7 +110,15 @@ Chennai - 603 103, India.</p>
                     </li>
                   <li>
                     <a href="/programs/bba-aviation-management">BBA Aviation Management</a>
+                    <a href="/programs/accounting-and-finance">Accounting and Finance </a>
                     </li>
+                    <li>
+                    <a href="/programs/marketing" >Markeitng</a>
+                    </li>
+                  <li>
+                    <a href="/programs/finance">Finance</a>
+                    </li>
+                 
                   <li>
                     <a href="/programs/accounting-and-finance">B.Com - Commerce - Accounting and Finance</a>
                     </li>
@@ -119,6 +127,14 @@ Chennai - 603 103, India.</p>
                     </li>
                   <li>
                     <a href="/programs/english">MA - English</a>
+                    <a href="/programs/data-analytics">Data Analytics</a>
+                    </li>
+                  <li>
+                    <a href="/programs/english">English</a>
+                    </li>
+
+                    <li>
+                    <a href="/programs/multimedia-and-animation">Multimedia and Animation</a>
                     </li>
                 </ul>
               </div>
