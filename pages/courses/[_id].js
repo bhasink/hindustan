@@ -699,7 +699,7 @@ const CourseDetails = () => {
                       <div className="col-6 col-lg-6">
                         <div className=" crds">
                           <p className="tmevse">Semester - wise</p>
-                          <h3 className="feecst">{parseFloat(courseFees[0].national_semester_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} ₹</h3>
+                          <h3 className="feecst">{parseFloat(courseFees[0].national_semester_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}₹</h3>
                           <p className="ttsms">x {courseFees[0].national_semester_month} Semester</p>
                           <p className="sbintr">Total Fees</p>
                           <p className="ttlcrs">{parseFloat(courseFees[0].national_semester_price * courseFees[0].national_semester_month).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} </p>
@@ -708,7 +708,7 @@ const CourseDetails = () => {
                       <div className="col-6  col-lg-6">
                         <div className=" crds">
                           <p className="tmevse">Year - wise</p>
-                          <h3 className="feecst">{parseFloat(courseFees[0].national_yearly_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} ₹</h3>
+                          <h3 className="feecst">{parseFloat(courseFees[0].national_yearly_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}₹</h3>
                           <p className="ttsms">x {courseFees[0].national_yearly_month} Years</p>
                           <p className="sbintr">Total Fees</p>
                           <p className="ttlcrs">{parseFloat(courseFees[0].national_yearly_price * courseFees[0].national_yearly_month).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} </p>

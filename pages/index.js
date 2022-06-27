@@ -478,7 +478,7 @@ const Index = () => {
     <div className="container">
       <div className="col-md-12 col-lg-12 align-self-center text-center" data-aos="fade-up" data-aos-duration={1000}>
         <h2 className="mainhds mb-lg-4 ">Ab<div className="ogcl">o</div>ut Us</h2>
-        <p>Hindustan Online - CODE - the Centre for Open and Digital Education, the newest addition to the renowned Hindustan Group of Institutions is an endeavor in making world-class education accessible. With a well-curated, well-researched curriculum- we believe in the power of Outcome-based Learning. Our programs do not just provide theoretical learning, but focus on practical application of concepts.  {/* <a href="#">know more</a> */}</p>
+        <p>Hindustan Online - CODE - the Centre for Open and Digital Education, the newest addition to the renowned Hindustan Group of Institutions is an endeavor in making world-class education accessible. With a well-curated, well-researched curriculum we believe in the power of Outcome-based Learning. Our programs do not just provide theoretical learning, but focus on practical application of concepts.  {/* <a href="#">know more</a> */}</p>
       </div>
       <div className="text-center pt-4 pb-4">
         <Link href="about">
