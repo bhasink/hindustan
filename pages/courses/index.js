@@ -427,7 +427,7 @@ const Listing = () => {
                                 src="/images/wallclock.png"
                                 className="tmicn"
                               />
-                              <p>{get_courses.duration} Months</p>
+                              <p>{get_courses.duration} Years</p>
                             </div>
                             <div className="tmclcs crsinfs">
                               <img
@@ -510,7 +510,7 @@ const Listing = () => {
                               src="/images/wallclock.png"
                               className="tmicn"
                             />
-                            <p>{get_courses.duration} Months</p>
+                            <p>{get_courses.duration} Years</p>
                           </div>
                           <div className="tmclcs crsinfs">
                             <img src="/images/scholors.png" className="tmicn" />

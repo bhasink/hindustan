@@ -653,7 +653,7 @@ const Index = () => {
                   <h5 className="csnms crlnts">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
-                    <p>{get_courses.duration} Months</p>
+                    <p>{get_courses.duration} Years</p>
                   </div>
                   <div className="tmclcs crsinfs">
                     <img src="/images/scholors.png" className="tmicn" />
@@ -707,7 +707,7 @@ const Index = () => {
                   <h5 className="csnms crlnts">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
-                    <p>{get_courses.duration} Months</p>
+                    <p>{get_courses.duration} Years</p>
                   </div>
                   <div className="tmclcs crsinfs">
                     <img src="/images/scholors.png" className="tmicn" />
@@ -760,7 +760,7 @@ const Index = () => {
                   <h5 className="csnms crlnts">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
-                    <p>{get_courses.duration} Months</p>
+                    <p>{get_courses.duration} Years</p>
                   </div>
                   <div className="tmclcs crsinfs">
                     <img src="/images/scholors.png" className="tmicn" />
@@ -818,7 +818,7 @@ const Index = () => {
                   <h5 className="csnms crlnts">{get_courses.name}</h5>
                   <div className="tmclcs">
                     <img src="/images/wallclock.png" className="tmicn" />
-                    <p>{get_courses.duration} Months</p>
+                    <p>{get_courses.duration} Years</p>
                   </div>
                   <div className="tmclcs crsinfs">
                     <img src="/images/scholors.png" className="tmicn" />
