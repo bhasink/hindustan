@@ -315,7 +315,7 @@ const ContactUs = () => {
             <div className="adlnone">
               <p><b>WhatsApp Us :</b> +91 9945580408</p>
               <p><b>Call Us: :</b> +91 9945580408</p>
-              <p><b>Email Us:</b> admission@hindustancode.com</p>
+              <p><b>Email Us:</b> info@hindustancode.com</p>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 bdbtms">
@@ -324,7 +324,7 @@ const ContactUs = () => {
             <div className="adlnone">
               <p><b>WhatsApp Us :</b> +91 9945580408</p>
               <p><b>Call Us: :</b> +91 9945580408</p>
-              <p><b>Email Us:</b> info@hindustanuniv.ac.in</p>
+              <p><b>Email Us:</b> intl@hindustancode.com</p>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 bdbtms">

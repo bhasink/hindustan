@@ -2655,6 +2655,10 @@ p.moretext.showtexts {
     display: block;
 }
 
+.testipnlpts p {
+    min-height: 53px;
+}
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){
@@ -2672,7 +2676,7 @@ p.moretext.showtexts {
     }
 
     .testipnlpts p {
-        min-height: 41px;
+        min-height: 59px;
     }	
 
     .vdobanners .moblinndicourse {
@@ -4128,6 +4132,7 @@ display: flex;}
 
 @media screen and (max-width: 900px) and (min-width: 768px){
 	
+    
 .site-header.topmain .navbar ul li.nav-item .orangebtns, header.topmain.navfixed .navbar ul li.nav-item .orangebtns {
     text-align: center;
     margin-top: 15px;
@@ -4151,6 +4156,15 @@ footer.stfooter .collapse:not(.show) {
 
 .homemainbanner {
     padding: 50px 0;
+}
+
+.mainfnbans{
+    height: 424px;
+}
+
+.mainfnbans .hmbannerquotes .orangectathms{
+    top: 210px;
+    left: -65px;
 }
 
 .srchbar input.form-control {

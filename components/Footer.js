@@ -95,30 +95,30 @@ Chennai - 603 103, India.</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-3">
-              <h4 data-toggle="collapse" data-target="#collapseThreeft" aria-expanded="false" aria-controls="collapseThreeft" className="mobclick collapsed">PROGRAMS OFFERED
+              <h4 data-toggle="collapse" data-target="#collapseThreeft" aria-expanded="false" aria-controls="collapseThreeft" className="mobclick collapsed">TRENDING PROGRAMS
                 <i className="fal fa-plus" /> <i className="fal fa-minus" />
               </h4>
-              <h4>PROGRAMS OFFERED</h4>
+              <h4>TRENDING PROGRAMS </h4>
               <div id="collapseThreeft" className="collapse" aria-labelledby="headingThreeft" data-parent="#accordionExample2">  
                 <ul>
                   
                   <li>
-                    <a href="/courses/data-analytics">Data Analytics </a>
+                    <a href="/courses/mba-aviation-management">MBA - Aviation Management </a>
                     </li>
                     <li>
-                    <a href="/courses/multimedia-and-animation" >Multimedia and Animation</a>
+                    <a href="/courses/marketing" >MBA - Markeitng</a>
                     </li>
                   <li>
                     <a href="/courses/bba-aviation-management">BBA Aviation Management</a>
                     </li>
                   <li>
-                    <a href="/courses/accounting-and-finance">Accounting and Finance</a>
+                    <a href="/courses/accounting-and-finance">B.Com - Commerce - Accounting and Finance</a>
                     </li>
                   <li>
-                    <a href="/courses/human-resource-management">Human Resource Management</a>
+                    <a href="/courses/data-analytics"> BCA - Data Analytics</a>
                     </li>
                   <li>
-                    <a href="/courses/tourism-and-hospitality-management">Tourism and Hospitality Management</a>
+                    <a href="/courses/english">MA - English</a>
                     </li>
                 </ul>
               </div>

@@ -499,7 +499,7 @@ const Index = () => {
                 <img src="/images/abouttags1.png" />
               </div>
               <div className="mnlines">
-                <p>Online Degrees Entitled by UGC/AICTE</p>
+                <p>Online Degree Entitled by UGC/AICTE</p>
               </div>
             </div>
           </div>
@@ -1019,8 +1019,8 @@ const Index = () => {
 <div className="item">
             <div className="testipnlpts">
             <a href="https://www.indiatoday.in/pr-newswire?rkey=20220525EN68796&filter=4315" target="_blank">
-              <p className="usrnmtst">Hindustan Online</p>
-              <p>CODE introduces new specializations for the Academic year (2022-2023)</p>
+              <p className="usrnmtst">Hindustan Online - CODE</p>
+              <p>introduces new specializations for the Academic year (2022-2023)</p>
               <img src="/images/innews/1.jpg" />
            </a>
             </div>
@@ -1028,8 +1028,8 @@ const Index = () => {
           <div className="item">
             <div className="testipnlpts">
             <a href="https://www.aninews.in/news/business/hindustan-online-code-to-host-a-webinar-on-career-opportunities-in-aviation-management20220525142658/" target="_blank">
-              <p className="usrnmtst">Hindustan Online </p>
-              <p>Opportunities in Aviation Management</p>
+              <p className="usrnmtst">Hindustan Online - CODE</p>
+              <p>to host a webinar on career opportunities in Aviation Management</p>
               
                  <img src="/images/innews/2.jpg" />
             </a>
@@ -1038,8 +1038,8 @@ const Index = () => {
           <div className="item">
             <div className="testipnlpts">
             <a href="https://timesofindia.indiatimes.com/hindustan-code-bets-big-on-nations-digital-education-mandate-prepares-to-welcome-its-students-for-the-academic-year-2022-23/articleshow/89496899.cms" target="_blank">
-              <p className="usrnmtst">Hindustan Online</p>
-              <p>Hindustan CODE bets big on nation's 'Digital Education'</p>
+              <p className="usrnmtst">Hindustan Online - CODE</p>
+              <p>bets big on nation's 'Digital Education' mandate; prepares to welcome its students for the academic year 2022-23 </p>
              <img src="/images/innews/3.jpg" />
              </a>
             </div>
