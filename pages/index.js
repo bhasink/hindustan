@@ -414,7 +414,7 @@ const Index = () => {
                 {trendingCourses &&
                   trendingCourses.map((get_courses, key) => (
 
-<Link href={`courses/${get_courses.slug}`}>
+<Link href={`programs/${get_courses.slug}`}>
                   <li><a href="#">{get_courses.name}</a></li>
                   </Link>
 
@@ -429,7 +429,7 @@ const Index = () => {
                 {allCourses &&
                   allCourses.map((get_courses, key) => (
 
-<Link href={`courses/${get_courses.slug}`}>
+<Link href={`programs/${get_courses.slug}`}>
                   <li><a href="#">{get_courses.name}</a></li>
                   </Link>
 
@@ -444,7 +444,7 @@ const Index = () => {
                 {mastersCourses &&
                   mastersCourses.map((get_courses, key) => (
 
-<Link href={`courses/${get_courses.slug}`}>
+<Link href={`programs/${get_courses.slug}`}>
                   <li><a href="#">{get_courses.name}</a></li>
                   </Link>
 
@@ -459,7 +459,7 @@ const Index = () => {
                 {bachelorsCourses &&
                   bachelorsCourses.map((get_courses, key) => (
 
-<Link href={`courses/${get_courses.slug}`}>
+<Link href={`programs/${get_courses.slug}`}>
                   <li><a href="#">{get_courses.name}</a></li>
                   </Link>
 
@@ -597,7 +597,7 @@ const Index = () => {
 
 {trendingCourses.map((get_courses, key) => (
 
-<Link href={`courses/${get_courses.slug}`}>
+<Link href={`programs/${get_courses.slug}`}>
 
 <div className="item">
                 <div className="crsimgs">
@@ -651,7 +651,7 @@ const Index = () => {
 
 {allCourses && allCourses.map((get_courses, key) => (
 
-<Link href={`courses/${get_courses.slug}`}>
+<Link href={`programs/${get_courses.slug}`}>
 
 <div className="item">
                 <div className="crsimgs">
@@ -704,7 +704,7 @@ const Index = () => {
 {mastersCourses &&
                   mastersCourses.map((get_courses, key) => (
 
-<Link href={`courses/${get_courses.slug}`}>
+<Link href={`programs/${get_courses.slug}`}>
 
 <div className="item">
                 <div className="crsimgs">
@@ -759,7 +759,7 @@ const Index = () => {
 {bachelorsCourses &&
                   bachelorsCourses.map((get_courses, key) => (
 
-<Link href={`courses/${get_courses.slug}`}>
+<Link href={`programs/${get_courses.slug}`}>
 
 <div className="item">
                 <div className="crsimgs">

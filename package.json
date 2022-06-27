@@ -22,6 +22,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-html-parser": "^2.0.2",
+    "react-number-format": "^4.9.3",
     "react-owl-carousel": "^2.3.3",
     "react-read-more-less": "^0.1.6",
     "react-read-more-read-less": "^1.0.7",
