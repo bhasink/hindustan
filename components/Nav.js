@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useToasts } from 'react-toast-notifications'
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import FileSaver from 'file-saver'
 
 const Nav = () => {
   const [isActive, setActive] = useState("false");
@@ -111,6 +112,81 @@ const Nav = () => {
     }
   }
 
+  const handleSubmit4 = async (e) => {
+    e.preventDefault()
+
+    if (name == '') {
+      addToast('Please enter the name!', { appearance: 'error' })
+
+      return false
+    }
+
+    if (email == '') {
+      addToast('Please enter the email!', { appearance: 'error' })
+      return false
+    }
+
+    if (IsEmail(email) == false) {
+      addToast('Incorrect email!', { appearance: 'error' })
+
+      return false
+    }
+
+    if (mobileNo == '') {
+      addToast('Please enter the mobile number!', { appearance: 'error' })
+      return false
+    }
+
+    if (mobileNo.length != 10) {
+      addToast('Mobile number must be of ten digits!', { appearance: 'error' })
+      return false
+    }
+
+    if (course == '') {
+      addToast('Please select the course!', { appearance: 'error' })
+
+      return false
+    }
+
+    if (query == '') {
+      addToast('Please enter the query!', { appearance: 'error' })
+      return false
+    }
+
+    $('body').removeClass('modal-open')
+    $('.modal-backdrop').remove()
+    $('#exampleModalEnquirenow').hide()
+
+    try {
+      const data = await axios.post(
+        `${process.env.NEXT_PUBLIC_API}/course-leads`,
+        {
+          name: name,
+          email: email,
+          mobile_no: mobileNo,
+          query: query,
+          course_id: course,
+        },
+      )
+
+     
+      if (data.status == 200) {
+        FileSaver.saveAs(
+          process.env.NEXT_PUBLIC_B_API + '/brochure/ho-brochure.pdf',
+          'ho-brochure.pdf',
+        )
+
+        addToast('Success!', { appearance: 'success' })
+        router.push('/thanks')
+      }
+      
+      //
+    } catch (err) {
+      console.log(err)
+      addToast('Invalid! Please try again.', { appearance: 'error' })
+    }
+  }
+
   const IsEmail = (email) => {
     let regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
     if (!regex.test(email)) {
@@ -131,7 +207,7 @@ const Nav = () => {
       <li><a href  data-toggle="modal" data-target="#exampleModalCenter"><img src="/images/applyico.png" /><span>Apply Now<span /></span></a></li>
       <li style={{width: 300}}><a href="tel:+919945580408"><img src="/images/callicos.png" /><span>Call us<span /></span></a></li>
       <li><a href="https://wa.me/9945580408/?text="><img src="/images/whatsappicos.png" /><span>Whatsapp Us<span /></span></a></li>
-      <li style={{border: 'none'}}><a href="#"><img src="/images/downldico.png" /><span>Brochure<span /></span></a></li>
+      <li style={{border: 'none'}}><a href="#" data-toggle="modal" data-target="#exampleModalCenter4"><img src="/images/downldico.png" /><span>Brochure<span /></span></a></li>
     </ul>
   </section>
   
@@ -247,6 +323,122 @@ const Nav = () => {
                               <div className="row">
                                 <div className="col-lg-12 mx-auto">
                                   <h3>Enquire Now !</h3>
+                                  <div className="form-groupsets">
+                                    <label>Name</label>
+                                    <input
+                                      type="text"
+                                      className="form-control"
+                                      placeholder=""
+                                      value={name}
+                                      onChange={(e) => setName(e.target.value)}
+                                    />
+                                  </div>
+
+                                  <div className="form-groupsets">
+                                    <label>Email id</label>
+                                    <input
+                                      type="text"
+                                      className="form-control"
+                                      placeholder=""
+                                      value={email}
+                                      onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                  </div>
+
+                                  <div className="form-groupsets">
+                                    <label>Mobile No.</label>
+                                    <input
+                                      type="text"
+                                      className="form-control"
+                                      placeholder=""
+                                      value={mobileNo}
+                                      onChange={(e) =>
+                                        setMobileNo(e.target.value)
+                                      }
+                                    />
+                                  </div>
+
+
+                                  <div className="form-groupsets">
+                                    <label>Course</label>
+
+                                    <select 
+                                      className="form-control"
+                                      placeholder=""
+                                      value={course}
+                                      onChange={(e) =>
+                                        setCourse(e.target.value)
+                                      }
+                                    >
+
+                                      <option>Select Course</option>
+
+                                      {courseData && courseData.map((get_courses_data, key) => (
+                                      <option value={get_courses_data.id}>{get_courses_data.name}</option>
+                                      ))}
+
+                                    </select>
+                                
+                                  </div>
+
+                                  <div className="form-groupsets">
+                                    <label>Query</label>
+                                    <textarea
+                                      type="text"
+                                      className="form-control"
+                                      placeholder=""
+                                      value={query}
+                                      onChange={(e) => setQuery(e.target.value)}
+                                    ></textarea>
+                                  </div>
+                                </div>
+
+                                <div className="col-lg-12 text-center roundbotms">
+                                  <button
+                                    type="submit"
+                                    className="orangectadms"
+                                  >
+                                    Submit
+                                  </button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                   
+      <div
+                    className="modal fade"
+                    id="exampleModalCenter4"
+                    tabIndex="-1"
+                    role="dialog"
+                    aria-labelledby="exampleModalEnquirenowTitle3"
+                    aria-hidden="true"
+                  >
+                    <div
+                      className="modal-dialog modal-dialog-centered   jncustm trasntypes"
+                      role="document"
+                    >
+                      <div className="modal-content">
+                        <div className="modal-body">
+                          <button
+                            type="button"
+                            className="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                          >
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+
+                          <div className="basicenqforms">
+                            <form onSubmit={handleSubmit4}>
+                              <div className="row">
+                                <div className="col-lg-12 mx-auto">
+                                  <h3>Download Brochure</h3>
                                   <div className="form-groupsets">
                                     <label>Name</label>
                                     <input

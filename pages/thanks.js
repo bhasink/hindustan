@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import Link from 'next/link'
 
 const Thanks = () => {
   
@@ -26,8 +27,7 @@ const Thanks = () => {
             <h2 className="mainhds">Thanks!</h2> 
        
             </div>
-            <p>Form has been submitted successfully!  we'll get back to you ASAP</p>
-            <button className='orangectathms' style={{border: 'none'}}>Back to Home</button>
+            <p>Form has been submitted successfully!  we'll get back to you ASAP.</p>
           </div>
         </div>
       </div>

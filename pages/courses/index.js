@@ -406,7 +406,7 @@ const Listing = () => {
                     <div className="col-6 col-lg-4">
                       <div className="cdshadows">
                         <div className="crsimgs">
-                        <a href="#">
+            
                     <img
                             src={
                               `${process.env.NEXT_PUBLIC_B_API}thumbnail/` +
@@ -414,7 +414,7 @@ const Listing = () => {
                             }
                             className="fllimg"
                           />
-                    </a>
+                    
                           <a href="#" className="crcategs">
                           {get_courses.course_type == 1 ? 'Master' : 'Bachelor'}  
                           </a>
@@ -445,7 +445,7 @@ const Listing = () => {
                             </div>
                           </div>
                           <Link href={`courses/${get_courses.slug}`}>
-                            <a href="#" className="gractashow">
+                            <a className="gractashow">
                               View Program
                             </a>
                           </Link>
@@ -489,7 +489,6 @@ const Listing = () => {
                   <div className="col-6 col-lg-4">
                     <div className="cdshadows">
                       <div className="crsimgs">
-                      <a href="#">
                     <img
                             src={
                               `${process.env.NEXT_PUBLIC_B_API}thumbnail/` +
@@ -497,7 +496,7 @@ const Listing = () => {
                             }
                             className="fllimg"
                           />
-                    </a>
+                   
                         <a href="#" className="crcategs">
                           BACHELOR
                         </a>
@@ -563,7 +562,7 @@ const Listing = () => {
                   <div className="col-6 col-lg-4">
                     <div className="cdshadows">
                       <div className="crsimgs">
-                      <a href="#">
+                    
                     <img
                             src={
                               `${process.env.NEXT_PUBLIC_B_API}thumbnail/` +
@@ -571,8 +570,7 @@ const Listing = () => {
                             }
                             className="fllimg"
                           />
-                    </a>
-                        <a href="#" className="crcategs">
+                         <a href="#" className="crcategs">
                           Master
                         </a>
                       </div>

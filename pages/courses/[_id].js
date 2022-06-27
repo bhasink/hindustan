@@ -447,7 +447,7 @@ const CourseDetails = () => {
             <div className="crctsinf">
               <div className="row">
                 <div className="col-6 col-lg-6 col-md-6">
-                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter" className="orangectathms nobrd">
+                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter1" className="orangectathms nobrd">
                     Apply Now
                   </a>
                 </div>
@@ -510,7 +510,7 @@ const CourseDetails = () => {
                 <a href="#learnmethodology">Learning Methodology</a>
               </li>
               <li>
-                <a  data-toggle="modal" data-target="#exampleModalCenter" href="#applynow">Enroll Now</a>
+                <a  data-toggle="modal" data-target="#exampleModalCenter1" href="#applynow">Enroll Now</a>
               </li>
             </ul>
           </div>
@@ -1141,7 +1141,7 @@ consectetur, adipisci velit...</p>
 
       <div
                     className="modal fade"
-                    id="exampleModalCenter"
+                    id="exampleModalCenter1"
                     tabindex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalEnquirenowTitle3"
