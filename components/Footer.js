@@ -103,22 +103,24 @@ Chennai - 603 103, India.</p>
                 <ul>
                   
                   <li>
-                    <a href="/courses/mba-aviation-management">MBA - Aviation Management </a>
+                    <a href="/courses/accounting-and-finance">Accounting and Finance </a>
                     </li>
                     <li>
-                    <a href="/courses/marketing" >MBA - Markeitng</a>
+                    <a href="/courses/marketing" >Markeitng</a>
                     </li>
                   <li>
-                    <a href="/courses/bba-aviation-management">BBA Aviation Management</a>
+                    <a href="/courses/finance">Finance</a>
+                    </li>
+                 
+                  <li>
+                    <a href="/courses/data-analytics">Data Analytics</a>
                     </li>
                   <li>
-                    <a href="/courses/accounting-and-finance">B.Com - Commerce - Accounting and Finance</a>
+                    <a href="/courses/english">English</a>
                     </li>
-                  <li>
-                    <a href="/courses/data-analytics"> BCA - Data Analytics</a>
-                    </li>
-                  <li>
-                    <a href="/courses/english">MA - English</a>
+
+                    <li>
+                    <a href="/courses/multimedia-and-animation">Multimedia and Animation</a>
                     </li>
                 </ul>
               </div>
