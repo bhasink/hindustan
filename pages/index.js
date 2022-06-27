@@ -58,44 +58,7 @@ const Index = () => {
 
   
     const state = {
-        responsive: {
-          0: {
-            items: 1,
-            nav: true,
-            dots: false,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-          300: {
-            items: 2,
-            nav: true,
-            dots: false,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            margin: 10,
-            loop: true,
-          },
-    
-          766: {
-            items: 2,
-            nav: true,
-            dots: false,
-            loop: true,
-          },
-    
-          1200: {
-            items: 4,
-            nav: true,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-        },
+       
 
         responsive_featuredslide: {
         
@@ -263,6 +226,7 @@ const Index = () => {
             items: 1,
             nav: false,
             animate:true,
+            autoplay:true,
             autoplaySpeed: 6000,
             autoplayHoverPause: true,
             animateOut: 'slideOutUp',
@@ -953,8 +917,10 @@ const Index = () => {
 
       <div className="cpmslide mobilesds">
       <OwlCarousel
-                    className="trustcmpcarso owl-theme owl-carousel"
-                   
+                    className="owl-theme owl-carousel"
+                    autoplaySpeed={6000}
+                    animateOut={'slideOutUp'} 
+                    animateIn={'slideInUp'}
                     responsive={state.responsive_trust_comp}
                                       
                   >
