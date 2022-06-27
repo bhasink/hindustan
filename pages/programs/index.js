@@ -444,7 +444,7 @@ const Listing = () => {
                               <p>45,000</p>
                             </div>
                           </div>
-                          <Link href={`courses/${get_courses.slug}`}>
+                          <Link href={`programs/${get_courses.slug}`}>
                             <a className="gractashow">
                               View Program
                             </a>
@@ -520,7 +520,7 @@ const Listing = () => {
                             <p>45,000</p>
                           </div>
                         </div>
-                        <Link href={`courses/${get_courses.slug}`}>
+                        <Link href={`programs/${get_courses.slug}`}>
                           <a href="#" className="gractashow">
                             View Program
                           </a>
@@ -593,7 +593,7 @@ const Listing = () => {
                             <p>45,000</p>
                           </div>
                         </div>
-                        <Link href={`courses/${get_courses.slug}`}>
+                        <Link href={`programs/${get_courses.slug}`}>
                           <a href="#" className="gractashow">
                             View Program
                           </a>

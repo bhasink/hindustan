@@ -179,7 +179,7 @@ const Nav = () => {
         addToast('Success!', { appearance: 'success' })
         router.push('/thanks')
       }
-      
+
       //
     } catch (err) {
       console.log(err)
@@ -240,7 +240,7 @@ const Nav = () => {
                     <a className="nav-link bidevices" href="tel:+91 9945580408" style={{color: '#fe982c'}}><i className="fas fa-phone-alt" /> +91 9945580408 </a>
                   </li>
                   <li className="nav-item nosublnk active">
-                    <Link href="/courses">
+                    <Link href="/programs">
                       <a className="nav-link bidevices">Programs </a>
                     </Link>
                   </li>

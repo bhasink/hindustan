@@ -76,17 +76,17 @@ Chennai - 603 103, India.</p>
                 <ul>
                 
                  <li>
-                 <Link  href="/courses#onestop">
+                 <Link  href="/programs#onestop">
                     <a>Our One Stop Study Destination</a>
                     </Link>
                     </li>
                     <li>
-                 <Link  href="/courses#bachelors">
+                 <Link  href="/programs#bachelors">
                     <a>Bachelors</a>
                     </Link>
                     </li>
                  <li>
-                 <Link  href="/courses#masters">
+                 <Link  href="/programs#masters">
                     <a>Masters</a>
                     </Link>
                     </li>
@@ -103,22 +103,22 @@ Chennai - 603 103, India.</p>
                 <ul>
                   
                   <li>
-                    <a href="/courses/mba-aviation-management">MBA - Aviation Management </a>
+                    <a href="/programs/mba-aviation-management">MBA - Aviation Management </a>
                     </li>
                     <li>
-                    <a href="/courses/marketing" >MBA - Markeitng</a>
+                    <a href="/programs/marketing" >MBA - Markeitng</a>
                     </li>
                   <li>
-                    <a href="/courses/bba-aviation-management">BBA Aviation Management</a>
+                    <a href="/programs/bba-aviation-management">BBA Aviation Management</a>
                     </li>
                   <li>
-                    <a href="/courses/accounting-and-finance">B.Com - Commerce - Accounting and Finance</a>
+                    <a href="/programs/accounting-and-finance">B.Com - Commerce - Accounting and Finance</a>
                     </li>
                   <li>
-                    <a href="/courses/data-analytics"> BCA - Data Analytics</a>
+                    <a href="/programs/data-analytics"> BCA - Data Analytics</a>
                     </li>
                   <li>
-                    <a href="/courses/english">MA - English</a>
+                    <a href="/programs/english">MA - English</a>
                     </li>
                 </ul>
               </div>
