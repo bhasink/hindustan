@@ -2639,7 +2639,7 @@ p.moretext.showtexts {
     height: 100vh;
 }
 
-.aboutbgbacks .hmbannerquotes .bnrhd {
+.aboutbgbacks .hmbannerquotes .bnrhd b{
     font-weight: 700;
 }
 
@@ -2657,6 +2657,10 @@ p.moretext.showtexts {
 
 .testipnlpts p {
     min-height: 53px;
+}
+
+.homemainbanner .bnrhd .ogx {
+    color: #f18600;
 }
 
 /* Responsive css */

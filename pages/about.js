@@ -189,7 +189,7 @@ const AboutUs = () => {
             <div className="hmbannerquotes">
               <img src="/images/bnrtexttop.png" className="tpquotelf" />
               <h1 className="bnrhd">
-                <b>About <br/> Hindustan Online</b></h1>
+                <b>About <br/> Hindustan Online</b> - <br/> C<span className='ogx'>O</span>DE</h1>
               
               <img src="/images/bnquotergs.png" className="bnquoterg" />
             </div>
