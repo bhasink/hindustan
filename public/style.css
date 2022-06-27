@@ -252,7 +252,9 @@ header.site-header.topmain.mobexheight.navfixed nav.navbar{
 text-align: left;
 font-weight: 300;}
 
-
+.aboutbgbacks .hmbannerquotes .bnrhd  {
+    font-weight: 500;
+}
 
 .ogcl {display: inline-block;color: #f28823;}
 
