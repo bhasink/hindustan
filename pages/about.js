@@ -271,7 +271,7 @@ I wish all the teachers and learners success in exploring the world of education
       <div className="dotsptns" />
       <img src="/images/abbots.png" className="bottomabuis" />
       <div className="text-center hdingst">
-        <h2 className="mainhds">Awards &amp; Ranking</h2>
+        <h2 className="mainhds">Awards &amp; Rankings</h2>
       </div>
       <div className="testimparts awardscrdsd">
       <OwlCarousel

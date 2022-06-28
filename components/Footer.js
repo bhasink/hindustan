@@ -23,14 +23,15 @@ const Footer = () => {
 Chennai - 603 103, India.</p>
             <a href="tel:+919945580408"> +91 9945580408</a>
             <a href="mailto:enquiry@jainxacademy.com">admission@hindustancode.com</a>
-            {/*<div class="sclics">
+            <div class="sclics">
 					<ul>
-						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-						<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+						<li><a href="https://www.facebook.com/hindustan.code"  target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="https://twitter.com/hindustan_code"  target="_blank"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="https://www.instagram.com/hindustan.code/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCIPOkdWa1xuAwV8hPNMCt2w" target="_blank"><i class="fab fa-youtube"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/centre-for-open-digital-education/"  target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 					</ul>
-				</div>*/}
+				</div>
           </div>
         </div>
       </div>
@@ -147,7 +148,18 @@ Chennai - 603 103, India.</p>
           </div>
         </div>
       </div>
+      
     </div>
+    <div className="copyrghts">
+      <div className="container">
+          <p>© 2022 CODE Hindustan Online. All Rights Reserved</p>
+          <ul>
+            <li><a href="Privacy-Policy.pdf" target="_blank">Privacy Policy </a></li>
+            <li><a href="Refund-Policy.pdf" target="_blank">Refund Policy </a></li>
+          </ul>
+      </div>
+      </div>
+
   </footer>
 
       </>

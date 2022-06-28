@@ -823,7 +823,7 @@ color: #f28823;font-weight: 100;}
 
 .stfooter {
     background: #f1f1f1;
-    padding: 70px 0;
+    padding: 70px 0 0 0;
 }
 
 .stfooter .ftaddrs {
@@ -2663,9 +2663,68 @@ p.moretext.showtexts {
     color: #f18600;
 }
 
+
+/* footer changes */
+
+.copyrghts {
+    margin: 60px 0 0;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+.copyrghts p {
+    margin: 0;
+    display: inline-block;
+    color: #000;
+    font-size: 12px;
+}
+
+.copyrghts ul {
+    list-style: none;
+    padding: 0;
+    float: right;
+}
+
+.copyrghts ul li {
+    display: inline-block;
+    margin: 0 0 0 16px;
+}
+
+.copyrghts ul li a {
+    color: #000;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.contactinfoons ul li {
+    color: #676d76;
+}
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){
+
+    .stfooter {
+        padding-bottom: 70px;
+    }
+    
+    .copyrghts ul {
+        float: none;
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+    
+    .copyrghts p {
+        text-align: center;
+        display: block;
+    }
+    
+    .copyrghts {
+        padding-bottom: 0;
+    }
+
+    
     .faqnewtys.allprgs, .faqnewtys.fqallcrsdt {
         padding-top: 0;
     }

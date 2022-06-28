@@ -1169,7 +1169,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="card">
+       {/* <div className="card">
           <div className="card-header" id="headingThree">
             <h5 className="mb-0">
               <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
@@ -1193,7 +1193,7 @@ const Index = () => {
               Three year program Data Base Systems Multimedia and Animation Data Analytics Candidate from any stream (Science, Commerce or Arts) securing 50% or more at 10+2 level without any approximation is eligible to take Admission to BCA program.</p>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="card">
           <div className="card-header" id="headingFive">
             <h5 className="mb-0">

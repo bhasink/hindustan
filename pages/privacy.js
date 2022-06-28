@@ -143,154 +143,7 @@ const ContactUs = () => {
   }
 
     const state = {
-        responsive: {
-          0: {
-            items: 1,
-            nav: true,
-            dots: false,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-          300: {
-            items: 2,
-            nav: true,
-            dots: false,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            margin: 10,
-            loop: true,
-          },
-    
-          766: {
-            items: 2,
-            nav: true,
-            dots: false,
-            loop: true,
-          },
-    
-          1200: {
-            items: 4,
-            nav: true,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-        },
-        responsive_top_cat: {
-          0: {
-            items: 1,
-            nav: false,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-          300: {
-            items: 1,
-            nav: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            dots: false,
-            loop: true,
-          },
-    
-          766: {
-            items: 3,
-            nav: true,
-            dots: false,
-            loop: true,
-          },
-    
-          1200: {
-            items: 3,
-            nav: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            dots: true,
-          },
-        },
-        responsive_top_catnew: {
-          0: {
-            items: 1,
-            nav: false,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-          300: {
-            items: 1,
-            nav: true,
-            dots: false,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-    
-          766: {
-            items: 3,
-            nav: true,
-            dots: false,
-            loop: true,
-          },
-    
-          1200: {
-            items: 4,
-            nav: false,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            dots: true,
-          },
-        },
-        responsive_reviewtestim: {
-          0: {
-            items: 1,
-            nav: false,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-          300: {
-            items: 3,
-            nav: false,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-    
-          766: {
-            items: 3,
-            nav: false,
-            dots: false,
-            loop: true,
-          },
-    
-          1200: {
-            items: 3,
-            nav: true,
-            dots: false,
-            autoplay:true,
-            margin:40,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            center: true,
-          },
-        },
+        
       }
 
     return (
@@ -301,77 +154,87 @@ const ContactUs = () => {
  <div>
   <section className="contactinfoons">
     <div className="container">
-      <div className="dotsptns tplfd" />
-      <div className="dotsptns btmlfd" />
-      <div className="dotsptns verytmlfd" />
+      
       <div className="hdingst text-center">
-        <h2 className="mainhds">c<span className="ogx">o</span>ntact Information</h2>
+        <h2 className="mainhds">Privacy Policy</h2>
       </div>
-      <div className="addressportns text-center">
-        <div className="row">
-          <div className="col-lg-4 col-md-6 bdbtms">
-            <img src="/images/contic1.png" />
-            <h5>Admission enquiry</h5>
-            <div className="adlnone">
-              <p><b>WhatsApp Us :</b> +91 9945580408</p>
-              <p><b>Call Us: :</b> +91 9945580408</p>
-              <p><b>Email Us:</b> info@hindustancode.com</p>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6 bdbtms">
-            <img src="/images/contic2.png" />
-            <h5>International enquiry</h5>
-            <div className="adlnone">
-              <p><b>WhatsApp Us :</b> +91 9945580408</p>
-              <p><b>Call Us: :</b> +91 9945580408</p>
-              <p><b>Email Us:</b> intl@hindustancode.com</p>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6 bdbtms">
-            <img src="/images/contic3.png" />
-            <h5>Other enquiry</h5>
-            <div className="adlnone">
-              <p><b>WhatsApp Us :</b> +91 9986342290</p>
-              <p><b>Call Us: :</b> +91 9945580408</p>
-              <p><b>Email Us:</b> enquiry@hindustancode.com</p>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6 mx-auto">
-            <img src="/images/contic4.png" />
-            <h5>Media enquiry</h5>
-            <div className="adlnone">
-              <p><b>Email Us:</b> media@hindustancode.com</p>
-            </div>
-          </div>
-        </div>
-      </div><div className="addresspnorgs">
-        <div className="row">
-          <div className="col-lg-4 col-md-4 icmds text-center align-self-center">
-            <img src="/images/mapcont.png" />
-          </div>
-          <div className="col-lg-6 col-md-6">
-            <h4 className="adhds">UNIVERSITY CAMPUS</h4>
-            <p> Rajiv Gandhi Salai (OMR), Padur,<br />
-              (Via) Kelambakkam,<br />
-              Chennai - 603 103, India.</p>
-          </div>
-        </div>
-      </div>
+
+      <div className="pt-5">
+      <p>Your privacy is of utmost priority and we are committed to respecting it. Rest assured, we DO NOT give, share, sell, or transfer any personal information to a third party.
+This privacy statement applies to the user information that we gather when you visit Hindustan Institute of Technology &amp; Science (HITS) a (Deemed-to-be University)’s and its other sub-sites that are owned, and managed, and controlled by the University team. This page contains information and a description of how this information is processed and protected
+</p>
+
+<p><b>Browsing Behaviour</b></p>
+
+<p>We track the browsing patterns of the visitors to understand how our sites are being used. The websites deploy Google Analytics to gather anonymous statistics which are used to improve user experience.
+</p>
+<p>The web-operating system will help us identify the following:
+</p>
+
+<ul>
+ <li>The Internet domain for your internet services, such as “xyz.com” or
+“xyz.net” if you use a private internet access account, or
+“yourcollege.edu” if you connect from a college or university domain.</li>
+<li>Type of browser being used (“Google Chrome version X” or “Internet Explorer version X”).</li>
+<li>Type of operating system being used (Macintosh, UNIX, or Windows).</li>
+<li>Time and date of your prior visits to the website, what you had viewed or clicked and how you found us</li>
+<li>Personal information is NOT recorded</li>
+</ul>
+
+
+<p><b>The information asked on the website</b></p>
+
+<p>
+The University websites and its sub-sites may ask you for personally- identifiable information like name, email ID, and/or phone number. The purpose of requesting this information is to communicate effectively with our visitors. Hindustan Institute of Technology &amp; Science a (Deemed-to-be University) will never sell, share, or disclose the information provided on its
+websites.
+</p>
+
+<p><b>Information received from an email</b></p>
+
+
+<p>
+If in case you decide to send us an electronic mail message (email), it will usually contain your return email address. If you include personally-identifying information in your email because you want us to address issues specific to your circumstances, we may use that information in responding to your request. Also, e-mail is not necessarily secure against interception.Please send only the information necessary to help us process your request.
+</p>
+
+<p><b>Information collected from interactive forms</b></p>
+
+
+<p>On some of our web pages, we offer interactive forms that let you voluntarily submit personal information such as your email address, name, or organization. This occurs when you are registering for online counseling, various tests, quizzes, seminars, workshops, or training sessions offered by Hindustan Institute of Technology &amp; Science a (Deemed-to-be University), downloading admission forms. In such cases, all submitted information is
+used only for the purposes for which it is intended and is not made available to any third party.</p>
+
+<p><b>Cookies</b></p>
+
+<ul>
+<li>
+Necessary Cookies - We use this type of cookie on all the Hindustan Institute of Technology &amp; Science a (Deemed-to-be University) webpages to help you use our websites interactively and regularly. A cookie is a small file that a website transfers to your computer’s hard disk, usually to keep track of you while you are connected to that website.
+</li>
+
+<li>
+Performance Enhancing Cookies - This doesn’t collect any personal information about individuals, but only about your browser “session.” The cookie makes it easier for you to use the dynamic features of these web pages, without providing the same information again as you move from one page to another.
+</li>
+
+<li>
+Functional Cookies - This allows the websites to remember the choices you made during your previous. It identifies user behavior and enables us to serve content based on the user profile.
+Third-party links The University and its other sub-sites may contain links to Third-Party Sites.Hindustan Institute of Technology &amp; Science a (Deemed-to-be University) is not accountable for the privacy practices followed by these websites. Hence, we encourage you to read through the privacy policy published by these Third-Party websites.
+</li>
+
+
+
+
+
+
+
+</ul>
+
+<p>
+For more information regarding the University’s privacy policy or if you have
+If any queries, please write to: info@hindustanuniv.ac.in
+</p>
+</div>
+      
     </div>
   </section>
-  <section className="downbrochures">
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-7  text-center text-lg-left p-2">
-          <h4>Learn future-ready and industry-relevant skills and build a promising career</h4>
-          
-        </div>
-        <div className="col-lg-4 text-lg-right text-center align-self-center">
-          <a href="#" className="blackctathms nobrd" data-toggle="modal" data-target="#exampleModalCenter4"><img src="/images/downldico.png" />Download Brochure</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  
   <div className="sideaassets">
     <a href="tel:+91 9945580408" className="graytelsnaps"> <i className="fas fa-phone-alt" /> +91 9945580408 </a>
     <div className="ctatcs">
