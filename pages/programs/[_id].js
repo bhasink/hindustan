@@ -499,7 +499,7 @@ const CourseDetails = () => {
               </li>
               {/* <li><a href="#highlights">Highlights</a></li> */}
               <li>
-                <a href="#eligiblity">Eligiblity</a>
+                <a href="#eligiblity">Eligibility</a>
               </li>
               <li>
                 <a href="#syllabus">Syllabus</a>
@@ -590,7 +590,7 @@ const CourseDetails = () => {
             <div className="row">
               <div className="col-lg-6 col-md-6  whtsbga text-center">
                 <div className=" hdingst text-center">
-                  <h2 className="mainhds">Eligiblity</h2>
+                  <h2 className="mainhds">Eligibility</h2>
                 </div>
                 <img src="/images/checklistind.png" className="chdatalsts" />
                 <p>
