@@ -22,7 +22,7 @@ const Footer = () => {
 (Via) Kelambakkam,<br></br>
 Chennai - 603 103, India.</p>
             <a href="tel:+919945580408"> +91 9945580408</a>
-            <a href="mailto:enquiry@jainxacademy.com">admission@hindustancode.com</a>
+            <a href="mailto:info@hindustancode.com">info@hindustancode.com</a>
             <div class="sclics">
 					<ul>
 						<li><a href="https://www.facebook.com/hindustan.code"  target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -109,7 +109,7 @@ Chennai - 603 103, India.</p>
                     <a href="/programs/accounting-and-finance">Accounting and Finance </a>
                     </li>
                     <li>
-                    <a href="/programs/marketing" >Markeitng</a>
+                    <a href="/programs/marketing" >Marketing</a>
                     </li>
                   <li>
                     <a href="/programs/finance">Finance</a>

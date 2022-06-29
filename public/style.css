@@ -2700,6 +2700,22 @@ p.moretext.showtexts {
     color: #676d76;
 }
 
+a.moreless-button:not([href]):not([tabindex]):hover{
+    color: #f18600;
+}
+
+.moreless-button.rdlss span:nth-child(1) {
+    display: none;
+}
+
+.moreless-button.rdlss span:nth-child(2) {
+    display: inline-block;
+}
+
+.moreless-button span:nth-child(2) {
+    display: none;
+}
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){

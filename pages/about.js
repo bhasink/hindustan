@@ -217,9 +217,9 @@ const AboutUs = () => {
             <div className="hdingst dsktop">
               <h2 className="mainhds">Wh<span className="ogx">o</span> we are</h2>
             </div>
-            <p>The renowned Hindustan Group of Institutions in its non-stop endeavor to be at the the forefront of quality education has proudly launched HINDUSTAN ONLINE - CODE (Centre for Open and Digital Education). In the wake of the National Education Policy 2020, India is experiencing an important shift in education and Online programs have successfully catered to the need of the hour by providing highly revered qualifications to both aspiring students and working professionals.</p>
+            <p>The renowned Hindustan Group of Institutions in its non-stop endeavor to be at the forefront of quality education has proudly launched HINDUSTAN ONLINE - CODE (Centre for Open and Digital Education). In the wake of the National Education Policy 2020, India is experiencing an important shift in education and Online programs have successfully catered to the need of the hour by providing highly revered qualifications to both aspiring students and working professionals.</p>
             <p  className={`moretext ${isActive ? "" : "showtexts"}`} > HINDUSTAN ONLINE - CODE offers specially designed programs with well-researched curricula to reduce the industry-academia gap. This makes our learners more employable in this highly competitive world. The programs are all contemporary with a well-curated and well-researched curriculum. Our programs do not just provide the theoretical learning of concepts, but we focus on the practical application of these concepts by following Outcome-based Learning concepts. HINDUSTAN ONLINE - CODE aims at reforming the Indian Higher Education landscape through the provision of equitable and inclusive learning opportunities, contributing to a significant increase in enrolment.</p>
-           <a href onClick={handleToggle} className="moreless-button">Read more </a> 
+           <a href onClick={handleToggle} className={`moreless-button ${isActive ? "" : "rdlss "}`}><span>Read more</span> <span>Read less</span> </a> 
           </div>
         </div>
       </div>
