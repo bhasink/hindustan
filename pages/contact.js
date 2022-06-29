@@ -332,7 +332,7 @@ const ContactUs = () => {
             <h5>Other enquiry</h5>
             <div className="adlnone">
               <p><b>WhatsApp Us :</b> +91 9986342290</p>
-              <p><b>Call Us: :</b> +91 9945580408</p>
+              <p><b>Call Us: :</b> 91 9986342290</p>
               <p><b>Email Us:</b> enquiry@hindustancode.com</p>
             </div>
           </div>
