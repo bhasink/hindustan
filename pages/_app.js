@@ -25,6 +25,9 @@ function MyApp({ Component, pageProps }) {
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet"/>
 
             <link rel="stylesheet" type="text/css" href={`/style.css`} />
+
+          
+
         </Head>
         
         <ToastProvider
