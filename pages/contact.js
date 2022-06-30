@@ -331,8 +331,8 @@ const ContactUs = () => {
             <img src="/images/contic3.png" />
             <h5>Other enquiry</h5>
             <div className="adlnone">
-              <p><b>WhatsApp Us :</b> +91 9986342290</p>
-              <p><b>Call Us: :</b> 91 9986342290</p>
+              <p><b>WhatsApp Us :</b> +91 9945580533</p>
+              <p><b>Call Us: :</b> 91 9945580533</p>
               <p><b>Email Us:</b> enquiry@hindustancode.com</p>
             </div>
           </div>
