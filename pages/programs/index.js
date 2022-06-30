@@ -473,7 +473,7 @@ const Listing = () => {
           </div>
         </div>
       </section>
-      <section className="showextcourses">
+      <section className="showextcourses" id="bachelors">
         <div className="container">
           <div className="text-center hdingst">
             <h2 className="mainhds">
@@ -548,7 +548,7 @@ const Listing = () => {
           </div>
         </div>
       </section>
-      <section className="showextcourses">
+      <section className="showextcourses" id="masters">
         <div className="container">
           <div className="text-center hdingst">
             <h2 className="mainhds">Masters</h2>

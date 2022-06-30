@@ -2716,9 +2716,42 @@ a.moreless-button:not([href]):not([tabindex]):hover{
     display: none;
 }
 
+.aboutleadslides .item {
+    padding-top: 60px;
+}
+
+.aboutleadslides  .owl-nav {
+    position: relative;
+    top: -378px;
+}
+
+.aboutleadslides .owl-nav .owl-prev {
+    float: left;
+    position: relative;
+    left: -67px;
+}
+
+.aboutleadslides .owl-nav .owl-next {
+    float: right;
+    position: relative;
+    right: -67px;
+}
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){
+
+    .aboutleadslides .owl-nav .owl-prev {
+        left: 0;
+    }
+    
+    .aboutleadslides .owl-nav .owl-next {
+        right: 0;
+    }
+
+    .aboutleadslides .owl-nav {
+        top: -1076px;
+    }
 
     .stfooter {
         padding-bottom: 70px;
@@ -4210,7 +4243,17 @@ display: flex;}
 
 
 @media screen and (max-width: 900px) and (min-width: 768px){
-	
+	.aboutleadslides .owl-nav .owl-next {
+        right: 0;
+    }
+    
+    .aboutleadslides .owl-nav .owl-prev {
+        left: 0;
+    }
+
+    .aboutleadslides .owl-nav{
+        top: -895px;
+    }
     
 .site-header.topmain .navbar ul li.nav-item .orangebtns, header.topmain.navfixed .navbar ul li.nav-item .orangebtns {
     text-align: center;

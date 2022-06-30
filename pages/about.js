@@ -25,122 +25,52 @@ const AboutUs = () => {
   };
 
     const state = {
-        responsive: {
-          0: {
-            items: 1,
-            nav: true,
-            dots: false,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-          300: {
-            items: 2,
-            nav: true,
-            dots: false,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            margin: 10,
-            loop: true,
-          },
-    
-          766: {
-            items: 2,
-            nav: true,
-            dots: false,
-            loop: true,
-          },
-    
-          1200: {
-            items: 4,
-            nav: true,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-        },
+      
         responsive_top_cat: {
           0: {
             items: 1,
             nav: false,
             dots: true,
-            autoplay:true,
+            autoplay:false,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
-            loop: true,
+            loop: false,
           },
           300: {
             items: 1,
             nav: true,
-            autoplay:true,
+            autoplay:false,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
             dots: false,
-            loop: true,
+            loop: false,
           },
     
           766: {
-            items: 3,
+            items: 1,
+            margin:20,
             nav: true,
             dots: false,
             loop: true,
           },
     
           1200: {
-            items: 3,
+            items: 1,
+            margin:20,
             nav: true,
-            autoplay:true,
+            autoplay:false,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
             dots: true,
           },
         },
-        responsive_top_catnew: {
-          0: {
-            items: 1,
-            nav: false,
-            dots: true,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-          300: {
-            items: 1,
-            nav: true,
-            dots: false,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            loop: true,
-          },
-    
-          766: {
-            items: 3,
-            nav: true,
-            dots: false,
-            loop: true,
-          },
-    
-          1200: {
-            items: 4,
-            nav: false,
-            autoplay:true,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            dots: true,
-          },
-        },
+
         responsive_reviewtestim: {
           0: {
             items: 1,
             nav: false,
             dots: true,
-            autoplay:true,
+            autoplay:false,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
             loop: true,
@@ -148,31 +78,31 @@ const AboutUs = () => {
           300: {
             items: 1,
             nav: true,
-            dots: false,
-            autoplay:true,
+            autoplay:false,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
+            dots: false,
             loop: true,
           },
     
           766: {
-            items: 3,
-            nav: false,
-            dots: true,
+            items: 2,
+            nav: true,
+            dots: false,
             loop: true,
           },
     
           1200: {
             items: 3,
-            nav: true,
-            dots: false,
-            autoplay:true,
             margin:40,
+            nav: true,
+            center:true,
+            autoplay:false,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
-            center: true,
+            dots: false,
           },
-        },
+        }
       }
 
     return (
@@ -225,23 +155,28 @@ const AboutUs = () => {
       </div>
     </div>
   </section>
-  <section className="leaderbdrs">
+  <section className="leaderbdrs"  id="leadership">
     <div className="container">
-      <div className="dotsptns" />
-      <img src="/images/featblus.png" className="bottomabuis" />
-      <div className="row">
-        <div className="col-md-6 col-lg-5 pr-lg-5">
-          <div className="hdingst text-center mbltop">
+
+    <div className="hdingst text-center">
             <h2 className="mainhds">leadership n<span className="ogx">o</span>te</h2>
           </div>
+
+
+      <div className="dotsptns" />
+      <img src="/images/featblus.png" className="bottomabuis" />
+
+      <OwlCarousel className="aboutleadslides" responsive={state.responsive_top_cat}>
+      <div className="item">
+      <div className="row">
+        <div className="col-md-6 col-lg-5 pr-lg-5">
+        
           <div className="vdthmbs">
             <img src="/images/aboutleader.jpg" className="fllimg" />
           </div>
         </div>
-        <div className="col-md-6 col-lg-7 align-self-center mt-lg-0 mt-5 mt-md-0" id="leadership">
-          <div className="hdingst dsktop">
-            <h2 className="mainhds">leadership n<span className="ogx">o</span>te</h2>
-          </div>
+        <div className="col-md-6 col-lg-7 align-self-center mt-lg-0 mt-5 mt-md-0">
+         
           <p className="text-center text-lg-left text-md-left">Hindustan Institute of Technology and Science(HITS), is one amongst the first few Universities in India to be entitled by AICTE to offer online professional Master Degree Programs of MBA and MCA. In the rapidly changing world with increasing movement, flexibility, and information overflow, HITS is determined to create new learning experiences through Hindustan Online - CODE.
 
 Inclusive education is the new mantra for the knowledge society. Our vision is where anyone, anywhere can acquire knowledge and learn new business and management skills faster than ever before. This is feasible due to digital technology and our expertise in delivering quality online education.
@@ -264,6 +199,115 @@ I wish all the teachers and learners success in exploring the world of education
 <b>Director</b></p>
         </div>
       </div>
+       </div> 
+
+
+       <div className="item">
+      <div className="row">
+        <div className="col-md-6 col-lg-5 pr-lg-5">
+        
+          <div className="vdthmbs">
+            <img src="/images/vcsridhara.jpg" className="fllimg" />
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-7 align-self-center mt-lg-0 mt-5 mt-md-0">
+         
+          <p className="text-center text-lg-left text-md-left">Hindustan Institute of Technology and Science has always been in the forefront of reaching out. Education needs a greater focus on Accessibility, Equity and Quality. With the guiding Vision of our Founder Chairman “To make every man a success and no man a failure” HITS has established “Centre for Open and Digital Education” (CODE). Moving beyond dissemination of knowledge, CODE resolves to blend academic rigor, the culture of inquisitions leading to innovation and sustained Industry engagement.
+Gross Enrolment Ratio (GER)the percentage of students belonging to the eligible age group enrolled in Higher Education in India in 2019-20 is 27.1% only.National Educational Policy 2020 aims at increasing it to 50% in five years. The present growth rate of expansion of Higher Education Institutions will not be sufficient to reach this target. Online and Distance Education Mode is added means of reaching this dream.
+In this context, the Online Programs offered by HITS shall bring in the revolution in the education and career of millions of Indians who can study through online mode and earn a degree that is duly entitled by AICTE/UGC. The working professionals, home makers and others can earn their degree at their convenient pace. Well prepared learning material, Live and Recorded Videos of Class Lectures, strong student support, interaction rooms, highly experienced faculty from academics and industries are few of many key advantages with Hindustan Online.
+We welcome the aspiring students to explore new arena of online education and make their dreams come true by acquiring higher knowledge and also get recognised academic degrees to build better career.
+</p>
+
+<p className="text-center text-lg-left text-md-left"><b>Dr. S.N. Sridhara</b><br/>
+<b>Vice Chancellor</b></p>
+        </div>
+      </div>
+       </div> 
+
+
+
+       <div className="item">
+      <div className="row">
+        <div className="col-md-6 col-lg-5 pr-lg-5">
+        
+          <div className="vdthmbs">
+            <img src="/images/chancellor.jpg" className="fllimg" />
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-7 align-self-center mt-lg-0 mt-5 mt-md-0">
+         
+          <p className="text-center text-lg-left text-md-left">Hindustan Group of Institutions was established by our Founder and Chairman (late) Dr. K.C.G. Verghese with the aim of offering quality education with practical application in the field of Aviation, Engineering, Technology, Management and Applied Sciences. Our Founder had envisioned “To make everyman a success and no man a failure” which is the guiding spirit that leads us today.
+Hindustan Institute of Technology and Science, is always enduring and striving to develop the graduates to innovative leaders capable of facing challenges in the specialized fields at par with the students of any institution of international repute. In its endeavour to benefit the working professionals and students wanting to pursue Higher Education to further their prospects, HITS has opened a new chapter “CODE” - Centre for Open and Digital Education, to offer higher degrees in the digital platform.
+CODE aims to create an inclusive environment - Educate all - Empower all and Enhance their employability. Through CODE Hindustan endeavours to provide socially and industrially relevant quality higher education to all strata of society, and to provide better opportunities for an inclusive society to achieve global standards.
+I welcome the Learners to reinvent themselves with access to quality education that has been made affordable by CODE.
+I hope HITS will develop more Certificate, Diploma and Degree Level Programs to bring out the best in young India to develop into an Economically Sound Knowledge Society.
+</p>
+
+
+
+<p className="text-center text-lg-left text-md-left"><b>Dr. Elizabeth Verghese</b><br/>
+<b>Chairperson, HGI</b></p>
+        </div>
+      </div>
+       </div> 
+
+
+       <div className="item">
+      <div className="row">
+        <div className="col-md-6 col-lg-5 pr-lg-5">
+        
+          <div className="vdthmbs">
+            <img src="/images/prochancellor.jpg" className="fllimg" />
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-7 align-self-center mt-lg-0 mt-5 mt-md-0">
+         
+          <p className="text-center text-lg-left text-md-left">In the chronicles of Hindustan Institute of Technology & Science (HITS), a new page has been created with the establishment of the Centre for Open and Digital Education (CODE). This new initiative aims to offer full academic programs through online education.
+HITS has a legacy in empowering students with creative thinking by using innovative teaching methods. Our multi-disciplinary learning environment with Choice-Based Credit System (CBCS) hones the skills of students and provides them practical knowledge to enhance their prospects for employment. Our MoUswith leading industries and our collaborative partnerships with International Universities help students develop a strong global competency.
+The widespread integration of technology have made distance learning easier and faster. Using this advantage, HITS aims to make higher education more accessible to aspiring students. As a first step in this direction HITS plans to initially introduce PG programs (MBA and MCA) that will ensure global career opportunities for our students. The dreams of aspirants to pursue higher education while working after schooling will be fulfilled by specially curated UG courses of BBA, BCA and B.Com offered Online
+These courses will be conducted utilising the expertise of our faculty from the School of Management and School of Computing Sciences. These departments have been offering regular programs for the last three decades and our students from these streams of education have found gainful employment as Entrepreneurs and also as IT Experts and Management Professionals in notable corporate entities.
+I wish all success & expect this mode of learning will take HITS to the farthest corners of the society to provide quality education.
+
+</p>
+
+
+<p className="text-center text-lg-left text-md-left"><b>Dr. Anand Jacob Verghese</b><br/>
+<b>Pro Chancellor’s Message </b></p>
+        </div>
+      </div>
+       </div>
+
+
+       <div className="item">
+      <div className="row">
+        <div className="col-md-6 col-lg-5 pr-lg-5">
+        
+          <div className="vdthmbs">
+            <img src="/images/provc.jpg" className="fllimg" />
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-7 align-self-center mt-lg-0 mt-5 mt-md-0">
+         
+          <p className="text-center text-lg-left text-md-left">Centre for Open and Digital Education (CODE) is yet another feather in the cap of Hindustan Institute of Technology and Science (HITS), an Institution committed to excellence in world class higher education.
+Popular Online Higher Education programs are now reachable to everyone who desires to learn and acquire degrees in their own interested arena, realised through Open Distant Learning (ODL) and Online Learning (OL) offered by HITS. These programs are designed with enriched curriculum to make them apt for the professional career advancement and to reach the expectations of industries, corporate and public. The legacy of HITS in rendering world class higher education is evident in design of course material and delivery with interactive sessions by experienced faculty and professionals.
+Higher Education is the only hope for success in today’s Volatile, Uncertain, Complex and Ambiguous (VUCA) World. HITS has democratized higher education through CODE. The PG Degree programs of MBA and MCA are entitled by AICTE and the UG Degree programs of BBA, B. Com and BCA are entitled by UGC. The programs are delivered through Open and distance mode as well as Online mode.
+At affordable costs, with self paced learning, delivered by experienced faculty and international as well industry experts the programs open up a world of opportunities for personal and professional growth. With high academic standards, experienced faculty, and engaging curriculum as on campus, one can conquer the VUCA World.
+Centre for Open and Digital Education (CODE) of HITS welcome the prospecting students and delegates for exploring the new experience of Open Learning and Online Learning for satisfying their hunger of new learnings and excel in their career.
+
+
+</p>
+
+
+<p className="text-center text-lg-left text-md-left"><b>Dr. R. W. Alexander Jesudasan</b><br/>
+<b>Pro Vice Chancellor </b></p>
+        </div>
+      </div>
+       </div>
+
+
+      </OwlCarousel>
+      
+
     </div>
   </section>
   <section className="rnkers" id="awardsranking">
