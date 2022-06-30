@@ -2722,7 +2722,7 @@ a.moreless-button:not([href]):not([tabindex]):hover{
 
 .aboutleadslides  .owl-nav {
     position: relative;
-    top: -378px;
+    top: -280px;
 }
 
 .aboutleadslides .owl-nav .owl-prev {
@@ -2736,6 +2736,30 @@ a.moreless-button:not([href]):not([tabindex]):hover{
     position: relative;
     right: -67px;
 }
+
+.agthghts {
+    overflow-y: auto;
+    height: 334px;
+    margin-bottom: 20px;
+    padding-right: 10px;
+}
+
+.agthghts ul li {
+    color: #676d76;
+}
+
+.agthghts ul {
+    padding: 0 16px;
+    margin: 25px 0 0 0;
+}
+
+.agthghts::-webkit-scrollbar {
+   width: 4px;
+}
+
+.agthghts::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
 
 /* Responsive css */
 
