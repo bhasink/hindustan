@@ -1775,7 +1775,7 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
 .rnkers .bottomabuis {position: absolute;bottom: -100px;width: 47px;}
 
 
-.aboutbgbacks {height: 511px; position:relative; overflow: hidden;}
+.aboutbgbacks {height: 640px; position:relative; overflow: hidden;}
 
 .aboutbgbacks .item {display: flex;height: 100vh;position: relative;flex-direction: column;}
 

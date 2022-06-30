@@ -115,20 +115,16 @@ const AboutUs = () => {
   
   <section className="homemainbanner aboutbgbacks">
     <div className="item">
-      <img src="/images/aboutmainban.jpg" className="bgdeskmb" />
+      <img src="/images/aboutnewban.jpg" className="bgdeskmb" />
       <div className="container">
         <div className="row">
           <div className="col-md-8 col-lg-7 text-center align-self-center">
             <div className="hmbannerquotes">
-              <img src="/images/bnrtexttop.png" className="tpquotelf" />
-              <h1 className="bnrhd">
-                <b>About <br/> Hindustan Online</b> - <br/> C<span className='ogx'>O</span>DE</h1>
               
-              <img src="/images/bnquotergs.png" className="bnquoterg" />
             </div>
           </div>
           <div className="col-md-4 col-lg-5 text-center">
-            <img src="/images/aboutmobilesnew.jpg" className="mobhomeshos" />
+            <img src="/images/aboutmobiles.jpg" className="mobhomeshos" />
           </div>
         </div>
       </div>	
