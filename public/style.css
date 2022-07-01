@@ -3274,8 +3274,12 @@ a.moreless-button:not([href]):not([tabindex]):hover{
 
 .coursenmeinfos .bottomabuis {display: none;}
 
-.coursenmeinfos .topmstomabuis {bottom: -122px;
-    left: 7px;z-index: 1;}
+.coursenmeinfos .topmstomabuis {
+    bottom: -118px;
+    left: 7px;
+    z-index: 1;
+    width: 40px;
+}
 
 .iniinfos .cicon {border: 6px solid #dcdadb;padding: 10px;margin-bottom: 10px;}
 
@@ -3304,7 +3308,8 @@ a.moreless-button:not([href]):not([tabindex]):hover{
 .bgrays .spcltopblfts {
     right: 13px;
     width: 38px;
-    top: 422px;
+    bottom: -25px;
+    top: inherit;
 }
 
 .aboutsect .owl-nav{
