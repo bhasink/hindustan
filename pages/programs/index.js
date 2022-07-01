@@ -14,6 +14,7 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
 })
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
+import NumberFormat from 'react-number-format';
 
 const Listing = () => {
   const [allCourses, setAllCourses] = useState([])
@@ -441,7 +442,7 @@ const Listing = () => {
                                 src="/images/rupicon.png"
                                 className="tmicn"
                               />
-                              <p>45,000</p>
+                              <p>{<NumberFormat displayType="text" value={get_courses.fee_plan[0].national_yearly_price} thousandSeparator={true} prefix={'₹'} />}</p>
                             </div>
                           </div>
                           <Link href={`programs/${get_courses.slug}`}>
@@ -517,7 +518,7 @@ const Listing = () => {
                           </div>
                           <div className="tmclcs">
                             <img src="/images/rupicon.png" className="tmicn" />
-                            <p>45,000</p>
+                            <p>{<NumberFormat displayType="text" value={get_courses.fee_plan[0].national_yearly_price} thousandSeparator={true} prefix={'₹'} />}</p>
                           </div>
                         </div>
                         <Link href={`programs/${get_courses.slug}`}>
@@ -590,7 +591,7 @@ const Listing = () => {
                           </div>
                           <div className="tmclcs">
                             <img src="/images/rupicon.png" className="tmicn" />
-                            <p>45,000</p>
+                            <p>{<NumberFormat displayType="text" value={get_courses.fee_plan[0].national_yearly_price} thousandSeparator={true} prefix={'₹'} />}</p>
                           </div>
                         </div>
                         <Link href={`programs/${get_courses.slug}`}>
