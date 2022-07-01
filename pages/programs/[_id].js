@@ -448,15 +448,18 @@ const CourseDetails = () => {
             <div className="crctsinf">
               <div className="row">
                 <div className="col-6 col-lg-6 col-md-6">
-                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter1" className="orangectathms nobrd">
+                  <a href="https://apply.hindustancode.com/" target="_blank" className="orangectathms nobrd">
                     Apply Now
                   </a>
                 </div>
                 <div className="col-6 col-lg-6 col-md-6">
-                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter2" className="blackctathms nobrd">
+
+                <div class="npf_wgts" data-height="400px" data-w="b2c2434e61006dae7b80093b9c72233c"></div>
+
+                  {/* <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter2" className="blackctathms nobrd">
                     <img src="/images/downldico.png" />
                     Brochure
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

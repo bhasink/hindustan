@@ -52,10 +52,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscr
           <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
           <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
           {/* <script src="/js/custome.js?v=4"></script> */}
-
-          {/* <script src="https://chatbot.in5.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/515762061aa74833e/c5d5c2ced1d146ffa3047d6adc4aaa71"></script>  */}
-
-          <script type="text/javascript">    var s=document.createElement("script");    s.type="text/javascript";    s.async=true;    s.src="https://chatbot.in5.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/515762061aa74833e/c5d5c2ced1d146ffa3047d6adc4aaa71";    document.body.appendChild(s);</script> 
+          
+          <script type="text/javascript"> var s=document.createElement("script"); s.type="text/javascript"; s.async=true; s.src="https://widgets.in5.nopaperforms.com/emwgts.js"; document.body.appendChild(s); </script>
+          <script type="text/javascript"> var s=document.createElement("script");    s.type="text/javascript";    s.async=true;    s.src="https://chatbot.in5.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/515762061aa74833e/c5d5c2ced1d146ffa3047d6adc4aaa71";    document.body.appendChild(s);</script> 
         </body>
       </Html>
     )
