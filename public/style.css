@@ -2761,9 +2761,53 @@ a.moreless-button:not([href]):not([tabindex]):hover{
     background: #888; 
   }
 
+  .offeredprogr .dopgoffs {
+    right: 11px;
+    top: -57px;
+    width: 40px;
+    position: absolute;
+}
+
+.leaderbdrs .dopgoffs,
+.rnkers .dopgoffs,
+.feeplansne .dopgoffs{
+    display: none;
+}
+
 /* Responsive css */
 
 @media screen and (max-width: 767px) and (min-width: 320px){
+
+    .leaderbdrs .dopgoffs {
+        position: absolute;
+        right: 28px;
+        top: -88px;
+        width: 40px;
+        display:block;
+    }
+
+    .rnkers .dopgoffs {
+        position: absolute;
+        bottom: -119px;
+        width: 39px;
+        left: 11px;
+        display: block;
+    }
+
+    .feeplansne .dopgoffs {
+        position: absolute;
+        top: -47px;
+        width: 32px;
+        display: block;
+    }
+
+    .offeredprogr .dopgoffs{
+        width: 36px;
+    }
+
+    .lfbotstsals{
+        left: -10px;
+    }
 
     .aboutleadslides .owl-nav .owl-prev {
         left: 0;
@@ -2776,6 +2820,8 @@ a.moreless-button:not([href]):not([tabindex]):hover{
     .aboutleadslides .owl-nav {
         top: -619px;
     }
+
+   
 
     .stfooter {
         padding-bottom: 70px;
@@ -3258,7 +3304,7 @@ a.moreless-button:not([href]):not([tabindex]):hover{
 .bgrays .spcltopblfts {
     right: 13px;
     width: 38px;
-    top: 264px;
+    top: 422px;
 }
 
 .aboutsect .owl-nav{

@@ -161,8 +161,8 @@ const AboutUs = () => {
             <h2 className="mainhds">leadership n<span className="ogx">o</span>te</h2>
           </div>
 
-
-      <div className="dotsptns" />
+          <img src="./images/topabdots.png" className="dopgoffs"/>
+      
       <img src="/images/featblus.png" className="bottomabuis" />
 
       <OwlCarousel className="aboutleadslides" responsive={state.responsive_top_cat}>
@@ -324,7 +324,8 @@ Centre for Open and Digital Education (CODE) of HITS welcome the prospecting stu
   </section>
   <section className="rnkers" id="awardsranking">
     <div className="container">
-      <div className="dotsptns" />
+     
+      <img src="./images/longbludots.png" className="dopgoffs"/>
       <img src="/images/abbots.png" className="bottomabuis" />
       <div className="text-center hdingst">
         <h2 className="mainhds">Awards &amp; Rankings</h2>

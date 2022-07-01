@@ -332,7 +332,8 @@ const Listing = () => {
 
       <section className="offeredprogr">
         <div className="container">
-          <div className="dotsptns" />
+          <img src="./images/longbludots.png" className="dopgoffs"/>
+         
           <div
             className="col-md-12 col-lg-12 align-self-center text-center"
             data-aos="fade-up"

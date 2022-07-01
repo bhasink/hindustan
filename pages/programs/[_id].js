@@ -657,6 +657,7 @@ const CourseDetails = () => {
         </section>
         <section className="feeplansne" id="feeplan">
           <div className="container">
+          <img src="/images/topabdots.png" className="dopgoffs"/>
             <img src="/images/abbots.png" className="topmstomabuis" />
             <div className="hdingst text-center text-lg-leftt">
               <h2 className="mainhds">Fee Plan</h2>
