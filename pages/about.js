@@ -284,7 +284,7 @@ I wish all success & expect this mode of learning will take HITS to the farthest
 </div>
 
 <p className="text-center text-lg-left text-md-left"><b>Dr. Anand Jacob Verghese</b><br/>
-<b>Pro Chancellor’s Message </b></p>
+<b>Pro Chancellor </b></p>
         </div>
       </div>
        </div>
