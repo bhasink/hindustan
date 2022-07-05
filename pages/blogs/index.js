@@ -17,6 +17,38 @@ import Nav from '../../components/Nav'
 
 const Blog = () => {
 
+  const [allBlogs, setAllBlogs] = useState([])
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    })
+
+    getAllBlogs()
+  }, [])
+
+  const getAllBlogs = async () => {
+    try {
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API}/blogs`)
+
+      const getBlogs = data.data.get_blogs.data
+      // const get_courses_masters = data.data.get_courses_masters.data
+      // const get_courses_bachelors = data.data.get_courses_bachelors.data
+      // const get_courses_trending = data.data.get_courses_trending.data
+
+      // console.log(get_courses_trending)
+
+      setAllBlogs(getBlogs)
+      // setMastersCourses(get_courses_masters)
+      // setBachelorsCourses(get_courses_bachelors)
+      // setTrendingCourses(get_courses_trending)
+
+      console.log(data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
     const state = {
         responsive: {
           0: {
@@ -299,6 +331,8 @@ const Blog = () => {
       </div>
     </div>
   </section>
+
+
   <section className="mediadescs blognopds">
     <div className="container">
       <img src="/images/abbots.png" className="topmstomabuis rghts" />
@@ -331,107 +365,29 @@ const Blog = () => {
               <option value="Year">Year</option>
             </select>
           </div>
+      
           <div className="gallcrd">
             <div className="row">
+          
+            {allBlogs &&
+                  allBlogs.map((blogs, key) => (
               <div className="col-lg-6">
                 <div className="artblogs">
                   <img src="/images/blogthmbs/1.jpg" />
                   <div className="inpds">
-                    <p className="blhds">What is CODE?</p>
-                    <p className="sbhd">The recent past has highlighted that the world is fast-changing, whether
-                      it is the recession or the pandemic, who survives such calamities?
-                      Darwin’s Theory of ‘Survival of the Fittest’, says that the species which has
-                      the ability to adapt to face the change survive. So, the point is to make
-                      ourselves THE FITTEST to survive.</p>
-                    <p>The fast-changing world has also provided us with the best tools,
-                      technology and connectivity</p>
+                    <p className="blhds">{blogs.name}</p>
+                    <p className="sbhd">
+                    {blogs.short_desc}
+                    </p>
+                    <Link href={`blogs/${blogs.slug}`}>
                     <a href="#">Read More!</a>
+                    </Link>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6">
-                <div className="artblogs">
-                  <img src="/images/blogthmbs/2.jpg" />
-                  <div className="inpds">
-                    <p className="blhds">New Normal in Education</p>
-                    <p className="sbhd">Before the year 2020 when the pandemic struck, many works were being
-                      done in a traditional way for ages. We never thought of changing the
-                      way these works were being done. But the pandemic presented many
-                      challenges and forced us to think in a way where our way of life changed.
-                      It created new work paths which were more efficient, but this also meant
-                      that many jobs became redundant or obsolete. The people involved in
-                      these jobs had only two options, either they face a job loss or they
-                      learn new skills </p>
-                    <a href="#">Read More!</a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="artblogs">
-                  <img src="/images/blogthmbs/3.jpg" />
-                  <div className="inpds">
-                    <p className="blhds">What is CODE?</p>
-                    <p className="sbhd">The recent past has highlighted that the world is fast-changing, whether
-                      it is the recession or the pandemic, who survives such calamities?
-                      Darwin’s Theory of ‘Survival of the Fittest’, says that the species which has
-                      the ability to adapt to face the change survive. So, the point is to make
-                      ourselves THE FITTEST to survive.</p>
-                    <p>The fast-changing world has also provided us with the best tools,
-                      technology and connectivity</p>
-                    <a href="#">Read More!</a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="artblogs">
-                  <img src="/images/blogthmbs/4.jpg" />
-                  <div className="inpds">
-                    <p className="blhds">Lorem Ipsum</p>
-                    <p className="sbhd">Before the year 2020 when the pandemic struck, many works were being
-                      done in a traditional way for ages. We never thought of changing the
-                      way these works were being done. But the pandemic presented many
-                      challenges and forced us to think in a way where our way of life changed.
-                      It created new work paths which were more efficient, but this also meant
-                      that many jobs became redundant or obsolete. The people involved in
-                      these jobs had only two options, either they face a job loss or they
-                      learn new skills .</p>
-                    <a href="#">Read More!</a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="artblogs">
-                  <img src="/images/blogthmbs/5.jpg" />
-                  <div className="inpds">
-                    <p className="blhds">What is CODE?</p>
-                    <p className="sbhd">The recent past has highlighted that the world is fast-changing, whether
-                      it is the recession or the pandemic, who survives such calamities?
-                      Darwin’s Theory of ‘Survival of the Fittest’, says that the species which has
-                      the ability to adapt to face the change survive. So, the point is to make
-                      ourselves THE FITTEST to survive.</p>
-                    <p>The fast-changing world has also provided us with the best tools,
-                      technology and connectivity</p>
-                    <a href="#">Read More!</a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="artblogs">
-                  <img src="/images/blogthmbs/6.jpg" />
-                  <div className="inpds">
-                    <p className="blhds">Lorem Ipsum</p>
-                    <p className="sbhd">Before the year 2020 when the pandemic struck, many works were being
-                      done in a traditional way for ages. We never thought of changing the
-                      way these works were being done. But the pandemic presented many
-                      challenges and forced us to think in a way where our way of life changed.
-                      It created new work paths which were more efficient, but this also meant
-                      that many jobs became redundant or obsolete. The people involved in
-                      these jobs had only two options, either they face a job loss or they
-                      learn new skills .</p>
-                    <a href="#">Read More!</a>
-                  </div>
-                </div>
-              </div>
+
+              ))}
+
             </div>
             <div className="text-center pt-5  pt-lg-4 showctmore">
               <a href="javascript:void(0);" className="orangectathms">Load more</a>

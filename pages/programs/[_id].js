@@ -456,10 +456,10 @@ const CourseDetails = () => {
 
                 <div class="npf_wgts" data-height="400px" data-w="b2c2434e61006dae7b80093b9c72233c"></div>
 
-                  {/* <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter2" className="blackctathms nobrd">
+                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter2" className="blackctathms nobrd">
                     <img src="/images/downldico.png" />
                     Brochure
-                  </a> */}
+                  </a>
                 </div>
               </div>
             </div>
