@@ -18,6 +18,13 @@ import Nav from '../../components/Nav'
 const Blog = () => {
 
   const [allBlogs, setAllBlogs] = useState([])
+  const [filterCoursesLastPage, setFilterCoursesLastPage] = useState(
+    false,
+  )
+  const [loader, setLoader] = useState(false)
+  const [currentPageFilter, setCurrentPageFilter] = useState(1)
+  const [blogsMode, setBlogsMode] = useState('all')
+
 
   useEffect(() => {
     AOS.init({
@@ -48,6 +55,59 @@ const Blog = () => {
       console.log(err)
     }
   }
+
+  
+  const filtersLoadMore = async (data) => {
+
+    let blog_type;
+    setLoader(true)
+    setFilterCoursesLastPage(false)
+    setCurrentPageFilter(1)
+
+    if(data == "admission"){
+      blog_type = "admission";
+      setBlogsMode("admission")
+    }else if(data == "masters"){
+      blog_type = "masters";
+      setBlogsMode("masters")
+    }else if(data == "bachelors"){
+      blog_type = "bachelors";
+      setBlogsMode("bachelors")
+    }else{
+      blog_type = 4;
+      setBlogsMode("all")
+    }
+
+   
+    try {
+
+      const config = {
+        headers: { 'Content-Type': 'application/json' },
+      }
+
+      const { data } = await axios.post(
+        `${process.env.NEXT_PUBLIC_API}/filter-data`,
+        {
+          course_type: course_type
+        },
+        config,
+      )
+
+      const get_courses = data.data.get_courses.data
+     
+      setTrendingCourses(get_courses)
+
+      setLoader(false)
+
+      console.log(data)
+    } catch (err) {
+      console.log(err)
+      setLoader(false)
+    }
+
+  }
+  
+
 
     const state = {
         responsive: {
@@ -342,16 +402,33 @@ const Blog = () => {
       <div className="tabblogsd">
         <ul className="nav nav-tabs" id="myTab2" role="tablist">
           <li className="nav-item">
-            <a className="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
+            <a   className={
+                  blogsMode == 'all'
+                    ? 'btn-group btn-group-toggle active'
+                    : 'btn-group btn-group-toggle'
+                }  onClick={() => filtersLoadMore('all')} id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" id="universitytb-tab" data-toggle="tab" href="#universitytb" role="tab" aria-controls="universitytb" aria-selected="false">Admission</a>
+            <a  className={
+                  blogsMode == 'admission'
+                    ? 'btn-group btn-group-toggle active'
+                    : 'btn-group btn-group-toggle'
+                }  onClick={() => filtersLoadMore('admission')}
+ id="universitytb-tab" data-toggle="tab" href="#universitytb" role="tab" aria-controls="universitytb" aria-selected="false">Admission</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" id="gallerytbs-tab" data-toggle="tab" href="#gallerytbs" role="tab" aria-controls="gallerytbs" aria-selected="false">Programs</a>
+            <a   className={
+                  blogsMode == 'programs'
+                    ? 'btn-group btn-group-toggle active'
+                    : 'btn-group btn-group-toggle'
+                }  onClick={() => filtersLoadMore('programs')} id="gallerytbs-tab" data-toggle="tab" href="#gallerytbs" role="tab" aria-controls="gallerytbs" aria-selected="false">Programs</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" id="otherstbs-tab" data-toggle="tab" href="#otherstbs" role="tab" aria-controls="otherstbs" aria-selected="false">Others</a>
+            <a   className={
+                  blogsMode == 'others'
+                    ? 'btn-group btn-group-toggle active'
+                    : 'btn-group btn-group-toggle'
+                } id="otherstbs-tab"  onClick={() => filtersLoadMore('others')} data-toggle="tab" href="#otherstbs" role="tab" aria-controls="otherstbs" aria-selected="false">Others</a>
           </li>
         </ul>
       </div>
