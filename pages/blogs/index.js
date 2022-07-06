@@ -18,6 +18,7 @@ import Nav from '../../components/Nav'
 const Blog = () => {
 
   const [allBlogs, setAllBlogs] = useState([])
+  const [trendingCourses, setTrendingCourses] = useState([])
   const [filterCoursesLastPage, setFilterCoursesLastPage] = useState(
     false,
   )
@@ -39,6 +40,8 @@ const Blog = () => {
       const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API}/blogs`)
 
       const getBlogs = data.data.get_blogs.data
+      const getTrendingcourses = data.data.get_t_courses.data
+
       // const get_courses_masters = data.data.get_courses_masters.data
       // const get_courses_bachelors = data.data.get_courses_bachelors.data
       // const get_courses_trending = data.data.get_courses_trending.data
@@ -46,6 +49,7 @@ const Blog = () => {
       // console.log(get_courses_trending)
 
       setAllBlogs(getBlogs)
+      setTrendingCourses(getTrendingcourses)
       // setMastersCourses(get_courses_masters)
       // setBachelorsCourses(get_courses_bachelors)
       // setTrendingCourses(get_courses_trending)
@@ -67,12 +71,12 @@ const Blog = () => {
     if(data == "admission"){
       blog_type = "admission";
       setBlogsMode("admission")
-    }else if(data == "masters"){
-      blog_type = "masters";
-      setBlogsMode("masters")
-    }else if(data == "bachelors"){
-      blog_type = "bachelors";
-      setBlogsMode("bachelors")
+    }else if(data == "programs"){
+      blog_type = "programs";
+      setBlogsMode("programs")
+    }else if(data == "others"){
+      blog_type = "others";
+      setBlogsMode("others")
     }else{
       blog_type = 4;
       setBlogsMode("all")
@@ -86,16 +90,16 @@ const Blog = () => {
       }
 
       const { data } = await axios.post(
-        `${process.env.NEXT_PUBLIC_API}/filter-data`,
+        `${process.env.NEXT_PUBLIC_API}/blog-filter-data`,
         {
-          course_type: course_type
+          blog_type: blog_type
         },
         config,
       )
 
-      const get_courses = data.data.get_courses.data
+      const get_courses = data.data.get_blogs.data
      
-      setTrendingCourses(get_courses)
+      setAllBlogs(get_courses)
 
       setLoader(false)
 
@@ -107,6 +111,42 @@ const Blog = () => {
 
   }
   
+
+  const filtersLoadMoreData = async (data) => {
+    setCurrentPageFilter((currentPageFilter = currentPageFilter + 1))
+    setLoader(true)
+
+    try {
+    
+      const config = {
+        headers: { 'Content-Type': 'application/json' },
+      }
+
+      const { data } = await axios.post(
+        `${process.env.NEXT_PUBLIC_API}/blog-filter-data?page=${currentPageFilter}`,
+        {
+          blog_type: blogsMode
+        },
+        config,
+      )
+
+      const get_blogs = data.data.get_blogs.data
+      const get_blogs_last_page = data.data.get_blogs.last_page
+
+        setAllBlogs((oldArray) => [...oldArray, ...get_blogs])
+
+      if (get_blogs_last_page < currentPageFilter) {
+        setFilterCoursesLastPage(true)
+      }
+
+      setLoader(false)
+
+      console.log(data)
+    } catch (err) {
+      console.log(err)
+      setLoader(false)
+    }
+  }
 
 
     const state = {
@@ -273,121 +313,40 @@ const Blog = () => {
         <h2 className="mainhds lnmidbel">M<div className="ogcl">O</div>st Popular Articles</h2>
       </div>
       <div className="populararts">
-        <div className="featuredslide owl-theme owl-carousel">
-          <div className="item">
-            <p><b>Getting Smart</b></p>
-            <p>An online community and support system for teachers ranging from
-              primary school level to post
-              secondary education. Articles
-              share the latest innovations in
-              teaching and learning with a focus
-              on remote schooling 
+
+      <OwlCarousel
+                    className="featuredslide owl-theme owl-carousel"
+                    loop
+                    responsive={state.responsive_trust_comp}
+                    nav
+                    margin={20}
+                   
+                  >
+
+{trendingCourses &&
+                  trendingCourses.map((trending, key) => (
+<div className="item">
+            <p><b>{trending.name}</b></p>
+            <p>{trending.short_desc}
             </p>
+          
+            <Link href={`/blogs/${trending.slug}`}>
+
             <a href="#" className="rdpopart">Read More!</a>
-            <div className="lkcomms">
+
+            </Link>
+
+            {/* <div className="lkcomms">
               <a href="#"><img src="/images/hearts.png" /></a>
               <a href="#"><img src="/images/comnt.png" /></a>
-            </div>
-            <p className="dtpst">Posted by: 4 April 2022</p>
+            </div> */}
+            <p className="dtpst">Posted by: {trending.posted_by}</p>
+            {/* <p className="dtpst">Published date: {trending.published_date}</p> */}
           </div>
-          <div className="item">
-            <p><b>The Edvocate</b></p>
-            <p>Covers the latest news revolving 
-              the world of education, including
-              current events, new policy
-              changes, and more. Articles
-              advocate positive educational
-              reform and innovation within the
-              modern schooling system.
-            </p>
-            <a href="#" className="rdpopart">Read More!</a>
-            <div className="lkcomms">
-              <a href="#"><img src="/images/hearts.png" /></a>
-              <a href="#"><img src="/images/comnt.png" /></a>
-            </div>
-            <p className="dtpst">Posted by: 4 April 2022</p>
-          </div>
-          <div className="item">
-            <p><b>New Programs</b></p>
-            <p>An online community and support system for teachers ranging from
-              primary school level to post
-              secondary education. Articles
-              share the latest innovations in
-              teaching and learning with a focus
-              on remote schooling 
-            </p>
-            <a href="#" className="rdpopart">Read More!</a>
-            <div className="lkcomms">
-              <a href="#"><img src="/images/hearts.png" /></a>
-              <a href="#"><img src="/images/comnt.png" /></a>
-            </div>
-            <p className="dtpst">Posted by: 4 April 2022</p>
-          </div>
-          <div className="item">
-            <p><b>The Edvocate</b></p>
-            <p>An online community and support system for teachers ranging from
-              primary school level to post
-              secondary education. Articles
-              share the latest innovations in
-              teaching and learning with a focus
-              on remote schooling 
-            </p>
-            <a href="#" className="rdpopart">Read More!</a>
-            <div className="lkcomms">
-              <a href="#"><img src="/images/hearts.png" /></a>
-              <a href="#"><img src="/images/comnt.png" /></a>
-            </div>
-            <p className="dtpst">Posted by: 4 April 2022</p>
-          </div>
-          <div className="item">
-            <p><b>Getting Smart</b></p>
-            <p>An online community and support system for teachers ranging from
-              primary school level to post
-              secondary education. Articles
-              share the latest innovations in
-              teaching and learning with a focus
-              on remote schooling 
-            </p>
-            <a href="#" className="rdpopart">Read More!</a>
-            <div className="lkcomms">
-              <a href="#"><img src="/images/hearts.png" /></a>
-              <a href="#"><img src="/images/comnt.png" /></a>
-            </div>
-            <p className="dtpst">Posted by: 4 April 2022</p>
-          </div>
-          <div className="item">
-            <p><b>Getting Smart</b></p>
-            <p>An online community and support system for teachers ranging from
-              primary school level to post
-              secondary education. Articles
-              share the latest innovations in
-              teaching and learning with a focus
-              on remote schooling 
-            </p>
-            <a href="#" className="rdpopart">Read More!</a>
-            <div className="lkcomms">
-              <a href="#"><img src="/images/hearts.png" /></a>
-              <a href="#"><img src="/images/comnt.png" /></a>
-            </div>
-            <p className="dtpst">Posted by: 4 April 2022</p>
-          </div>
-          <div className="item">
-            <p><b>Getting Smart</b></p>
-            <p>An online community and support system for teachers ranging from
-              primary school level to post
-              secondary education. Articles
-              share the latest innovations in
-              teaching and learning with a focus
-              on remote schooling 
-            </p>
-            <a href="#" className="rdpopart">Read More!</a>
-            <div className="lkcomms">
-              <a href="#"><img src="/images/hearts.png" /></a>
-              <a href="#"><img src="/images/comnt.png" /></a>
-            </div>
-            <p className="dtpst">Posted by: 4 April 2022</p>
-          </div>
-        </div>
+
+                  ))}
+                    </OwlCarousel>
+     
       </div>
     </div>
   </section>
@@ -406,42 +365,41 @@ const Blog = () => {
                   blogsMode == 'all'
                     ? 'btn-group btn-group-toggle active'
                     : 'btn-group btn-group-toggle'
-                }  onClick={() => filtersLoadMore('all')} id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
+                }  onClick={() => filtersLoadMore('all')} >All</a>
           </li>
           <li className="nav-item">
             <a  className={
                   blogsMode == 'admission'
                     ? 'btn-group btn-group-toggle active'
                     : 'btn-group btn-group-toggle'
-                }  onClick={() => filtersLoadMore('admission')}
- id="universitytb-tab" data-toggle="tab" href="#universitytb" role="tab" aria-controls="universitytb" aria-selected="false">Admission</a>
+                }  onClick={() => filtersLoadMore('admission')}>Admission</a>
           </li>
           <li className="nav-item">
             <a   className={
                   blogsMode == 'programs'
                     ? 'btn-group btn-group-toggle active'
                     : 'btn-group btn-group-toggle'
-                }  onClick={() => filtersLoadMore('programs')} id="gallerytbs-tab" data-toggle="tab" href="#gallerytbs" role="tab" aria-controls="gallerytbs" aria-selected="false">Programs</a>
+                }  onClick={() => filtersLoadMore('programs')}>Programs</a>
           </li>
           <li className="nav-item">
             <a   className={
                   blogsMode == 'others'
                     ? 'btn-group btn-group-toggle active'
                     : 'btn-group btn-group-toggle'
-                } id="otherstbs-tab"  onClick={() => filtersLoadMore('others')} data-toggle="tab" href="#otherstbs" role="tab" aria-controls="otherstbs" aria-selected="false">Others</a>
+                }   onClick={() => filtersLoadMore('others')} >Others</a>
           </li>
         </ul>
       </div>
       <div className="tab-content" id="myTabContent2">
         <div className="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-          <div className="sotfllshw">
+          {/* <div className="sotfllshw">
             <select className="selectpicker" data-show-subtext="true" data-live-search-placeholder="Sort By Tag">
               <option value="Sort By">Sort By</option>
               <option value="Recent Articles">Recent Articles</option>
               <option value="Month">Month</option>
               <option value="Year">Year</option>
             </select>
-          </div>
+          </div> */}
       
           <div className="gallcrd">
             <div className="row">
@@ -466,9 +424,23 @@ const Blog = () => {
               ))}
 
             </div>
-            <div className="text-center pt-5  pt-lg-4 showctmore">
-              <a href="javascript:void(0);" className="orangectathms">Load more</a>
+
+            <div className="text-center pt-5 pt-lg-4 showctmore">
+              {filterCoursesLastPage ? (
+                <p> Yay! you have seen all</p>
+              ) : (
+                <>
+                  {loader ? (
+                    <p> Loading ... .. .</p>
+                  ) : (
+                    <a onClick={filtersLoadMoreData} className="orangectathms">
+                      View more
+                    </a>
+                  )}
+                </>
+              )}
             </div>
+
           </div>
         </div>
         <div className="tab-pane fade" id="universitytb" role="tabpanel" aria-labelledby="universitytb-tab">

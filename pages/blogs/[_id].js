@@ -13,9 +13,65 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
   ssr: false,
 })
 import Nav from '../../components/Nav'
+import { useRouter } from 'next/router'
 
 
 const BlogDetails = () => {
+
+    const [blogsDetails, setBlogsDetails] = useState([])
+    const [trendingCourses, setTrendingCourses] = useState([])
+    const [catCourses, setCatCourses] = useState([])
+
+    
+    const [isReadMore, setIsReadMore] = useState(true);
+    const router = useRouter()
+
+    useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    })
+
+    if (router.isReady) {
+      const _id = router.query._id
+      getBlogsDetails(_id)
+      console.log(router.query);
+    }
+
+
+  },[router.isReady])
+
+  const getBlogsDetails = async (_id) => {
+    try {
+      const config = {
+        headers: { 'Content-Type': 'application/json' },
+      }
+
+      const { data } = await axios.post(
+        `${process.env.NEXT_PUBLIC_API}/get-blogs-details`,
+        {
+          slug: _id,
+        },
+        config,
+      )
+
+      const getBlogsDetails = data.get_blogs_details
+      const getTrendingCourses = data.get_t_courses.data
+      const getCatCourses = data.get_cat_courses.data
+
+      if(getBlogsDetails == null){
+        router.push('/404')
+      }
+
+      console.log(getBlogsDetails);
+
+      setBlogsDetails(getBlogsDetails)
+      setTrendingCourses(getTrendingCourses)
+      setCatCourses(getCatCourses)
+
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
     const state = {
         responsive: {
@@ -179,7 +235,7 @@ const BlogDetails = () => {
       <img src="/images/abbots.png" className="topmstomabuis rghts" />
       <img src="/images/topbllefts.png" className="topmstomabuis mdlvl" />
       <div className="text-lg-left hdingst">
-        <h2 className="mainhds">What is c<div className="ogcl">O</div>de</h2>
+        <h2 className="mainhds">{blogsDetails.name}</h2>
       </div>
       <div className="row">
         <div className="col-lg-8">
@@ -187,19 +243,12 @@ const BlogDetails = () => {
             <div className="mainthumbs">
               <img src="/images/blogthmbs/1.jpg" />
             </div>
-            <p>The recent past has highlighted that the world is fast-changing, whether it is the recession or the pandemic, who survives such calamities? Darwin’s Theory of ‘Survival of the Fittest’, says that the species which has the ability to adapt to face the change survive. So, the point is to make ourselves THE FITTEST to survive. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </p>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            <h6>1914 translation by H. Rackham</h6>
-            <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
-            <h6>1914 translation by H. Rackham</h6>
-            <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</p>
-            <h6>The standard Lorem Ipsum passage, used since the 1500s</h6>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            <h6>Hedonist Roots</h6>
-            <p>Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before &amp; After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”</p>
+            <p>{blogsDetails.description}</p>
           </div>
           <div className="publishinfos">
-            <p className="dtpst">Posted by: 4 April 2022</p>
+            <p className="dtpst">Posted by: {blogsDetails.posted_by}</p>
+            <p className="dtpst">Published date: {blogsDetails.published_date}</p>
+
             <div className="socialplu">
               <div className="shrmeda">
                 <p>Share if you like</p>
@@ -209,28 +258,41 @@ const BlogDetails = () => {
                   <li><a href="#"><i className="fab fa-linkedin-in" /></a></li>
                 </ul>
               </div>
-              <div className="lkcomms">
+              {/* <div className="lkcomms">
                 <a href="#"><img src="/images/hearts.png" /></a>
                 <a href="#"><img src="/images/comnt.png" /></a>
-              </div>
-              <div className="nextartcl">
+              </div> */}
+              {/* <div className="nextartcl">
                 <a href="#">Next article <i className="fal fa-chevron-circle-right" /></a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
         <div className="col-lg-4">
           <div className="sideblogsbars">
             <h4>Most Popular Articles</h4>
+
+            {/* {JSON.stringify(trendingCourses,null,2)} */}
             <ul>
-              <li>Other<br /><a href="#">
-                  How our Partnership with Great Learning will Boost Your Online Education?</a></li>
-              <li>Admission<br /><a href="#">
-                  Why Corporate Accounting is a good career option?</a></li>
-              <li>Admission<br /><a href="#">
-                  What are your reasons for enrolling in an Online Degree Program?</a></li>
-              <li>Admission<br /><a href="#">
-                  Why is it important to study International Finance?</a></li>
+
+            {trendingCourses &&
+                  trendingCourses.map((trending, key) => (
+              <li>
+
+                {trending.blog_category == 1 ? "Admission" : trending.blog_category == 1 ? "Programs" : "Others"}
+                
+                <br />
+              
+                <Link href={`/blogs/${trending.slug}`}>
+              <a>
+                  {trending.name}
+              </a>
+              </Link>
+
+              </li>
+
+))}
+            
             </ul>
           </div>
         </div>
@@ -245,92 +307,37 @@ const BlogDetails = () => {
         <h2 className="mainhds">Related Bl<div className="ogcl">O</div>g</h2>
       </div>
       <div className="gallcrd">
-        <div className="featuredslide owl-theme owl-carousel">
-          <div className="item">
+
+
+      <OwlCarousel
+                    className="featuredslide owl-theme owl-carousel"
+                    loop
+                    responsive={state.responsive_trust_comp}
+                    nav
+                    margin={20}
+                   
+                  >
+
+{catCourses &&
+                  catCourses.map((relatedBlogs, key) => (
+<div className="item">
             <div className="artblogs">
               <img src="/images/blogthmbs/related2.jpg" />
               <div className="inpds">
-                <p className="blhds">Lorem Ipsum</p>
-                <p className="sbhd">This new Program is designed to learn how to
-                  make a business desirable for customers,
-                  financially viable for stakeholders, </p>
-                <a href="#">Read More!</a>
+                <p className="blhds">{relatedBlogs.name}</p>
+                <p className="sbhd">{relatedBlogs.short_desc} </p>
+                <Link href={`/blogs/${relatedBlogs.slug}`}>
+                  <a>Read More!</a>
+                </Link>
               </div>
             </div>
           </div>
-          <div className="item">
-            <div className="artblogs">
-              <img src="/images/blogthmbs/related1.jpg" />
-              <div className="inpds">
-                <p className="blhds">Lorem Ipsum</p>
-                <p className="sbhd">This new Program is designed to learn how to
-                  make a business desirable for customers,
-                  financially viable for stakeholders, </p>
-                <a href="#">Read More!</a>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="artblogs">
-              <img src="/images/blogthmbs/related3.jpg" />
-              <div className="inpds">
-                <p className="blhds">Lorem Ipsum</p>
-                <p className="sbhd">This new Program is designed to learn how to
-                  make a business desirable for customers,
-                  financially viable for stakeholders, </p>
-                <a href="#">Read More!</a>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="artblogs">
-              <img src="/images/blogthmbs/related2.jpg" />
-              <div className="inpds">
-                <p className="blhds">Lorem Ipsum</p>
-                <p className="sbhd">This new Program is designed to learn how to
-                  make a business desirable for customers,
-                  financially viable for stakeholders, </p>
-                <a href="#">Read More!</a>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="artblogs">
-              <img src="/images/blogthmbs/related2.jpg" />
-              <div className="inpds">
-                <p className="blhds">Lorem Ipsum</p>
-                <p className="sbhd">This new Program is designed to learn how to
-                  make a business desirable for customers,
-                  financially viable for stakeholders, </p>
-                <a href="#">Read More!</a>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="artblogs">
-              <img src="/images/blogthmbs/related3.jpg" />
-              <div className="inpds">
-                <p className="blhds">Lorem Ipsum</p>
-                <p className="sbhd">This new Program is designed to learn how to
-                  make a business desirable for customers,
-                  financially viable for stakeholders, </p>
-                <a href="#">Read More!</a>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="artblogs">
-              <img src="/images/blogthmbs/related1.jpg" />
-              <div className="inpds">
-                <p className="blhds">Lorem Ipsum</p>
-                <p className="sbhd">This new Program is designed to learn how to
-                  make a business desirable for customers,
-                  financially viable for stakeholders, </p>
-                <a href="#">Read More!</a>
-              </div>
-            </div>
-          </div>
-        </div>
+
+                  ))}
+         
+
+                    </OwlCarousel>
+      
       </div>
     </div>
   </section>
