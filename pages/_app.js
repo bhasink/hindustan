@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Head from "next/head";
 import {ToastProvider} from "react-toast-notifications";
 import "antd/dist/antd.css";
