@@ -1,10 +1,16 @@
 import Head from "next/head";
 import {ToastProvider} from "react-toast-notifications";
 import "antd/dist/antd.css";
+import TagManager from 'react-gtm-module';
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function MyApp({ Component, pageProps }) {
+
+    useEffect(() => {
+        TagManager.initialize({ gtmId: 'GTM-MDNJWG6' });
+    }, []);
+
     return (
     
     <>
