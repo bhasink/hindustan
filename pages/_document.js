@@ -72,7 +72,7 @@ class MyDocument extends Document {
 
           {/* <Script strategy="afterInteractive" dangerouslySetInnerHTML={{ __html:  ` var s=document.createElement('script');    s.type="text/javascript";    s.async=true;    s.src="https://chatbot.in5.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/515762061aa74833e/c5d5c2ced1d146ffa3047d6adc4aaa71";    document.body.appendChild(s);`}}></Script> */}
 
-          <Script strategy="lazyOnload">
+          <Script strategy="beforeInteractive">
                { 
                `
                var s=document.createElement('script');    s.type="text/javascript";    s.async=true;    s.src="https://chatbot.in5.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/515762061aa74833e/c5d5c2ced1d146ffa3047d6adc4aaa71";    document.body.appendChild(s);
