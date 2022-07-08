@@ -46,7 +46,7 @@ class MyDocument extends Document {
           <NextScript />
           {/* <div className="npf_chatbots" data-w="c5d5c2ced1d146ffa3047d6adc4aaa71" style={{display: 'none'}} /> */}
 
-          <div className="npf_chatbots" data-w="c5d5c2ced1d146ffa3047d6adc4aaa71" style={{display: 'none'}}></div>
+          {/* <div className="npf_chatbots" data-w="c5d5c2ced1d146ffa3047d6adc4aaa71" style={{display: 'none'}}></div> */}
 
           <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
