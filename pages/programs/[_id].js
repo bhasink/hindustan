@@ -456,8 +456,8 @@ const CourseDetails = () => {
 
                 {/* <div className="npf_wgts" data-height="400px" data-w="b2c2434e61006dae7b80093b9c72233c"></div> */}
 
-                {/* <div class="npf_wgts" data-height="400px" data-w="0798cc877db5d6b9589768bbc5e303dd"></div> */}
-
+                <div class="npf_wgts" data-height="400px" data-w="0798cc877db5d6b9589768bbc5e303dd"></div>
+                
                   <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter2" className="blackctathms nobrd">
                     <img src="/images/downldico.png" />
                     Brochure
