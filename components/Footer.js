@@ -109,7 +109,7 @@ Chennai - 603 103, India.</p>
                     <a href="/programs/banking-and-finance">Banking and Finance </a>
                     </li>
                     <li>
-                    <a href="/programs/marketing" >Markeiting</a>
+                    <a href="/programs/marketing" >Marketing</a>
                     </li>
                   <li>
                     <a href="/programs/finance">Finance</a>
