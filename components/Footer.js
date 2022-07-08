@@ -106,10 +106,10 @@ Chennai - 603 103, India.</p>
                 
                   <li>
                    
-                    <a href="/programs/accounting-and-finance">Accounting and Finance </a>
+                    <a href="/programs/banking-and-finance">Banking and Finance </a>
                     </li>
                     <li>
-                    <a href="/programs/marketing" >Markeitng</a>
+                    <a href="/programs/marketing" >Marketing</a>
                     </li>
                   <li>
                     <a href="/programs/finance">Finance</a>
