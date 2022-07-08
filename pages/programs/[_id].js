@@ -454,7 +454,7 @@ const CourseDetails = () => {
                 </div>
                 <div className="col-6 col-lg-6 col-md-6">
 
-                <div class="npf_wgts" data-height="400px" data-w="b2c2434e61006dae7b80093b9c72233c"></div>
+                <div className="npf_wgts" data-height="400px" data-w="b2c2434e61006dae7b80093b9c72233c"></div>
 
                   <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter2" className="blackctathms nobrd">
                     <img src="/images/downldico.png" />

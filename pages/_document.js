@@ -44,7 +44,7 @@ class MyDocument extends Document {
 
           <Main />
           <NextScript />
-          <div classname="npf_chatbots" data-w="c5d5c2ced1d146ffa3047d6adc4aaa71" style={{display: 'none'}} />
+          <div className="npf_chatbots" data-w="c5d5c2ced1d146ffa3047d6adc4aaa71" style={{display: 'none'}} />
           <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -65,19 +65,12 @@ class MyDocument extends Document {
           <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
           {/* <script src="/js/custome.js?v=4"></script> */}
 
-          {/* <script type="text/javascript"> var s=document.createElement('script'); s.type="text/javascript"; s.async=true; s.src="https://widgets.in5.nopaperforms.com/emwgts.js"; document.body.appendChild(s); </script> */}
-          {/* <script type="text/javascript"> var s=document.createElement('script');    s.type="text/javascript";    s.async=true;    s.src="https://chatbot.in5.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/515762061aa74833e/c5d5c2ced1d146ffa3047d6adc4aaa71";    document.body.appendChild(s);</script>  */}
-       
+          
           <Script strategy="afterInteractive" dangerouslySetInnerHTML={{ __html:  `  var s=document.createElement('script'); s.type="text/javascript"; s.async=true; s.src="https://widgets.in5.nopaperforms.com/emwgts.js"; document.body.appendChild(s);`}}></Script>
 
-          {/* <Script strategy="afterInteractive" dangerouslySetInnerHTML={{ __html:  ` var s=document.createElement('script');    s.type="text/javascript";    s.async=true;    s.src="https://chatbot.in5.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/515762061aa74833e/c5d5c2ced1d146ffa3047d6adc4aaa71";    document.body.appendChild(s);`}}></Script> */}
+          <Script strategy="afterInteractive" dangerouslySetInnerHTML={{ __html:  ` var s1=document.createElement('script');    s1.type="text/javascript";    s1.async=true;    s1.src="https://chatbot.in5.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/515762061aa74833e/c5d5c2ced1d146ffa3047d6adc4aaa71";    document.body.appendChild(s1);`}}></Script>
 
-          <Script strategy="beforeInteractive">
-               { 
-               `
-               var s=document.createElement('script');    s.type="text/javascript";    s.async=true;    s.src="https://chatbot.in5.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/515762061aa74833e/c5d5c2ced1d146ffa3047d6adc4aaa71";    document.body.appendChild(s);
-        `}
-        </Script>
+         
         </body>
       </Html>
     )
