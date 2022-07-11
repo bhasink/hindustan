@@ -444,7 +444,7 @@ const Nav = () => {
 
                           <div className="basicenqforms">
 
-                          <div className="npf_wgts" data-height="700px" data-w="0798cc877db5d6b9589768bbc5e303dd"></div>
+                          <div className="npf_wgts" data-height="520px" data-w="0798cc877db5d6b9589768bbc5e303dd"></div>
 
                             {/* <form onSubmit={handleSubmit4}>
                               <div className="row">
