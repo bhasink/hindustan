@@ -54,12 +54,7 @@ const CourseDetails = () => {
 
   },[router.isReady])
 
-  useEffect(() => {
-    const scriptTag = document.createElement('script');
-    scriptTag.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
-    scriptTag.async = true;
-    document.body.appendChild(scriptTag);
-}, []);
+  
 
 
   const getCourseDetails = async (_id) => {
@@ -462,7 +457,7 @@ const CourseDetails = () => {
                 </div>
                 <div className="col-6 col-lg-6 col-md-6">
                 
-                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter2" className="blackctathms nobrd">
+                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter4" className="blackctathms nobrd">
                     <img src="/images/downldico.png" />
                     Brochure
                   </a>
@@ -1283,7 +1278,7 @@ consectetur, adipisci velit...</p>
 
               <div className="basicenqforms">
 
-              <div className="npf_wgts" data-height="400px" data-w="0798cc877db5d6b9589768bbc5e303dd"></div>
+              {/* <div className="npf_wgts" data-height="400px" data-w="0798cc877db5d6b9589768bbc5e303dd"></div> */}
 
                 {/* <form onSubmit={handleSubmit2}>
                   <div className="row">
