@@ -12,6 +12,14 @@ function MyApp({ Component, pageProps }) {
         TagManager.initialize({ gtmId: 'GTM-MDNJWG6' });
     }, []);
 
+    useEffect(() => {
+        const scriptTag1 = document.createElement('script');
+        scriptTag1.src= "https://chatbot.in5.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/515762061aa74833e/c5d5c2ced1d146ffa3047d6adc4aaa71";
+        scriptTag1.async = true;
+        document.body.appendChild(scriptTag1);
+    }, []);
+
+
     return (
     
     <>

@@ -26,7 +26,15 @@ const Nav = () => {
   useEffect(() => {
    
     getAllCourses()
+    
   }, [])
+
+  useEffect(() => {
+    const scriptTag = document.createElement('script');
+    scriptTag.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
+    scriptTag.async = true;
+    document.body.appendChild(scriptTag);
+}, []);
   
   const getAllCourses = async () => {
     try {
@@ -435,7 +443,10 @@ const Nav = () => {
                           </button>
 
                           <div className="basicenqforms">
-                            <form onSubmit={handleSubmit4}>
+
+                          <div className="npf_wgts" data-height="400px" data-w="0798cc877db5d6b9589768bbc5e303dd"></div>
+
+                            {/* <form onSubmit={handleSubmit4}>
                               <div className="row">
                                 <div className="col-lg-12 mx-auto">
                                   <h3>Download Brochure</h3>
@@ -518,7 +529,7 @@ const Nav = () => {
                                   </button>
                                 </div>
                               </div>
-                            </form>
+                            </form> */}
                           </div>
                         </div>
                       </div>
