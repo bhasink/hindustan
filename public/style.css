@@ -1261,7 +1261,7 @@ footer.stfooter .collapse:not(.show) {
 
 .sideaassets .ctatcs ul {list-style-type: none;padding: 0;}
 
-.sideaassets .ctatcs {width: 64px;float: right;position: fixed;bottom: -7px;right: 6px;}
+.sideaassets .ctatcs {width: 64px;float: right;position: fixed;bottom: 106px;right: 6px;}
 
 .sideaassets .graytelsnaps {display: none;transform: rotate(90deg);width: 199px;background: #ddd;text-align: center;color: #000;position: fixed;top: 187px;padding: 10px 5px;border-radius: 21px;right: -61px;}
 
@@ -2772,6 +2772,12 @@ a.moreless-button:not([href]):not([tabindex]):hover{
 .rnkers .dopgoffs,
 .feeplansne .dopgoffs{
     display: none;
+}
+
+div#__eechatIcon {
+    width: 63px;
+    height: 63px;
+    right: 18px;
 }
 
 /* Responsive css */
