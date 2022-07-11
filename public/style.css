@@ -2784,6 +2784,10 @@ div#__eechatIcon {
 
 @media screen and (max-width: 767px) and (min-width: 320px){
 
+    div#__eechatIcon{
+        bottom: 117px;
+    }
+    
     .leaderbdrs .dopgoffs {
         position: absolute;
         right: 28px;
