@@ -1287,7 +1287,9 @@ footer.stfooter .collapse:not(.show) {
     z-index: -1;
     font-weight: 700;
     letter-spacing: 1px;
-    visibility: hidden;}
+    visibility: hidden;
+    width:200px;
+}
 
 .sideaassets .ctatcs ul li:hover .hntps {right: calc(100% + 10px);
     opacity: 1;
@@ -2787,7 +2789,7 @@ div#__eechatIcon {
     div#__eechatIcon{
         bottom: 117px;
     }
-    
+
     .leaderbdrs .dopgoffs {
         position: absolute;
         right: 28px;
