@@ -54,6 +54,18 @@ const CourseDetails = () => {
 
   },[router.isReady])
 
+  useEffect(() => {
+    const scriptTag = document.createElement('script');
+    scriptTag.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
+    scriptTag.async = true;
+    document.body.appendChild(scriptTag);
+
+    return () => {
+        document.body.removeChild(scriptTag);
+    }
+}, []);
+
+
   const getCourseDetails = async (_id) => {
     try {
       const config = {

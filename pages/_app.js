@@ -12,18 +12,6 @@ function MyApp({ Component, pageProps }) {
         TagManager.initialize({ gtmId: 'GTM-MDNJWG6' });
     }, []);
 
-    useEffect(() => {
-        const scriptTag = document.createElement('script');
-        scriptTag.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
-        scriptTag.async = true;
-        document.body.appendChild(scriptTag);
-
-        return () => {
-            document.body.removeChild(scriptTag);
-        }
-    }, []);
-
-
     return (
     
     <>
