@@ -1147,7 +1147,7 @@ consectetur, adipisci velit...</p>
                 <img src="/images/telnumb.png" />
               </a>
               <span className="hntps">
-                <i className="fas fa-phone-alt" /> +919945580408{' '}
+                <i className="fas fa-phone-alt" /> +91 9945580408{' '}
               </span>
             </li>
             <li><a href="https://wa.me/9945580408/?text="><img src="/images/whatsappcta.png" /></a></li>
