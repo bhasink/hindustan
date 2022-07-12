@@ -392,7 +392,7 @@ const Index = () => {
       <img src="/images/bluedots.png" className="bldotslefts" />
       <div className="mx-auto col-md-10 col-lg-8 bgorngs text-center">
         <div className="coursetextmoreinf">
-          <h2 className="mdbldshds">Our one stop <b>study destination</b></h2>
+          <h1 className="mdbldshds">Our one stop <b>study destination</b></h1>
           <ul className="nav nav-tabs" id="myTab" role="tablist">
             <li className="nav-item">
               <a className="nav-link active" id="trending-tab" data-toggle="tab" href="#trending" role="tab" aria-controls="trending" aria-selected="true">Trending</a>

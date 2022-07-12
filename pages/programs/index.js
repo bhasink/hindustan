@@ -339,9 +339,9 @@ const Listing = () => {
             data-aos="fade-up"
             data-aos-duration={1000}
           >
-            <h2 className="mainhds mb-lg-4 ">
+            <h1 className="mainhds mb-lg-4 ">
               Programs <div className="ogcl">o</div>ffered
-            </h2>
+            </h1>
             <p>
             Hindustan Online - CODE has an array of specializations for undergraduate and postgraduate programs. The programs are future-focused with well-curated and well-researched curriculums. Through outcome-based learning, the programs not only provide a theoretical understanding of concepts, but also practical application of these concepts.
             </p>

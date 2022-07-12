@@ -136,7 +136,7 @@ const AboutUs = () => {
         <div className="row">
           <div className="col-md-6 col-lg-6 pr-lg-5" id="whoweare">
             <div className="hdingst  text-center mbltop">
-              <h2 className="mainhds">Wh<span className="ogx">o</span> we are</h2>
+              <h1 className="mainhds">Wh<span className="ogx">o</span> we are</h1>
             </div>
             <div className="vdthmbs">
               <img src="/images/aboutthmbs.jpg" className="fllimg" />
@@ -144,7 +144,7 @@ const AboutUs = () => {
           </div>
           <div className="col-md-6 col-lg-6 text-lg-left text-center text-md-left mt-lg-0 mt-5 mt-md-0 align-self-center">
             <div className="hdingst dsktop">
-              <h2 className="mainhds">Wh<span className="ogx">o</span> we are</h2>
+              <h1 className="mainhds">Wh<span className="ogx">o</span> we are</h1>
             </div>
             <p>The renowned Hindustan Group of Institutions in its non-stop endeavor to be at the forefront of quality education has proudly launched HINDUSTAN ONLINE - CODE (Centre for Open and Digital Education). In the wake of the National Education Policy 2020, India is experiencing an important shift in education and Online programs have successfully catered to the need of the hour by providing highly revered qualifications to both aspiring students and working professionals.</p>
             <p  className={`moretext ${isActive ? "" : "showtexts"}`} > HINDUSTAN ONLINE - CODE offers specially designed programs with well-researched curricula to reduce the industry-academia gap. This makes our learners more employable in this highly competitive world. The programs are all contemporary with a well-curated and well-researched curriculum. Our programs do not just provide the theoretical learning of concepts, but we focus on the practical application of these concepts by following Outcome-based Learning concepts. HINDUSTAN ONLINE - CODE aims at reforming the Indian Higher Education landscape through the provision of equitable and inclusive learning opportunities, contributing to a significant increase in enrolment.</p>

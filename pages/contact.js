@@ -305,7 +305,7 @@ const ContactUs = () => {
       <div className="dotsptns btmlfd" />
       <div className="dotsptns verytmlfd" />
       <div className="hdingst text-center">
-        <h2 className="mainhds">c<span className="ogx">o</span>ntact Information</h2>
+        <h1 className="mainhds">c<span className="ogx">o</span>ntact Information</h1>
       </div>
       <div className="addressportns text-center">
         <div className="row">
