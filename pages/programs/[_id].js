@@ -515,7 +515,7 @@ const CourseDetails = () => {
                 <a href="#learnmethodology">Learning Methodology</a>
               </li>
               <li>
-                <a  href="https://apply.hindustancode.com/" target="_blank">Enquire Now</a>
+                <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter4">Enquire Now</a>
               </li>
             </ul>
           </div>
