@@ -2135,6 +2135,15 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
 
 .gallcrd .artblogs a {
     border-bottom: 1px solid;
+    color: #f28823;
+}
+
+.tabblogsd a:not([href]):not([tabindex]):hover {
+    color: #000;
+}
+
+.tabblogsd a.active:not([href]):not([tabindex]):hover {
+    color: #fff;
 }
 
 .populararts .owl-theme .owl-nav {
@@ -2167,6 +2176,7 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
     border-bottom: 1px solid;
 	margin-bottom: 11px;
     display: inline-block;
+    color: #f28823;
 }
 
 .mediadescs 

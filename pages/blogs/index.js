@@ -260,9 +260,9 @@ const Blog = () => {
             dots: true,
           },
         },
-        responsive_reviewtestim: {
+        responsive_trust_comp: {
           0: {
-            items: 1,
+            items: 2,
             nav: false,
             dots: true,
             autoplay:true,
@@ -271,7 +271,7 @@ const Blog = () => {
             loop: true,
           },
           300: {
-            items: 3,
+            items: 2,
             nav: false,
             dots: true,
             autoplay:true,
@@ -281,7 +281,7 @@ const Blog = () => {
           },
     
           766: {
-            items: 3,
+            items: 2,
             nav: false,
             dots: false,
             loop: true,
@@ -295,7 +295,7 @@ const Blog = () => {
             margin:40,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
-            center: true,
+            center: false,
           },
         },
       }
@@ -316,10 +316,10 @@ const Blog = () => {
 
       <OwlCarousel
                     className="featuredslide owl-theme owl-carousel"
-                    loop
-                    responsive={state.responsive_trust_comp}
                     nav
-                    margin={20}
+                   
+                    responsive={state.responsive_trust_comp}
+                    
                    
                   >
 
@@ -363,29 +363,29 @@ const Blog = () => {
           <li className="nav-item">
             <a   className={
                   blogsMode == 'all'
-                    ? 'btn-group btn-group-toggle active'
-                    : 'btn-group btn-group-toggle'
+                    ? 'btn-group nav-link btn-group-toggle active'
+                    : 'btn-group nav-link btn-group-toggle'
                 }  onClick={() => filtersLoadMore('all')} >All</a>
           </li>
           <li className="nav-item">
             <a  className={
                   blogsMode == 'admission'
-                    ? 'btn-group btn-group-toggle active'
-                    : 'btn-group btn-group-toggle'
+                    ? 'btn-group nav-link btn-group-toggle active'
+                    : 'btn-group nav-link btn-group-toggle'
                 }  onClick={() => filtersLoadMore('admission')}>Admission</a>
           </li>
           <li className="nav-item">
             <a   className={
                   blogsMode == 'programs'
-                    ? 'btn-group btn-group-toggle active'
-                    : 'btn-group btn-group-toggle'
+                    ? 'btn-group nav-link btn-group-toggle active'
+                    : 'btn-group nav-link btn-group-toggle'
                 }  onClick={() => filtersLoadMore('programs')}>Programs</a>
           </li>
           <li className="nav-item">
             <a   className={
                   blogsMode == 'others'
-                    ? 'btn-group btn-group-toggle active'
-                    : 'btn-group btn-group-toggle'
+                    ? 'btn-group nav-link btn-group-toggle active'
+                    : 'btn-group nav-link btn-group-toggle'
                 }   onClick={() => filtersLoadMore('others')} >Others</a>
           </li>
         </ul>
