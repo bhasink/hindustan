@@ -147,7 +147,7 @@ const AboutUs = () => {
               <h1 className="mainhds">Wh<span className="ogx">o</span> we are</h1>
             </div>
             <p>The renowned Hindustan Group of Institutions in its non-stop endeavor to be at the forefront of quality education has proudly launched HINDUSTAN ONLINE - CODE (Centre for Open and Digital Education). In the wake of the National Education Policy 2020, India is experiencing an important shift in education and Online programs have successfully catered to the need of the hour by providing highly revered qualifications to both aspiring students and working professionals.</p>
-            <p  className={`moretext ${isActive ? "" : "showtexts"}`} > HINDUSTAN ONLINE - CODE offers specially designed programs with well-researched curricula to reduce the industry-academia gap. This makes our learners more employable in this highly competitive world. The programs are all contemporary with a well-curated and well-researched curriculum. Our programs do not just provide the theoretical learning of concepts, but we focus on the practical application of these concepts by following Outcome-based Learning concepts. HINDUSTAN ONLINE - CODE aims at reforming the Indian Higher Education landscape through the provision of equitable and inclusive learning opportunities, contributing to a significant increase in enrolment.</p>
+            <p  className={`moretext ${isActive ? "" : "showtexts"}`} > HINDUSTAN ONLINE - CODE offers specially designed programs with well-researched curricula to reduce the industry-academia gap. This makes our learners more employable in this highly competitive world. The programs are all contemporary with a well-curated and well-researched curriculum. Our programs do not just provide the theoretical learning of concepts, but we focus on the practical application of these concepts by following Outcome Based Learning concepts. HINDUSTAN ONLINE - CODE aims at reforming the Indian Higher Education landscape through the provision of equitable and inclusive learning opportunities, contributing to a significant increase in enrolment.</p>
            <a href onClick={handleToggle} className={`moreless-button ${isActive ? "" : "rdlss "}`}><span>Read more</span> <span>Read less</span> </a> 
           </div>
         </div>
@@ -182,7 +182,7 @@ Inclusive education is the new mantra for the knowledge society. Our vision is w
 
 Crossing all geographical boundaries CODE is offering online PG Degree programs of MBA and MCA apart from BBA, B.Com. and BCA and many more in the years to come.
 
-Even during the pandemic year our faculty were continuously engaged in updating their knowledge and skills through courses offered by Ed X, Coursera and various MOOCs. All these digital assets worth millions were procured by the University.
+Even during the pandemic year our faculty were continuously engaged in updating their knowledge and skills through courses offered by edx, Coursera and various MOOCs. All these digital assets worth millions were procured by the University.
 
 HITS holds the World Record of Excellence for “HIGHEST NUMBER OF ONLINE LESSONS COMPLETED” awarded by the International Book of Records. 4359 participants completed 2,20,745 online lessons as on November 2020. It is a very unique distinction to HITS.
 
@@ -192,7 +192,7 @@ I wish all the learners from across the globe the very best and welcome you all 
 
 Affordable, quality education at the convenience of the Learner at their door steps is our mission in shaping the future of our nation.
 
-I wish all the teachers and learners success in exploring the world of education. in the new normal.</p>
+I wish all the teachers and learners success in exploring the world of education, in the new normal.</p>
 </div>
 <p className="text-center text-lg-left text-md-left"><b>Mr. Ashok Verghese</b><br/>
 <b>Director</b></p>

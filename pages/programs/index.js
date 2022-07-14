@@ -741,7 +741,7 @@ const Listing = () => {
           </div>
           <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion8">
             <div className="card-body">
-              <p>Hindustan Online - CODE offers an array of under-graduate and post- graduate programs. These include-</p>
+              <p>Hindustan Online - CODE offers an array of under-graduate and post-graduate programs. These include-</p>
               <ul>
               
                 <li>BBA</li>

@@ -539,7 +539,7 @@ const Index = () => {
                 <img src="/images/abouttags5.png" />
               </div>
               <div className="mnlines">
-                <p>Sessions by Top industry experts </p>
+                <p>Sessions by Top Industry Experts </p>
               </div>
             </div>
           </div>
@@ -1155,7 +1155,7 @@ const Index = () => {
           </div>
           <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion8">
             <div className="card-body">
-              <p>Hindustan Online - CODE offers an array of under-graduate and post- graduate programs. These include-</p>
+              <p>Hindustan Online - CODE offers an array of under-graduate and post-graduate programs. These include-</p>
               <ul>
               
                 <li>BBA</li>
