@@ -13,8 +13,9 @@ const Footer = () => {
     <div className="container">
       <div className="row">
         <div className="col-lg-8 col-md-6">
-        <iframe className="ftaddrs" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28041.587045186683!2d77.12252401562505!3d28.533756324031703!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1c3fdb9b9f8f%3A0xd261102f628a137b!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e0!3m2!1sen!2sin!4v1656139144837!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-         
+
+        <iframe className="ftaddrs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15296876.15413179!2d69.8995898222455!3d20.60483931853543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250847d3353d7%3A0x6a585af1f362dadb!2sHindustan%20Institute%20of%20Technology%20%26%20Science!5e0!3m2!1sen!2sin!4v1658152876750!5m2!1sen!2sin"   loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
         </div>
         <div className="col-lg-4 col-md-6 align-self-center">
           <div className="ftad">
