@@ -537,6 +537,39 @@ const Nav = () => {
                   </div>
                   
 
+                                
+      <div
+        className="modal fade"
+        id="exampleModalCenter22ff"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalEnquirenowTitle3"
+        aria-hidden="true"
+      >
+        <div
+          className="modal-dialog modal-dialog-centered   jncustm trasntypes"
+          role="document"
+        >
+          <div className="modal-content">
+            <div className="modal-body">
+              <button
+                type="button"
+                className="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+
+              <div className="basicenqforms">
+
+              <div className="npf_wgts" data-height="530px" data-w="b2c2434e61006dae7b80093b9c72233c"></div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       </>
 
     );

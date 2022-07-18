@@ -55,14 +55,12 @@ const CourseDetails = () => {
   },[router.isReady])
 
 
-  useEffect(() => {
-    const scriptTag22 = document.createElement('script');
-    scriptTag22.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
-    scriptTag22.async = true;
-    document.body.appendChild(scriptTag22);
-}, []);
-  
-
+//   useEffect(() => {
+//     const scriptTag22 = document.createElement('script');
+//     scriptTag22.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
+//     scriptTag22.async = true;
+//     document.body.appendChild(scriptTag22);
+// }, []);
 
   const getCourseDetails = async (_id) => {
     try {
@@ -1256,41 +1254,6 @@ consectetur, adipisci velit...</p>
                       </div>
                     </div>
                   </div>
-                  
-
-
-                  
-      <div
-        className="modal fade"
-        id="exampleModalCenter22ff"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalEnquirenowTitle3"
-        aria-hidden="true"
-      >
-        <div
-          className="modal-dialog modal-dialog-centered   jncustm trasntypes"
-          role="document"
-        >
-          <div className="modal-content">
-            <div className="modal-body">
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-
-              <div className="basicenqforms">
-
-              <div className="npf_wgts" data-height="530px" data-w="b2c2434e61006dae7b80093b9c72233c"></div> 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
 
       </>
