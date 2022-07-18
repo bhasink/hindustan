@@ -457,7 +457,7 @@ const CourseDetails = () => {
                 </div>
                 <div className="col-6 col-lg-6 col-md-6">
                 
-                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter4" className="blackctathms nobrd">
+                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter22" className="blackctathms nobrd">
                     <img src="/images/downldico.png" />
                     Brochure
                   </a>
@@ -1255,7 +1255,7 @@ consectetur, adipisci velit...</p>
                   
       <div
         className="modal fade"
-        id="exampleModalCenter2"
+        id="exampleModalCenter22"
         tabindex="-1"
         role="dialog"
         aria-labelledby="exampleModalEnquirenowTitle3"
@@ -1278,9 +1278,9 @@ consectetur, adipisci velit...</p>
 
               <div className="basicenqforms">
 
-              {/* <div className="npf_wgts" data-height="400px" data-w="0798cc877db5d6b9589768bbc5e303dd"></div> */}
+              <div className="npf_wgts" data-height="400px" data-w="b2c2434e61006dae7b80093b9c72233c"></div> */}
 
-                {/* <form onSubmit={handleSubmit2}>
+                 <form onSubmit={handleSubmit2}>
                   <div className="row">
                     <div className="col-lg-12 mx-auto">
                       <h3>Download Brochure</h3>
@@ -1335,7 +1335,7 @@ consectetur, adipisci velit...</p>
                       </button>
                     </div>
                   </div>
-                </form> */}
+                </form>
               </div>
             </div>
           </div>
