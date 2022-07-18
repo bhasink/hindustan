@@ -56,10 +56,10 @@ const CourseDetails = () => {
 
 
   useEffect(() => {
-    const scriptTag = document.createElement('script');
-    scriptTag.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
-    scriptTag.async = true;
-    document.body.appendChild(scriptTag);
+    const scriptTag2 = document.createElement('script');
+    scriptTag2.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
+    scriptTag2.async = true;
+    document.body.appendChild(scriptTag2);
 }, []);
   
 
@@ -1285,7 +1285,7 @@ consectetur, adipisci velit...</p>
 
               <div className="basicenqforms">
 
-              <div className="npf_wgts" data-height="500px" data-w="b2c2434e61006dae7b80093b9c72233c"></div> 
+              <div className="npf_wgts" data-height="530px" data-w="b2c2434e61006dae7b80093b9c72233c"></div> 
               </div>
             </div>
           </div>
