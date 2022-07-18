@@ -215,7 +215,7 @@ const Nav = () => {
       <li><a href="https://apply.hindustancode.com/" target="_blank"><img src="/images/applyico.png" /><span>Apply Now<span /></span></a></li>
       <li style={{width: 300}}><a href="tel:+919945580408"><img src="/images/callicos.png" /><span>Call us<span /></span></a></li>
       <li><a href="https://wa.me/9945580408/?text="><img src="/images/whatsappicos.png" /><span>Whatsapp Us<span /></span></a></li>
-      <li style={{border: 'none'}}><a href="#" data-toggle="modal" data-target="#exampleModalCenter4"><img src="/images/downldico.png" /><span>Brochure<span /></span></a></li>
+      <li style={{border: 'none'}}><a href="#" data-toggle="modal" data-target="#exampleModalCenter22ff"><img src="/images/downldico.png" /><span>Brochure<span /></span></a></li>
     </ul>
   </section>
   
