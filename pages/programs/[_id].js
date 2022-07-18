@@ -56,10 +56,10 @@ const CourseDetails = () => {
 
 
   useEffect(() => {
-    const scriptTag2 = document.createElement('script');
-    scriptTag2.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
-    scriptTag2.async = true;
-    document.body.appendChild(scriptTag2);
+    const scriptTag22 = document.createElement('script');
+    scriptTag22.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
+    scriptTag22.async = true;
+    document.body.appendChild(scriptTag22);
 }, []);
   
 
