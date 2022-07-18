@@ -451,7 +451,7 @@ border-bottom: 1px solid #000;display: inline-block;margin-left: 30px;margin-bot
 
 .onestopcourse .coursetextmoreinf .nav-tabs a {color: #fff;font-weight: 100;font-size: 18px;border-bottom: 1px #fff;}
 
-.onestopcourse .coursetextmoreinf .mdbldshds {color: #fff;margin-bottom: 30px;font-weight: 300;}
+.onestopcourse .coursetextmoreinf .mdbldshds {color: #fff;margin-bottom: 30px;font-weight: 300; font-size: 32px;}
 
 .coursehnd ul {padding: 0;list-style-type: none;margin: 0;}
 
@@ -1597,7 +1597,7 @@ footer.stfooter .collapse:not(.show) {
 
 .egsyllabys .elemidrghts {position: absolute;left: 38%;width: 103px;top: 60px;z-index: 2;}
 
-.egsyllabys  .whtsmidrghts {position: absolute;left: -15px;z-index: 3;width: 103px;bottom: 84px;}
+.egsyllabys  .whtsmidrghts {position: absolute;left: -15px;z-index: 3;width: 103px;bottom: 14px;}
 
 .feeplansne .topmstomabuis {position: absolute;left: -6px;width: 42px;top: -18px;}
 
@@ -2135,6 +2135,15 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
 
 .gallcrd .artblogs a {
     border-bottom: 1px solid;
+    color: #f28823;
+}
+
+.tabblogsd a:not([href]):not([tabindex]):hover {
+    color: #000;
+}
+
+.tabblogsd a.active:not([href]):not([tabindex]):hover {
+    color: #fff;
 }
 
 .populararts .owl-theme .owl-nav {
@@ -2167,6 +2176,7 @@ padding: 6px 0;margin: 15px 0;font-size: 14px;transition: all ease 0.4s;}
     border-bottom: 1px solid;
 	margin-bottom: 11px;
     display: inline-block;
+    color: #f28823;
 }
 
 .mediadescs 
