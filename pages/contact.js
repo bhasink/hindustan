@@ -367,7 +367,7 @@ const ContactUs = () => {
           
         </div>
         <div className="col-lg-4 text-lg-right text-center align-self-center">
-          <a href="#" className="blackctathms nobrd" data-toggle="modal" data-target="#exampleModalCenter4"><img src="/images/downldico.png" />Download Brochure</a>
+          <a href="#" className="blackctathms nobrd" data-toggle="modal" data-target="#exampleModalCenter22ff"><img src="/images/downldico.png" />Download Brochure</a>
         </div>
       </div>
     </div>

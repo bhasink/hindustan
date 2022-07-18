@@ -54,8 +54,13 @@ const CourseDetails = () => {
 
   },[router.isReady])
 
-  
 
+//   useEffect(() => {
+//     const scriptTag22 = document.createElement('script');
+//     scriptTag22.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
+//     scriptTag22.async = true;
+//     document.body.appendChild(scriptTag22);
+// }, []);
 
   const getCourseDetails = async (_id) => {
     try {
@@ -457,7 +462,7 @@ const CourseDetails = () => {
                 </div>
                 <div className="col-6 col-lg-6 col-md-6">
                 
-                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter4" className="blackctathms nobrd">
+                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter22ff" className="blackctathms nobrd">
                     <img src="/images/downldico.png" />
                     Brochure
                   </a>
@@ -1249,98 +1254,6 @@ consectetur, adipisci velit...</p>
                       </div>
                     </div>
                   </div>
-                  
-
-
-                  
-      <div
-        className="modal fade"
-        id="exampleModalCenter2"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalEnquirenowTitle3"
-        aria-hidden="true"
-      >
-        <div
-          className="modal-dialog modal-dialog-centered   jncustm trasntypes"
-          role="document"
-        >
-          <div className="modal-content">
-            <div className="modal-body">
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-
-              <div className="basicenqforms">
-
-              {/* <div className="npf_wgts" data-height="400px" data-w="0798cc877db5d6b9589768bbc5e303dd"></div> */}
-
-                {/* <form onSubmit={handleSubmit2}>
-                  <div className="row">
-                    <div className="col-lg-12 mx-auto">
-                      <h3>Download Brochure</h3>
-                      <div className="form-groupsets">
-                        <label>Name</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder=""
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                        />
-                      </div>
-
-                      <div className="form-groupsets">
-                        <label>Email id</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder=""
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                        />
-                      </div>
-
-                      <div className="form-groupsets">
-                        <label>Mobile No.</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder=""
-                          value={mobileNo}
-                          onChange={(e) => setMobileNo(e.target.value)}
-                        />
-                      </div>
-
-                      <div className="form-groupsets">
-                        <label>Query</label>
-                        <textarea
-                          type="text"
-                          className="form-control"
-                          placeholder=""
-                          value={query}
-                          onChange={(e) => setQuery(e.target.value)}
-                        ></textarea>
-                      </div>
-                    </div>
-
-                    <div className="col-lg-12 text-center roundbotms">
-                      <button type="submit" className="orangectadms">
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </form> */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
 
       </>
