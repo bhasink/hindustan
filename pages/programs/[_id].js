@@ -45,6 +45,13 @@ const CourseDetails = () => {
       duration: 2000,
     })
 
+    useEffect(() => {
+      const scriptTag = document.createElement('script');
+      scriptTag.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
+      scriptTag.async = true;
+      document.body.appendChild(scriptTag);
+  }, []);
+
     if (router.isReady) {
       const _id = router.query._id
       getCourseDetails(_id)
@@ -457,7 +464,7 @@ const CourseDetails = () => {
                 </div>
                 <div className="col-6 col-lg-6 col-md-6">
                 
-                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter22" className="blackctathms nobrd">
+                  <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModalCenter22ff" className="blackctathms nobrd">
                     <img src="/images/downldico.png" />
                     Brochure
                   </a>
@@ -1255,7 +1262,7 @@ consectetur, adipisci velit...</p>
                   
       <div
         className="modal fade"
-        id="exampleModalCenter22"
+        id="exampleModalCenter22ff"
         tabindex="-1"
         role="dialog"
         aria-labelledby="exampleModalEnquirenowTitle3"
@@ -1278,9 +1285,9 @@ consectetur, adipisci velit...</p>
 
               <div className="basicenqforms">
 
-              <div className="npf_wgts" data-height="400px" data-w="b2c2434e61006dae7b80093b9c72233c"></div> */}
+              <div className="npf_wgts" data-height="400px" data-w="b2c2434e61006dae7b80093b9c72233c"></div> 
 
-                 <form onSubmit={handleSubmit2}>
+                 {/* <form onSubmit={handleSubmit2}>
                   <div className="row">
                     <div className="col-lg-12 mx-auto">
                       <h3>Download Brochure</h3>
@@ -1335,7 +1342,7 @@ consectetur, adipisci velit...</p>
                       </button>
                     </div>
                   </div>
-                </form>
+                </form> */}
               </div>
             </div>
           </div>
