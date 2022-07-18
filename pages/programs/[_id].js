@@ -45,13 +45,6 @@ const CourseDetails = () => {
       duration: 2000,
     })
 
-    useEffect(() => {
-      const scriptTag = document.createElement('script');
-      scriptTag.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
-      scriptTag.async = true;
-      document.body.appendChild(scriptTag);
-  }, []);
-
     if (router.isReady) {
       const _id = router.query._id
       getCourseDetails(_id)
@@ -61,6 +54,13 @@ const CourseDetails = () => {
 
   },[router.isReady])
 
+
+  useEffect(() => {
+    const scriptTag = document.createElement('script');
+    scriptTag.src= "https://widgets.in5.nopaperforms.com/emwgts.js";
+    scriptTag.async = true;
+    document.body.appendChild(scriptTag);
+}, []);
   
 
 
@@ -1285,64 +1285,7 @@ consectetur, adipisci velit...</p>
 
               <div className="basicenqforms">
 
-              <div className="npf_wgts" data-height="400px" data-w="b2c2434e61006dae7b80093b9c72233c"></div> 
-
-                 {/* <form onSubmit={handleSubmit2}>
-                  <div className="row">
-                    <div className="col-lg-12 mx-auto">
-                      <h3>Download Brochure</h3>
-                      <div className="form-groupsets">
-                        <label>Name</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder=""
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                        />
-                      </div>
-
-                      <div className="form-groupsets">
-                        <label>Email id</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder=""
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                        />
-                      </div>
-
-                      <div className="form-groupsets">
-                        <label>Mobile No.</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder=""
-                          value={mobileNo}
-                          onChange={(e) => setMobileNo(e.target.value)}
-                        />
-                      </div>
-
-                      <div className="form-groupsets">
-                        <label>Query</label>
-                        <textarea
-                          type="text"
-                          className="form-control"
-                          placeholder=""
-                          value={query}
-                          onChange={(e) => setQuery(e.target.value)}
-                        ></textarea>
-                      </div>
-                    </div>
-
-                    <div className="col-lg-12 text-center roundbotms">
-                      <button type="submit" className="orangectadms">
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </form> */}
+              <div className="npf_wgts" data-height="500px" data-w="b2c2434e61006dae7b80093b9c72233c"></div> 
               </div>
             </div>
           </div>
