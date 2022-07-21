@@ -19,8 +19,12 @@ import ReactHtmlParser from 'react-html-parser';
 import { useToasts } from 'react-toast-notifications'
 import FileSaver from 'file-saver'
 import NumberFormat from 'react-number-format';
+// import Head from 'next/head'
+import { NextSeo } from 'next-seo';
 
-const CourseDetails = () => {
+
+export default function CourseDetails({ Cdetails }) {
+
 
     const [courseDetails, setCourseDetails] = useState([])
     const [courseSemesters, setCourseSemesters] = useState([])
@@ -395,7 +399,14 @@ const CourseDetails = () => {
 
   return (
     <>
+
       <Nav />
+
+      
+      <NextSeo
+      title={Cdetails.meta_title}
+      description={Cdetails.meta_description}
+      />
 
       {courseDetails && courseDetails.name && (
           <>
@@ -1263,4 +1274,25 @@ consectetur, adipisci velit...</p>
   )
 }
 
-export default CourseDetails
+// export default CourseDetails
+
+export async function getServerSideProps(ctx) {
+
+  const _id = ctx.query._id
+
+  const config = {
+    headers: { 'Content-Type': 'application/json' },
+  }
+
+  const { data } = await axios.post(
+    `${process.env.NEXT_PUBLIC_API}/get-course-details`,
+    {
+      slug: _id,
+    },
+    config,
+  )
+
+  const Cdetails = data.get_course_details
+
+  return { props: { Cdetails } }
+}
