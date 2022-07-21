@@ -14,6 +14,7 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
 })
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import { NextSeo } from 'next-seo';
 
 
 const Index = () => {
@@ -300,6 +301,11 @@ const Index = () => {
         <>
 
   <Nav />
+
+  <NextSeo
+      title="Online Degree Programs For UG and PG | Hindustan Online"
+      description="Grow your career with our online degree programs. Our UG and PG programs from Hindustan Online - CODE are crafted with an industry-ready curriculum. Know More."
+      />
 
 
 
